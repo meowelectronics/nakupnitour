@@ -298,17 +298,22 @@ async function negative(name, mutation) {
     assert(await page.locator('#restart').evaluate(e => getComputedStyle(e).outlineStyle !== 'none'));
     await page.keyboard.press('Tab'); assert.equal(await page.evaluate(()=>document.activeElement.id), 'chain');
   });
-  for (const [width, height] of [[320,740],[390,844],[737,900],[1440,900]]) {
+  for (const [width, height] of [[320,740],[390,844],[737,900],[1440,900],[1920,1080],[2560,1440]]) {
     await check(`Responsive ${width}x${height}: no horizontal overflow, reachable non-overlapping essential panels`, async () => {
       await page.setViewportSize({width,height}); await select('lidl'); await page.waitForTimeout(100);
       const layout = await page.evaluate(() => {
         const rect = s => { const r=document.querySelector(s).getBoundingClientRect(); return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height}; };
-        return { width:innerWidth, scroll:document.documentElement.scrollWidth,
+        return { width:innerWidth, height:innerHeight, app:rect('.app'), map:rect('#map'), scroll:document.documentElement.scrollWidth,
           controls:rect('.controls'), dashboard:rect('.dashboard'), tip:rect('.tip'),
           legend:rect('.legend'), tools:rect('.map-tools'), footer:rect('.footer'), logo:rect('#brand-logo'),
           buttons:[...document.querySelectorAll('button,select,input')].map(e=>({id:e.id,...rect('#'+e.id)})) };
       });
       assert(layout.scroll <= width, JSON.stringify(layout));
+      for (const surface of [layout.app, layout.map]) {
+        assert.equal(surface.x, 0, 'page surface must start at the viewport edge');
+        assert.equal(surface.width, width, 'page surface must fill the viewport width');
+        if (width >= 737) assert.equal(surface.height, height, 'desktop surface must fill the viewport height');
+      }
       for (const r of [layout.controls,layout.dashboard,layout.tip,layout.legend,layout.tools,layout.footer,layout.logo,...layout.buttons]) {
         assert(r.x >= -1 && r.right <= width+1, JSON.stringify(r));
       }

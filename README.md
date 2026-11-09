@@ -13,9 +13,10 @@ npm run dev
 npm test
 ```
 
-`npm test` builds the actual Astro output and runs 57 browser scenarios,
+`npm test` builds the actual Astro output and runs 59 browser scenarios,
 including all 24 routes, GPX exports, playback, keyboard controls, responsive
-layouts, offline operation and invalid-data handling. It uses installed
+layouts, offline operation and invalid-data handling. Layouts include 1920px
+and 2560px desktops, with edge-to-edge viewport checks. It uses installed
 Microsoft Edge by default. Set `PW_CHANNEL=chrome` to use installed Chrome.
 Results and screenshots are written to ignored `test-results/`.
 Safari, Firefox and real mobile hardware are not covered by this suite.
