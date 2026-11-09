@@ -1,0 +1,5141 @@
+{
+  "source": "Local Czech OSM extract, 2026-11-07",
+  "recovered": [
+    {
+      "chain": "lidl",
+      "store_id": 1,
+      "original_address": "",
+      "address": "třída 1. máje 3255, 69002",
+      "city": "",
+      "source": "node/449784155",
+      "building": "way/351925150",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 3,
+      "original_address": "",
+      "address": "Trocnovská 663, Trhové Sviny, 37401",
+      "city": "Trhové Sviny",
+      "source": "node/2402151473",
+      "building": "way/204367787",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 5,
+      "original_address": "",
+      "address": "Přímětická 3658/66, 66902",
+      "city": "",
+      "source": "node/1107540058",
+      "building": "way/82894470",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 6,
+      "original_address": "",
+      "address": "Brněnská 1359/58, 69301",
+      "city": "",
+      "source": "node/3008227169",
+      "building": "way/255285049",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 7,
+      "original_address": "",
+      "address": "tř. Masarykova 170, 69801",
+      "city": "",
+      "source": "node/2741057933",
+      "building": "way/28900783",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 8,
+      "original_address": "",
+      "address": "Ledenická-St. Pohůrka 1297, 37006",
+      "city": "",
+      "source": "node/10728410706",
+      "building": "way/1180431302",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 9,
+      "original_address": "",
+      "address": "Znojemská 1149, 69123",
+      "city": "",
+      "source": "node/10951611310",
+      "building": "way/1206710464",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 10,
+      "original_address": "",
+      "address": "Rudolfovská tř. 784/72, 37001",
+      "city": "",
+      "source": "node/9553011576",
+      "building": "way/1513502169",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 16,
+      "original_address": "",
+      "address": "Východní 2063, 68603",
+      "city": "",
+      "source": "node/1200577876",
+      "building": "way/40950718",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 17,
+      "original_address": "",
+      "address": "Krajířova 16, Dačice, 38001",
+      "city": "Dačice",
+      "source": "node/2397170887",
+      "building": "way/122272838",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 18,
+      "original_address": "",
+      "address": "Československé armády 1107, 76601",
+      "city": "",
+      "source": "node/7684655909",
+      "building": "way/918055105",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 21,
+      "original_address": "",
+      "address": "U Knihovny 1174, Jindřichův Hradec, 37701",
+      "city": "Jindřichův Hradec",
+      "source": "node/2397628521",
+      "building": "way/48430437",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 23,
+      "original_address": "",
+      "address": "Pod nemocnicí 817/41, 62500",
+      "city": "",
+      "source": "node/5293506264",
+      "building": "way/521469975",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 24,
+      "original_address": "",
+      "address": "Hviezdoslavova 1288/2, Brno, 62700",
+      "city": "Brno",
+      "source": "node/2664852055",
+      "building": "way/33288559",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 25,
+      "original_address": "",
+      "address": "Brněnská 1342, 66501",
+      "city": "",
+      "source": "node/476888824",
+      "building": "way/39780419",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 26,
+      "original_address": "",
+      "address": "Žebětínská 958/75, 62300",
+      "city": "",
+      "source": "node/5077230787",
+      "building": "way/427970817",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 27,
+      "original_address": "",
+      "address": "Napajedelská 1809, 76502",
+      "city": "",
+      "source": "node/2066135949",
+      "building": "way/53767719",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 28,
+      "original_address": "",
+      "address": "Trnkova 3071/121, 62800",
+      "city": "",
+      "source": "node/4570037331",
+      "building": "way/27527498",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 29,
+      "original_address": "",
+      "address": "Brněnská 452, Třebíč, 67401",
+      "city": "Třebíč",
+      "source": "node/6549964929",
+      "building": "way/655066389",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 30,
+      "original_address": "",
+      "address": "Díly VI 5478, 76001",
+      "city": "",
+      "source": "node/1880757516",
+      "building": "way/52165713",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 31,
+      "original_address": "",
+      "address": "Nábřeží 7139, 76001",
+      "city": "",
+      "source": "node/4570039421",
+      "building": "way/55729286",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 32,
+      "original_address": "",
+      "address": "Ellerova 1647, 38601",
+      "city": "",
+      "source": "node/4426319286",
+      "building": "way/93731019",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 33,
+      "original_address": "",
+      "address": "Obchodní 877, Soběslav, 39201",
+      "city": "Soběslav",
+      "source": "node/529843300",
+      "building": "way/33180025",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 35,
+      "original_address": "",
+      "address": "Velehradská 4616/4b, 76701",
+      "city": "",
+      "source": "node/7470641410",
+      "building": "way/30102593",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 36,
+      "original_address": "",
+      "address": "Tyršova 1731/66, 66434",
+      "city": "",
+      "source": "node/1196720019",
+      "building": "way/71070076",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 37,
+      "original_address": "",
+      "address": "Nádražní 2725, 39701",
+      "city": "",
+      "source": "node/7253652670",
+      "building": "way/28785040",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 38,
+      "original_address": "",
+      "address": "Generála Klapálka 798, 75501",
+      "city": "",
+      "source": "node/2935417163",
+      "building": "way/35929836",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 41,
+      "original_address": "",
+      "address": "Okružní 4967/15, 58601",
+      "city": "",
+      "source": "node/475714218",
+      "building": "way/26594503",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 42,
+      "original_address": "",
+      "address": "Jiráskova 5201/66, 58601",
+      "city": "",
+      "source": "node/560090341",
+      "building": "way/26575636",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 43,
+      "original_address": "",
+      "address": "K Jatkám 1275, Blatná, 38801",
+      "city": "Blatná",
+      "source": "node/2417227347",
+      "building": "way/117128538",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 46,
+      "original_address": "",
+      "address": "Meziříčská 2302, 75661",
+      "city": "",
+      "source": "node/1500192523",
+      "building": "way/58556452",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 47,
+      "original_address": "",
+      "address": "Lipnická 3253/1, Přerov, 75002",
+      "city": "Přerov",
+      "source": "node/2298521112",
+      "building": "way/89843445",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 49,
+      "original_address": "",
+      "address": "Újezd 2169/19, 79601",
+      "city": "",
+      "source": "node/5077228792",
+      "building": "way/57186282",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 50,
+      "original_address": "",
+      "address": "Rožnovská 864, 75701",
+      "city": "",
+      "source": "node/1498545819",
+      "building": "way/57960546",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 51,
+      "original_address": "",
+      "address": "Otakara Kubína 2339, 68001",
+      "city": "",
+      "source": "node/1179584852",
+      "building": "way/81271651",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 52,
+      "original_address": "",
+      "address": "Pod Šenkem 2188, 74401",
+      "city": "",
+      "source": "node/11581865294",
+      "building": "way/1175042186",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 57,
+      "original_address": "",
+      "address": "Velkomoravská 558/29, 77900",
+      "city": "",
+      "source": "node/8972343341",
+      "building": "way/905783552",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 59,
+      "original_address": "",
+      "address": "Nádražní 172, Holýšov, 34562",
+      "city": "Holýšov",
+      "source": "node/2314496970",
+      "building": "way/458504776",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 60,
+      "original_address": "",
+      "address": "Sokolovská 2126/5, 74101",
+      "city": "",
+      "source": "node/1171861959",
+      "building": "way/56877287",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 61,
+      "original_address": "",
+      "address": "Štefánikova 1409/18c, 74221",
+      "city": "",
+      "source": "node/2581128379",
+      "building": "way/32934376",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 63,
+      "original_address": "",
+      "address": "Frýdlantská 2197, 73801",
+      "city": "",
+      "source": "node/1759376677",
+      "building": "way/91722313",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 64,
+      "original_address": "",
+      "address": "Lidická 156, 73961",
+      "city": "",
+      "source": "node/1792979303",
+      "building": "way/42942992",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 67,
+      "original_address": "",
+      "address": "Evropská 337, Příbram, 26101",
+      "city": "Příbram",
+      "source": "node/2366794656",
+      "building": "way/99726526",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 72,
+      "original_address": "",
+      "address": "U Tří mostů 995/11, 56802",
+      "city": "",
+      "source": "node/8749271306",
+      "building": "way/1055381712",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 73,
+      "original_address": "",
+      "address": "Adámkova třída 1647, 53901",
+      "city": "",
+      "source": "node/832457731",
+      "building": "way/78778032",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 79,
+      "original_address": "",
+      "address": "Pražská 1659, Dobříš, 26301",
+      "city": "Dobříš",
+      "source": "node/2367143888",
+      "building": "way/61227462",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 83,
+      "original_address": "",
+      "address": "Třemošná 1120, 33011",
+      "city": "",
+      "source": "node/1448398585",
+      "building": "way/128628165",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 85,
+      "original_address": "",
+      "address": "Sjízdná 1157/1, 72100",
+      "city": "",
+      "source": "node/2770026175",
+      "building": "way/70922193",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 91,
+      "original_address": "",
+      "address": "Sadová 918, Planá, 34815",
+      "city": "Planá",
+      "source": "node/2527182142",
+      "building": "way/206263914",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 95,
+      "original_address": "",
+      "address": "Sokolovská 167, 57001",
+      "city": "",
+      "source": "node/10138197609",
+      "building": "way/1058336076",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 96,
+      "original_address": "",
+      "address": "Celní 2071/2, 74801",
+      "city": "",
+      "source": "node/5810108936",
+      "building": "way/91112099",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 98,
+      "original_address": "",
+      "address": "Jablonského 1773, Čáslav, 28601",
+      "city": "Čáslav",
+      "source": "node/2348251045",
+      "building": "way/186224537",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 99,
+      "original_address": "",
+      "address": "Hlavní 494, 25168",
+      "city": "",
+      "source": "node/8688141995",
+      "building": "way/976971907",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 100,
+      "original_address": "",
+      "address": "Pražská 505, 25229",
+      "city": "",
+      "source": "node/2877414009",
+      "building": "way/88850461",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 103,
+      "original_address": "",
+      "address": "Těšínská 2912/36;687/32, 74601",
+      "city": "",
+      "source": "node/697472670",
+      "building": "way/52505845",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 104,
+      "original_address": "",
+      "address": "Plzeňská 1939, 26601",
+      "city": "",
+      "source": "node/4078903298",
+      "building": "way/108479045",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 105,
+      "original_address": "",
+      "address": "Tovární 1395, 53701",
+      "city": "",
+      "source": "node/465134941",
+      "building": "way/39013478",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 108,
+      "original_address": "",
+      "address": "Budějovická 1143, 25242",
+      "city": "",
+      "source": "node/927270753",
+      "building": "way/195652441",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 109,
+      "original_address": "",
+      "address": "Popradská 1510, Ústí nad Orlicí, 56206",
+      "city": "Ústí nad Orlicí",
+      "source": "node/2313312046",
+      "building": "way/62389418",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 110,
+      "original_address": "",
+      "address": "Zeyerova 1932/11, 79201",
+      "city": "",
+      "source": "node/926346260",
+      "building": "way/102581432",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 111,
+      "original_address": "",
+      "address": "Záměstí 1739, 56501",
+      "city": "",
+      "source": "node/2456626691",
+      "building": "way/74853957",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 112,
+      "original_address": "",
+      "address": "Černokostelecká 2110/20, Říčany, 25101",
+      "city": "Říčany",
+      "source": "node/1432998875",
+      "building": "way/61937847",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 114,
+      "original_address": "",
+      "address": "Strakonická 63, 15900",
+      "city": "",
+      "source": "node/8972343623",
+      "building": "way/893993471",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 115,
+      "original_address": "",
+      "address": "V Štíhlách ev.226, 14200",
+      "city": "",
+      "source": "node/2771993913",
+      "building": "way/30917973",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 117,
+      "original_address": "",
+      "address": "K Barrandovu 1247/3, 15200",
+      "city": "",
+      "source": "node/5235466778",
+      "building": "way/60180018",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 118,
+      "original_address": "",
+      "address": "Havlíčkovo nám. 1399/35, 25219",
+      "city": "",
+      "source": "node/635182795",
+      "building": "way/217908637",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 119,
+      "original_address": "",
+      "address": "Přátelství 1666/21, 10400",
+      "city": "",
+      "source": "node/9362806076",
+      "building": "way/847806252",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 120,
+      "original_address": "",
+      "address": "Červeňanského 2723/29, 15500",
+      "city": "",
+      "source": "node/2130815938",
+      "building": "way/89980559",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 121,
+      "original_address": "",
+      "address": "Hůrka 1950, 53012",
+      "city": "",
+      "source": "node/6593138893",
+      "building": "way/764879868",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 122,
+      "original_address": "",
+      "address": "Hornoměcholupská 786/82, 10900",
+      "city": "",
+      "source": "node/7575130100",
+      "building": "way/788676575",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 123,
+      "original_address": "",
+      "address": "Bělehradská 548, 53009",
+      "city": "",
+      "source": "node/2963497086",
+      "building": "way/292808344",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 124,
+      "original_address": "",
+      "address": "Vladycká 1532/2, 10200",
+      "city": "",
+      "source": "node/2824522223",
+      "building": "way/100639575",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 127,
+      "original_address": "",
+      "address": "Makovského 1219/27, 16300",
+      "city": "",
+      "source": "node/296869999",
+      "building": "way/371124617",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 129,
+      "original_address": "",
+      "address": "Kutnohorská 531, 10900",
+      "city": "",
+      "source": "node/6270299128",
+      "building": "way/669204270",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 132,
+      "original_address": "",
+      "address": "Novosibřinská 2227, 19016",
+      "city": "",
+      "source": "node/2774009513",
+      "building": "way/49852582",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 134,
+      "original_address": "",
+      "address": "Čsl. armády 488, 25301",
+      "city": "",
+      "source": "node/635125150",
+      "building": "way/98164870",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 136,
+      "original_address": "",
+      "address": "Pražská 1545, 27351",
+      "city": "",
+      "source": "node/8516163737",
+      "building": "way/853507294",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 142,
+      "original_address": "",
+      "address": "Českomoravská 930/22, 19000",
+      "city": "",
+      "source": "node/2757558776",
+      "building": "way/44846949",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 145,
+      "original_address": "",
+      "address": "Hartenberská 2533/2, 19300",
+      "city": "",
+      "source": "node/2047193312",
+      "building": "way/28057333",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 146,
+      "original_address": "",
+      "address": "Sokolovská 202/314, 19000",
+      "city": "",
+      "source": "node/296734645",
+      "building": "way/104828479",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 147,
+      "original_address": "",
+      "address": "Kolbenova 956/27a, 19800",
+      "city": "",
+      "source": "node/2815670604",
+      "building": "way/28141969",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 148,
+      "original_address": "",
+      "address": "Náchodská 116/208, 19300",
+      "city": "",
+      "source": "node/296674137",
+      "building": "way/202640602",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 150,
+      "original_address": "",
+      "address": "Americká 2768, 27201",
+      "city": "",
+      "source": "node/1436673430",
+      "building": "way/60104049",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 151,
+      "original_address": "",
+      "address": "Bílkova 289, 29001",
+      "city": "",
+      "source": "node/9042164306",
+      "building": "way/846127261",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 152,
+      "original_address": "",
+      "address": "Suchdolská 1065, 25262",
+      "city": "",
+      "source": "node/5937283068",
+      "building": "way/132858567",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 153,
+      "original_address": "",
+      "address": "Smečenská 1081, 27204",
+      "city": "",
+      "source": "node/9042163970",
+      "building": "way/1112204805",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 155,
+      "original_address": "",
+      "address": "Schoellerova 1027/16, 19600",
+      "city": "",
+      "source": "node/6549964960",
+      "building": "way/627800391",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 156,
+      "original_address": "",
+      "address": "Karlovarská 1207, Nové Strašecí, 27101",
+      "city": "Nové Strašecí",
+      "source": "node/2322810327",
+      "building": "way/218168578",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 158,
+      "original_address": "",
+      "address": "Zápy 259, Zápy, 25061",
+      "city": "Zápy",
+      "source": "node/2672886257",
+      "building": "way/38738617",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 159,
+      "original_address": "",
+      "address": "Kolínská 1701/30, Nymburk, 28802",
+      "city": "Nymburk",
+      "source": "node/296516481",
+      "building": "way/47483430",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 160,
+      "original_address": "",
+      "address": "Brněnská 2126/33a, 50006",
+      "city": "",
+      "source": "node/4570036734",
+      "building": "way/50204820",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 164,
+      "original_address": "",
+      "address": "Ouvalova 427, 27401",
+      "city": "",
+      "source": "node/1447515465",
+      "building": "way/105682086",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 167,
+      "original_address": "",
+      "address": "Bratří Bendů 800, 29471",
+      "city": "",
+      "source": "node/8516159906",
+      "building": "way/915869181",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 168,
+      "original_address": "",
+      "address": "Obchodní 1446, Ostrov, 36301",
+      "city": "Ostrov",
+      "source": "node/2536676047",
+      "building": "way/171459665",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 169,
+      "original_address": "",
+      "address": "Volyňských Čechů 3094, Žatec, 43801",
+      "city": "Žatec",
+      "source": "node/2545766071",
+      "building": "way/292263461",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 170,
+      "original_address": "",
+      "address": "Hradecká 952, 55101",
+      "city": "",
+      "source": "node/2800677456",
+      "building": "way/51927418",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 171,
+      "original_address": "",
+      "address": "Mladoboleslavská 3617, Mělník, 27601",
+      "city": "Mělník",
+      "source": "node/1366846982",
+      "building": "way/82448789",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 172,
+      "original_address": "",
+      "address": "Postoloprtská 2785, Louny, 44001",
+      "city": "Louny",
+      "source": "node/1363522681",
+      "building": "way/115241424",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 174,
+      "original_address": "",
+      "address": "kpt. Jaroše 1954, Kadaň, 43201",
+      "city": "Kadaň",
+      "source": "node/2327978443",
+      "building": "way/74045784",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 175,
+      "original_address": "",
+      "address": "Chomutovská 211, Klášterec nad Ohří, 43151",
+      "city": "Klášterec nad Ohří",
+      "source": "node/2326587427",
+      "building": "way/48958256",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 176,
+      "original_address": "",
+      "address": "Plhovská 2066, 54701",
+      "city": "",
+      "source": "node/656328364",
+      "building": "way/53111843",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 177,
+      "original_address": "",
+      "address": "Alej 17. listopadu 2692, Roudnice nad Labem, 41301",
+      "city": "Roudnice nad Labem",
+      "source": "node/2021349803",
+      "building": "way/92142438",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 178,
+      "original_address": "",
+      "address": "Dvůr Králové nad Labem 3344, 54401",
+      "city": "",
+      "source": "node/12981789651",
+      "building": "way/1289593040",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 179,
+      "original_address": "",
+      "address": "Riegrova 1149, Jičín, 50601",
+      "city": "Jičín",
+      "source": "node/2020690315",
+      "building": "way/52192239",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 180,
+      "original_address": "",
+      "address": "Cihelná 698, 41108",
+      "city": "",
+      "source": "node/9287782098",
+      "building": "way/1052366179",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 181,
+      "original_address": "",
+      "address": "Wolkerova 5546, 43001",
+      "city": "",
+      "source": "node/1989470791",
+      "building": "way/153267070",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 182,
+      "original_address": "",
+      "address": "Pražská 520, 50901",
+      "city": "",
+      "source": "node/3593233578",
+      "building": "way/52478783",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 183,
+      "original_address": "",
+      "address": "Písečná 5583, Chomutov, 43004",
+      "city": "Chomutov",
+      "source": "node/1978482816",
+      "building": "way/139517459",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 185,
+      "original_address": "",
+      "address": "K Vořechu 1494, 29501",
+      "city": "",
+      "source": "node/1223672690",
+      "building": "way/50085509",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 188,
+      "original_address": "",
+      "address": "Jičínská 2148, Turnov, 51101",
+      "city": "Turnov",
+      "source": "node/669910817",
+      "building": "way/95157240",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 189,
+      "original_address": "",
+      "address": "U Bílého sloupu 2147, Litvínov, 43601",
+      "city": "Litvínov",
+      "source": "node/1989290663",
+      "building": "way/59323449",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 190,
+      "original_address": "",
+      "address": "Na Mýtě 586, Semily, 51301",
+      "city": "Semily",
+      "source": "node/1884660645",
+      "building": "way/178089128",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 192,
+      "original_address": "",
+      "address": "Průmyslová 897, 46822",
+      "city": "",
+      "source": "node/1918287581",
+      "building": "way/181395643",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 194,
+      "original_address": "",
+      "address": "Purkyňova 3111, 47001",
+      "city": "",
+      "source": "node/989415045",
+      "building": "way/32056796",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 195,
+      "original_address": "",
+      "address": "Riegrova 5030/23, 46601",
+      "city": "",
+      "source": "node/664094700",
+      "building": "way/79518035",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 197,
+      "original_address": "",
+      "address": "Vratislavická 1277/22, 46006",
+      "city": "",
+      "source": "node/7253642331",
+      "building": "way/100922589",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 199,
+      "original_address": "",
+      "address": "B. Egermanna 851, 47301",
+      "city": "",
+      "source": "node/968959755",
+      "building": "way/92024445",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 201,
+      "original_address": "",
+      "address": "Letná 641/59, Liberec, 46001",
+      "city": "Liberec",
+      "source": "node/2069306308",
+      "building": "way/154161139",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 203,
+      "original_address": "",
+      "address": "Zahradní 1463, 46401",
+      "city": "",
+      "source": "node/659813217",
+      "building": "way/181395641",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 204,
+      "original_address": "",
+      "address": "Pražská 396/23a, Rumburk, 40801",
+      "city": "Rumburk",
+      "source": "node/2021512788",
+      "building": "way/29553506",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 205,
+      "original_address": "66902",
+      "address": "Malá Louka 3917/1, 66902",
+      "city": "",
+      "source": "node/6109161363",
+      "building": "way/655687663",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 222,
+      "original_address": "Michálkovická",
+      "address": "Michálkovická 2169/88, 71000",
+      "city": "",
+      "source": "node/10857763103",
+      "building": "way/1159044897",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 275,
+      "original_address": "Klatovy, 33901",
+      "address": "Domažlická 924, 33901",
+      "city": "",
+      "source": "node/5141947733",
+      "building": "way/171229952",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 276,
+      "original_address": "Kutná Hora",
+      "address": "Opletalova 204, 28401",
+      "city": "",
+      "source": "node/13462197641",
+      "building": "way/1461264613",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 291,
+      "original_address": "Plzeň, 30100",
+      "address": "Folmavská 3035/8, 30100",
+      "city": "",
+      "source": "node/9287875305",
+      "building": "way/1009056330",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 292,
+      "original_address": "Plzeň, 30100",
+      "address": "Doudlevecká 2834/67a, Plzeň, 30100",
+      "city": "Plzeň",
+      "source": "node/2526941175",
+      "building": "way/45255901",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 294,
+      "original_address": "Plzeň, 31200",
+      "address": "Těšínská 1486/19, 31200",
+      "city": "",
+      "source": "node/2985110506",
+      "building": "way/155351208",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 295,
+      "original_address": "Plzeň, 32300",
+      "address": "Gerská 2070/1, Plzeň, 32300",
+      "city": "Plzeň",
+      "source": "node/2526936564",
+      "building": "way/72937501",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 3,
+      "original_address": "",
+      "address": "Jarošova 1234/2, 66902",
+      "city": "",
+      "source": "node/1103068979",
+      "building": "way/50318160",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 6,
+      "original_address": "",
+      "address": "Krumlovská 1103, 38301",
+      "city": "",
+      "source": "node/3150491583",
+      "building": "way/37376980",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 10,
+      "original_address": "",
+      "address": "Jáchymova 903, Jindřichův Hradec, 37701",
+      "city": "Jindřichův Hradec",
+      "source": "node/2397668575",
+      "building": "way/48002579",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 12,
+      "original_address": "",
+      "address": "Řípská 1476/27, 62700",
+      "city": "",
+      "source": "node/3335244747",
+      "building": "way/331305797",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 14,
+      "original_address": "",
+      "address": "Sokolská 5300, 76001",
+      "city": "",
+      "source": "node/1880756978",
+      "building": "way/30995348",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 16,
+      "original_address": "",
+      "address": "Cukrovarská 492/4, 68201",
+      "city": "",
+      "source": "node/2938191696",
+      "building": "way/167957461",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 17,
+      "original_address": "",
+      "address": "Obvodová 3310/13a, 76701",
+      "city": "",
+      "source": "node/469443953",
+      "building": "way/30139815",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 18,
+      "original_address": "",
+      "address": "U Nádraží 2565, Písek, 39701",
+      "city": "Písek",
+      "source": "node/2298893576",
+      "building": "way/28785041",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 20,
+      "original_address": "",
+      "address": "Šumavská 782, Klatovy, 33901",
+      "city": "Klatovy",
+      "source": "node/2517819532",
+      "building": "way/171229951",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 22,
+      "original_address": "",
+      "address": "Pivovarská 700, Domažlice, 34401",
+      "city": "Domažlice",
+      "source": "node/2516505188",
+      "building": "way/34870280",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 23,
+      "original_address": "",
+      "address": "Meziříčská 2617, 75661",
+      "city": "",
+      "source": "node/9997838484",
+      "building": "way/1003005588",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 24,
+      "original_address": "",
+      "address": "Lipnická 2936/4, Přerov, 75002",
+      "city": "Přerov",
+      "source": "node/2298520384",
+      "building": "way/89840505",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 25,
+      "original_address": "",
+      "address": "U Nákladního nádraží 848, 75701",
+      "city": "",
+      "source": "node/1498545682",
+      "building": "way/31536541",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 28,
+      "original_address": "",
+      "address": "Chelčického 2376/7, 59101",
+      "city": "",
+      "source": "node/417207150",
+      "building": "way/23113740",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 31,
+      "original_address": "",
+      "address": "Štursova 1124/3, Olomouc, 77900",
+      "city": "Olomouc",
+      "source": "node/296724600",
+      "building": "way/53236854",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 32,
+      "original_address": "",
+      "address": "Štefánikova 1410/18d, 74221",
+      "city": "",
+      "source": "node/2581128381",
+      "building": "way/32934437",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 33,
+      "original_address": "",
+      "address": "Bělohradská 3855, 58001",
+      "city": "",
+      "source": "node/2860895391",
+      "building": "way/87665607",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 34,
+      "original_address": "",
+      "address": "Revoluční 3470, 73801",
+      "city": "",
+      "source": "node/1759383165",
+      "building": "way/91368209",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 36,
+      "original_address": "",
+      "address": "Ostravská 2030/77, 73701",
+      "city": "",
+      "source": "node/1745152588",
+      "building": "way/53086917",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 37,
+      "original_address": "",
+      "address": "Švestkový sad 1704/8, 57101",
+      "city": "",
+      "source": "node/13318192502",
+      "building": "way/1489254594",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 41,
+      "original_address": "",
+      "address": "Červené Vršky 2217, Benešov, 25601",
+      "city": "Benešov",
+      "source": "node/1164158770",
+      "building": "way/39085636",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 48,
+      "original_address": "",
+      "address": "Jeníkovská 1983, 28601",
+      "city": "",
+      "source": "node/2974670234",
+      "building": "way/231126306",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 52,
+      "original_address": "",
+      "address": "Hlučínská 1698/53, 74705",
+      "city": "",
+      "source": "node/697540792",
+      "building": "way/52116222",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 53,
+      "original_address": "",
+      "address": "Slovenského národního povstání 1081, 53705",
+      "city": "",
+      "source": "node/1587369403",
+      "building": "way/30811427",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 55,
+      "original_address": "",
+      "address": "K dálnici ev.434, 10400",
+      "city": "",
+      "source": "node/9997837494",
+      "building": "way/1078710756",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 56,
+      "original_address": "",
+      "address": "Lhotecká 2109/2d, 14300",
+      "city": "",
+      "source": "node/2772158148",
+      "building": "way/179554784",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 61,
+      "original_address": "",
+      "address": "Kolínská 2507, Nymburk, 28802",
+      "city": "Nymburk",
+      "source": "node/2319919707",
+      "building": "way/179939743",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 63,
+      "original_address": "",
+      "address": "Fučíkova 1342/3, 79001",
+      "city": "",
+      "source": "node/662824729",
+      "building": "way/90577092",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 64,
+      "original_address": "",
+      "address": "Ouvalova 1844, 27401",
+      "city": "",
+      "source": "node/1447515507",
+      "building": "way/105682053",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 65,
+      "original_address": "",
+      "address": "Jáchymovská 1497, 36301",
+      "city": "",
+      "source": "node/6312995691",
+      "building": "way/689475386",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 66,
+      "original_address": "",
+      "address": "Kadaňská 3034, Žatec, 43801",
+      "city": "Žatec",
+      "source": "node/2545765439",
+      "building": "way/75939777",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 67,
+      "original_address": "",
+      "address": "Dolecká 970, 55101",
+      "city": "",
+      "source": "node/12852321401",
+      "building": "way/441963954",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 69,
+      "original_address": "",
+      "address": "Na Průtahu 1960, Kadaň, 43201",
+      "city": "Kadaň",
+      "source": "node/2327978449",
+      "building": "way/74123147",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 74,
+      "original_address": "",
+      "address": "Riegrova 1148, Jičín, 50601",
+      "city": "Jičín",
+      "source": "node/2865472454",
+      "building": "way/52192220",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 79,
+      "original_address": "",
+      "address": "Jičínská 2363, 51101",
+      "city": "",
+      "source": "node/10712112741",
+      "building": "way/1149282085",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 81,
+      "original_address": "",
+      "address": "Lánovská 1656, 54301",
+      "city": "",
+      "source": "node/3492333104",
+      "building": "way/68109776",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 82,
+      "original_address": "",
+      "address": "Okružní 3368/7, Ústí nad Labem, 40001",
+      "city": "Ústí nad Labem",
+      "source": "node/2364427282",
+      "building": "way/92485995",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 83,
+      "original_address": "",
+      "address": "Jateční 5156/4, Jablonec nad Nisou, 46601",
+      "city": "Jablonec nad Nisou",
+      "source": "node/2340161559",
+      "building": "way/187241656",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 84,
+      "original_address": "",
+      "address": "Dr. Milady Horákové 586/90a, Liberec, 46007",
+      "city": "Liberec",
+      "source": "node/13312352345",
+      "building": "way/47625380",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 86,
+      "original_address": "",
+      "address": "Československé mládeže 3500, 40747",
+      "city": "",
+      "source": "node/6795117453",
+      "building": "way/496343784",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 94,
+      "original_address": "Kolbenova",
+      "address": "Kolbenova 1141/35, 19800",
+      "city": "",
+      "source": "node/7253652965",
+      "building": "way/700605828",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 97,
+      "original_address": "M. Horákové",
+      "address": "M. Horákové 2903/1, 37005",
+      "city": "",
+      "source": "node/10138198229",
+      "building": "way/1046232051",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 99,
+      "original_address": "Okružní, 79601",
+      "address": "Okružní 4262/10, 79601",
+      "city": "",
+      "source": "node/1605543798",
+      "building": "way/57032224",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 122,
+      "original_address": "Letná, Liberec, 46001",
+      "address": "Polní 604/29, Liberec, 46001",
+      "city": "Liberec",
+      "source": "node/2064659928",
+      "building": "way/1510823433",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 1,
+      "original_address": "",
+      "address": "třída 1. máje 3086/2, 69002",
+      "city": "",
+      "source": "node/449784137",
+      "building": "way/351925230",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 2,
+      "original_address": "",
+      "address": "Republikánské obrany 916/7, 69201",
+      "city": "",
+      "source": "node/415609493",
+      "building": "way/300068841",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 7,
+      "original_address": "",
+      "address": "Bohumila Böhma 2321/2, 37007",
+      "city": "",
+      "source": "node/5658248104",
+      "building": "way/542806887",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 13,
+      "original_address": "",
+      "address": "Vlkošská 1872, 69642",
+      "city": "",
+      "source": "node/12453553458",
+      "building": "way/1347088731",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 17,
+      "original_address": "",
+      "address": "Husova 398, 67602",
+      "city": "",
+      "source": "node/2780192364",
+      "building": "way/54624762",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 19,
+      "original_address": "",
+      "address": "Velehradská třída 1300, 68601",
+      "city": "",
+      "source": "node/931993256",
+      "building": "way/40621702",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 24,
+      "original_address": "",
+      "address": "Žarošická 4292/30, 62800",
+      "city": "",
+      "source": "node/296649123",
+      "building": "way/37957707",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 32,
+      "original_address": "",
+      "address": "M. Majerové 296, 67401",
+      "city": "",
+      "source": "node/2780174919",
+      "building": "way/4079183",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 34,
+      "original_address": "",
+      "address": "Okružní 855/33, 63800",
+      "city": "",
+      "source": "node/296708466",
+      "building": "way/451456260",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 35,
+      "original_address": "",
+      "address": "Okružní 5290, 76005",
+      "city": "",
+      "source": "node/1880756960",
+      "building": "way/34334072",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 36,
+      "original_address": "",
+      "address": "Podpěrova 518/6, 62100",
+      "city": "",
+      "source": "node/296715247",
+      "building": "way/25877726",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 38,
+      "original_address": "",
+      "address": "U Nádraží 1315, Strakonice, 38601",
+      "city": "Strakonice",
+      "source": "node/2299293726",
+      "building": "way/25996853",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 42,
+      "original_address": "",
+      "address": "Svitavská 2307/16, 67801",
+      "city": "",
+      "source": "node/365174039",
+      "building": "way/253974449",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 43,
+      "original_address": "",
+      "address": "Havlíčkova 4821/13, 58601",
+      "city": "",
+      "source": "node/296789172",
+      "building": "way/38544620",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 46,
+      "original_address": "",
+      "address": "Nádražní 1514, 39901",
+      "city": "",
+      "source": "node/2931718304",
+      "building": "way/77803099",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 47,
+      "original_address": "",
+      "address": "Meziříčská 2306, 75661",
+      "city": "",
+      "source": "node/2935589760",
+      "building": "way/58556218",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 51,
+      "original_address": "",
+      "address": "Kozlovická 639, 33501",
+      "city": "",
+      "source": "node/7876097007",
+      "building": "way/929560546",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 52,
+      "original_address": "",
+      "address": "Jana Sigmunda 314, 78349",
+      "city": "",
+      "source": "node/12453551192",
+      "building": "way/1414823815",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 56,
+      "original_address": "",
+      "address": "Hlavní 1709, 73911",
+      "city": "",
+      "source": "node/2274368123",
+      "building": "way/110324379",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 62,
+      "original_address": "",
+      "address": "Masarykova 2051, 58001",
+      "city": "",
+      "source": "node/2860869549",
+      "building": "way/87540700",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 85,
+      "original_address": "",
+      "address": "F. S. Tůmy 1331, 73514",
+      "city": "",
+      "source": "node/1744352877",
+      "building": "way/175026184",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 87,
+      "original_address": "",
+      "address": "Opavská 1886/27a, Hlučín, 74801",
+      "city": "Hlučín",
+      "source": "node/703661934",
+      "building": "way/91096286",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 91,
+      "original_address": "",
+      "address": "Chrudimská 1671, Čáslav, 28601",
+      "city": "Čáslav",
+      "source": "node/2348250891",
+      "building": "way/186224575",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 92,
+      "original_address": "",
+      "address": "Na Pastvisku 1571/5, 74705",
+      "city": "",
+      "source": "node/697476685",
+      "building": "way/52119916",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 94,
+      "original_address": "",
+      "address": "Plzeňská 897/20, 35301",
+      "city": "",
+      "source": "node/7253652535",
+      "building": "way/756495392",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 100,
+      "original_address": "",
+      "address": "Pražská 1204, 28163",
+      "city": "",
+      "source": "node/2359045782",
+      "building": "way/53593190",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 101,
+      "original_address": "",
+      "address": "Obchodní 1919/12, Říčany, 25101",
+      "city": "Říčany",
+      "source": "node/1432997900",
+      "building": "way/27304095",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 103,
+      "original_address": "",
+      "address": "K Verneráku 1848/40, 14800",
+      "city": "",
+      "source": "node/9997838841",
+      "building": "way/1097063324",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 107,
+      "original_address": "",
+      "address": "Na Spravedlnosti 2778, 53002",
+      "city": "",
+      "source": "node/2998426174",
+      "building": "way/48065369",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 111,
+      "original_address": "",
+      "address": "Hornoměcholupská ev.5/92, 10900",
+      "city": "",
+      "source": "node/2824523956",
+      "building": "way/8919570",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 112,
+      "original_address": "",
+      "address": "Pražská 950, 25303",
+      "city": "",
+      "source": "node/7177196909",
+      "building": "way/643358697",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 121,
+      "original_address": "",
+      "address": "Divišova 1500, Žamberk, 56401",
+      "city": "Žamberk",
+      "source": "node/2454117000",
+      "building": "way/60909280",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 130,
+      "original_address": "",
+      "address": "nábř. Dr. Beneše 2509, 26901",
+      "city": "",
+      "source": "node/2871142702",
+      "building": "way/114210849",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 134,
+      "original_address": "",
+      "address": "Unhošťská 687, 27361",
+      "city": "",
+      "source": "node/9553011950",
+      "building": "way/1055671432",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 143,
+      "original_address": "",
+      "address": "Štechova 3182, 27201",
+      "city": "",
+      "source": "node/1436674473",
+      "building": "way/110447034",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 144,
+      "original_address": "",
+      "address": "Kleinerova 112, 27201",
+      "city": "",
+      "source": "node/1436659020",
+      "building": "way/595747674",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 149,
+      "original_address": "",
+      "address": "Hrdinů odboje 1606, 51601",
+      "city": "",
+      "source": "node/673590912",
+      "building": "way/60771857",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 150,
+      "original_address": "",
+      "address": "Ďáblická 1061, 18200",
+      "city": "",
+      "source": "node/3492331203",
+      "building": "way/394912793",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 156,
+      "original_address": "",
+      "address": "Rybniční 2744, Aš, 35201",
+      "city": "Aš",
+      "source": "node/2536300916",
+      "building": "way/80142759",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 157,
+      "original_address": "",
+      "address": "Armádní 874, 28924",
+      "city": "",
+      "source": "node/7253651502",
+      "building": "way/53865798",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 158,
+      "original_address": "",
+      "address": "Petra Hrubého 285, 27401",
+      "city": "",
+      "source": "node/1447515645",
+      "building": "way/32138515",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 159,
+      "original_address": "",
+      "address": "Krokova 649/30, Karlovy Vary, 36001",
+      "city": "Karlovy Vary",
+      "source": "node/2536725785",
+      "building": "way/479703849",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 169,
+      "original_address": "",
+      "address": "Legionářská 2989, 54401",
+      "city": "",
+      "source": "node/656391323",
+      "building": "way/37290727",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 171,
+      "original_address": "",
+      "address": "Husova 1058, 50601",
+      "city": "",
+      "source": "node/5518106750",
+      "building": "way/418128767",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 172,
+      "original_address": "",
+      "address": "Potoční 1298, Vejprty, 43191",
+      "city": "Vejprty",
+      "source": "node/2829997992",
+      "building": "way/236595923",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 176,
+      "original_address": "",
+      "address": "Československé armády 906, 54101",
+      "city": "",
+      "source": "node/656434839",
+      "building": "way/52127736",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 178,
+      "original_address": "",
+      "address": "Průmyslová 2373, 51101",
+      "city": "",
+      "source": "node/11472580209",
+      "building": "way/1203943065",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 185,
+      "original_address": "",
+      "address": "Švermova 362, Liberec, 46010",
+      "city": "Liberec",
+      "source": "node/2080174909",
+      "building": "way/102649896",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 186,
+      "original_address": "",
+      "address": "B. Egermanna 823, 47301",
+      "city": "",
+      "source": "node/968963260",
+      "building": "way/85526688",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 187,
+      "original_address": "",
+      "address": "Na Rybníčku 873/3, Liberec, 46007",
+      "city": "Liberec",
+      "source": "node/2082665062",
+      "building": "way/48179814",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 281,
+      "original_address": "580, Strašice, 33845",
+      "address": "Strašice 580, Strašice, 33845",
+      "city": "Strašice",
+      "source": "node/4377793154",
+      "method": "shop-object"
+    },
+    {
+      "chain": "billa",
+      "store_id": 290,
+      "original_address": "Toušeňská, Čelákovice, 25088",
+      "address": "Sokolovská 1959, Čelákovice, 25088",
+      "city": "Čelákovice",
+      "source": "node/1434677940",
+      "building": "way/104011765",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 1,
+      "original_address": "",
+      "address": "Hraniční 1257, 69141",
+      "city": "",
+      "source": "node/3013642254",
+      "building": "way/30804988",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 4,
+      "original_address": "",
+      "address": "Obchodní 841, 68604",
+      "city": "",
+      "source": "node/2957879306",
+      "building": "way/59192044",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 5,
+      "original_address": "",
+      "address": "Východní 1352, Staré Město, 68603",
+      "city": "Staré Město",
+      "source": "node/1200579907",
+      "building": "way/40949411",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 6,
+      "original_address": "",
+      "address": "Budějovická 1025, 37701",
+      "city": "",
+      "source": "node/12453553111",
+      "building": "way/1351198043",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 14,
+      "original_address": "",
+      "address": "U Jandovky 127/2, 68201",
+      "city": "",
+      "source": "node/2938188169",
+      "building": "way/167957460",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 15,
+      "original_address": "",
+      "address": "Kotojedská 546/17b, 76701",
+      "city": "",
+      "source": "node/2763000256",
+      "building": "way/30675365",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 16,
+      "original_address": "",
+      "address": "U Hřebčince 2510, Písek, 39701",
+      "city": "Písek",
+      "source": "node/2298893501",
+      "building": "way/29977350",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 18,
+      "original_address": "",
+      "address": "Plzeňská 263, Horažďovice, 34101",
+      "city": "Horažďovice",
+      "source": "node/2517773666",
+      "building": "way/142288943",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 24,
+      "original_address": "",
+      "address": "Komenského 2302, 68001",
+      "city": "",
+      "source": "node/1179584864",
+      "building": "way/69907115",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 25,
+      "original_address": "",
+      "address": "Českobratrská 1028/2a, 67961",
+      "city": "",
+      "source": "node/2786164060",
+      "building": "way/113988594",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 27,
+      "original_address": "",
+      "address": "Horní 283/87, 70030",
+      "city": "",
+      "source": "node/2107173227",
+      "building": "way/29061600",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 29,
+      "original_address": "",
+      "address": "Opavská 6201/1a, 70800",
+      "city": "",
+      "source": "node/2140194906",
+      "building": "way/173493725",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 31,
+      "original_address": "",
+      "address": "Bělidla 1059, Litomyšl, 57001",
+      "city": "Litomyšl",
+      "source": "node/1462350003",
+      "building": "way/263831482",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 33,
+      "original_address": "",
+      "address": "Olomoucká 2844/115, 74601",
+      "city": "",
+      "source": "node/697513504",
+      "building": "way/52502231",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 35,
+      "original_address": "",
+      "address": "Plzeňská 396, 26701",
+      "city": "",
+      "source": "node/867273878",
+      "building": "way/108478617",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 36,
+      "original_address": "",
+      "address": "Josefa Houdka 900, 15531",
+      "city": "",
+      "source": "node/11528267940",
+      "building": "way/1227577566",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 44,
+      "original_address": "",
+      "address": "T. G. Masaryka 2001, Nové Město nad Metují, 54901",
+      "city": "Nové Město nad Metují",
+      "source": "node/656264855",
+      "building": "way/60519515",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "albert",
+      "store_id": 46,
+      "original_address": "",
+      "address": "Velebudická 3270, 43401",
+      "city": "",
+      "source": "node/2964755419",
+      "building": "way/59284754",
+      "method": "address-node-inside-shop-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 4,
+      "original_address": "",
+      "address": "Dvořákova 4054/10, Hodonín, 69501",
+      "city": "Hodonín",
+      "source": "node/2301865443",
+      "method": "overpass-address-node-in-building",
+      "building": "way/178326669"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 11,
+      "original_address": "",
+      "address": "Labská 1500, České Budějovice, 37011",
+      "city": "České Budějovice",
+      "source": "node/2410885128",
+      "method": "overpass-address-node-in-building",
+      "building": "way/62058285"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 12,
+      "original_address": "",
+      "address": "Krumlovská 9, Prachatice, 38301",
+      "city": "Prachatice",
+      "source": "node/432859681",
+      "method": "overpass-address-node-in-building",
+      "building": "way/62020298"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 13,
+      "original_address": "",
+      "address": "Vlčnovská 2462, 68801",
+      "city": "",
+      "source": "node/957323805",
+      "method": "overpass-address-node-in-building",
+      "building": "way/89469048"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 14,
+      "original_address": "",
+      "address": "Židlochovice 954, 66701",
+      "city": "",
+      "source": "node/12981789615",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1512943046"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 15,
+      "original_address": "",
+      "address": "Tř. Maršála Malinovského 436, 68601",
+      "city": "",
+      "source": "node/932000350",
+      "method": "overpass-address-node-in-building",
+      "building": "way/177352268"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 20,
+      "original_address": "",
+      "address": "Nádražní 441, 68501",
+      "city": "",
+      "source": "node/6795115672",
+      "method": "overpass-address-node-in-building",
+      "building": "way/760015992"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 40,
+      "original_address": "",
+      "address": "Holešovská 31, 76861",
+      "city": "",
+      "source": "node/2762979395",
+      "method": "overpass-address-node-in-building",
+      "building": "way/214356282"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 44,
+      "original_address": "",
+      "address": "Pražská 2174, 39301",
+      "city": "",
+      "source": "node/1436324248",
+      "method": "overpass-address-node-in-building",
+      "building": "way/87381378"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 54,
+      "original_address": "",
+      "address": "Křičkova 1555, 59231",
+      "city": "",
+      "source": "node/1073612631",
+      "method": "overpass-address-node-in-building",
+      "building": "way/51061041"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 58,
+      "original_address": "",
+      "address": "tř. Svornosti 1177/57, Olomouc, 77900",
+      "city": "Olomouc",
+      "source": "way/58280630",
+      "method": "overpass-enclosing-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 62,
+      "original_address": "",
+      "address": "Lazecká 49/33, 77900",
+      "city": "",
+      "source": "way/53039553",
+      "method": "overpass-enclosing-building"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 65,
+      "original_address": "",
+      "address": "Horymírova 3450, 73801",
+      "city": "",
+      "source": "node/1759383066",
+      "method": "overpass-address-node-in-building",
+      "building": "way/91730764"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 66,
+      "original_address": "",
+      "address": "Horní 805, 73925",
+      "city": "",
+      "source": "node/8688142725",
+      "method": "overpass-address-node-in-building",
+      "building": "way/946621721"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 68,
+      "original_address": "",
+      "address": "Revoluční 1336, 33023",
+      "city": "",
+      "source": "node/1448437120",
+      "method": "overpass-address-node-in-building",
+      "building": "way/257791447"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 69,
+      "original_address": "",
+      "address": "Nádražní 2445/33, 78501",
+      "city": "",
+      "source": "node/890888972",
+      "method": "overpass-address-node-in-building",
+      "building": "way/58893949"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 70,
+      "original_address": "",
+      "address": "Jablunkovská 2021/54, 73701",
+      "city": "",
+      "source": "node/1745152562",
+      "method": "overpass-address-node-in-building",
+      "building": "way/67292204"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 71,
+      "original_address": "",
+      "address": "Plzeňská 1031, Rokycany, 33701",
+      "city": "Rokycany",
+      "source": "node/2304931507",
+      "method": "overpass-address-node-in-building",
+      "building": "way/81949731"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 74,
+      "original_address": "",
+      "address": "U Stadionu 1655/8a, Havířov, 73601",
+      "city": "Havířov",
+      "source": "node/6467003696",
+      "method": "overpass-address-node-in-building",
+      "building": "way/460328209"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 75,
+      "original_address": "",
+      "address": "Plzeňská 3042/383, 70030",
+      "city": "",
+      "source": "node/2107173734",
+      "method": "overpass-address-node-in-building",
+      "building": "way/53225290"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 76,
+      "original_address": "",
+      "address": "1. máje 914/19, 78985",
+      "city": "",
+      "source": "node/849094211",
+      "method": "overpass-address-node-in-building",
+      "building": "way/110708779"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 77,
+      "original_address": "",
+      "address": "Budišovská 1010, 74901",
+      "city": "",
+      "source": "node/2804408393",
+      "method": "overpass-address-node-in-building",
+      "building": "way/221367523"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 78,
+      "original_address": "",
+      "address": "Šumperská 1480, 78391",
+      "city": "",
+      "source": "node/9552996907",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1075191332"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 82,
+      "original_address": "",
+      "address": "Moravská 2114, Tachov, 34701",
+      "city": "Tachov",
+      "source": "node/2527135545",
+      "method": "overpass-address-node-in-building",
+      "building": "way/208629918"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 84,
+      "original_address": "",
+      "address": "Nad Porubkou 2400, 70800",
+      "city": "",
+      "source": "node/9121927305",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1032365756"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 86,
+      "original_address": "",
+      "address": "Ing. Fr. Janečka 546, 25741",
+      "city": "",
+      "source": "node/1172486597",
+      "method": "overpass-address-node-in-building",
+      "building": "way/68637740"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 87,
+      "original_address": "",
+      "address": "U Stadiónu 3393/1, 70200",
+      "city": "",
+      "source": "node/9042063815",
+      "method": "overpass-address-node-in-building",
+      "building": "way/23760394"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 88,
+      "original_address": "",
+      "address": "17. listopadu 6225/74, 70800",
+      "city": "",
+      "source": "node/2140194915",
+      "method": "overpass-address-node-in-building",
+      "building": "way/171955667"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 89,
+      "original_address": "",
+      "address": "K Lávce 1181/3, 70200",
+      "city": "",
+      "source": "node/10951610354",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1066511105"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 90,
+      "original_address": "",
+      "address": "Hlučínská 1172, 70200",
+      "city": "",
+      "source": "node/6109161491",
+      "method": "overpass-address-node-in-building",
+      "building": "way/667580883"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 92,
+      "original_address": "",
+      "address": "Pražská 1678, 25210",
+      "city": "",
+      "source": "node/13401798829",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1482667358"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 93,
+      "original_address": "",
+      "address": "17. listopadu 1431, 73514",
+      "city": "",
+      "source": "node/2610153434",
+      "method": "overpass-address-node-in-building",
+      "building": "way/221267910"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 94,
+      "original_address": "",
+      "address": "Československé armády 2151/30, 78901",
+      "city": "",
+      "source": "node/848256001",
+      "method": "overpass-address-node-in-building",
+      "building": "way/110440079"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 97,
+      "original_address": "",
+      "address": "Dr. E. Beneše 641, 56002",
+      "city": "",
+      "source": "node/2839162278",
+      "method": "overpass-address-node-in-building",
+      "building": "way/62191366"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 101,
+      "original_address": "",
+      "address": "Okružní 1339/12, 79501",
+      "city": "",
+      "source": "node/897600409",
+      "method": "overpass-address-node-in-building",
+      "building": "way/58805065"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 102,
+      "original_address": "",
+      "address": "Opavská 3432/197, 74721",
+      "city": "",
+      "source": "node/9362804000",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1175388846"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 106,
+      "original_address": "",
+      "address": "Hradecká 127, 56601",
+      "city": "",
+      "source": "node/1825703377",
+      "method": "overpass-address-node-in-building",
+      "building": "way/74198200"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 107,
+      "original_address": "",
+      "address": "M. R. Štefánika 2991/30, 78701",
+      "city": "",
+      "source": "node/847985353",
+      "method": "overpass-address-node-in-building",
+      "building": "way/198518644"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 126,
+      "original_address": "",
+      "address": "Ovčáry 304, 28002",
+      "city": "",
+      "source": "node/8827536960",
+      "method": "overpass-address-node-in-building",
+      "building": "way/874776078"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 128,
+      "original_address": "",
+      "address": "Na slupi 2103/2c, 12800",
+      "city": "",
+      "source": "node/3206653785",
+      "method": "overpass-address-node-in-building",
+      "building": "way/314622481"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 131,
+      "original_address": "",
+      "address": "Hlaváčkova 1334/19, 15000",
+      "city": "",
+      "source": "node/7041064889",
+      "method": "overpass-address-node-in-building",
+      "building": "way/676818283"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 137,
+      "original_address": "",
+      "address": "Revoluční 958/49, 79401",
+      "city": "",
+      "source": "node/903083254",
+      "method": "overpass-address-node-in-building",
+      "building": "way/102760362"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 139,
+      "original_address": "",
+      "address": "Hartigova 1962/111, 13000",
+      "city": "",
+      "source": "node/296500466",
+      "method": "overpass-address-node-in-building",
+      "building": "way/27894935"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 143,
+      "original_address": "",
+      "address": "Veletržní 1623/24, 17000",
+      "city": "",
+      "source": "node/7108545111",
+      "method": "overpass-address-node-in-building",
+      "building": "way/747817795"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 144,
+      "original_address": "",
+      "address": "Dukel. hrdinů 2664, 26901",
+      "city": "",
+      "source": "node/2871143570",
+      "method": "overpass-address-node-in-building",
+      "building": "way/111840758"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 149,
+      "original_address": "",
+      "address": "Střížkovská 630/114, 18000",
+      "city": "",
+      "source": "node/6795117063",
+      "method": "overpass-address-node-in-building",
+      "building": "way/636931537"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 157,
+      "original_address": "",
+      "address": "Jiráskova 1832, 51601",
+      "city": "",
+      "source": "node/8070484160",
+      "method": "overpass-address-node-in-building",
+      "building": "way/60768273"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 162,
+      "original_address": "",
+      "address": "Víta Nejedlého 1188/14, 50003",
+      "city": "",
+      "source": "node/4945953260",
+      "method": "overpass-address-node-in-building",
+      "building": "way/50565939"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 165,
+      "original_address": "",
+      "address": "Armádní 792, 28924",
+      "city": "",
+      "source": "node/9287885298",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1028346602"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 166,
+      "original_address": "",
+      "address": "Revoluční třída 221, 50401",
+      "city": "",
+      "source": "node/2807196637",
+      "method": "overpass-address-node-in-building",
+      "building": "way/211376717"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 186,
+      "original_address": "",
+      "address": "K Lázním 471, 54101",
+      "city": "",
+      "source": "node/7996685819",
+      "method": "overpass-address-node-in-building",
+      "building": "way/52581584"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 187,
+      "original_address": "",
+      "address": "Zámecká 186, 47201",
+      "city": "",
+      "source": "node/981649780",
+      "method": "overpass-address-node-in-building",
+      "building": "way/298606922"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 193,
+      "original_address": "",
+      "address": "Výstupní 3422/2a, Ústí nad Labem, 40011",
+      "city": "Ústí nad Labem",
+      "source": "node/2363577775",
+      "method": "overpass-address-node-in-building",
+      "building": "way/92702521"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 196,
+      "original_address": "",
+      "address": "Krkonošská 658, 46841",
+      "city": "",
+      "source": "node/664121514",
+      "method": "overpass-address-node-in-building",
+      "building": "way/127752739"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 200,
+      "original_address": "",
+      "address": "Ústecká 1933/1, Děčín, 40502",
+      "city": "Děčín",
+      "source": "node/2292756476",
+      "method": "overpass-address-node-in-building",
+      "building": "way/55136777"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 202,
+      "original_address": "",
+      "address": "Pražská 824, 40721",
+      "city": "",
+      "source": "node/2970137295",
+      "method": "overpass-address-node-in-building",
+      "building": "way/104047975"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 5,
+      "original_address": "",
+      "address": "Starovice 903, 69301",
+      "city": "",
+      "source": "node/12453552071",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1416468216"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 8,
+      "original_address": "",
+      "address": "Vlčnovská 2514, 68801",
+      "city": "",
+      "source": "node/957329603",
+      "method": "overpass-address-node-in-building",
+      "building": "way/89469006"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 13,
+      "original_address": "",
+      "address": "Brněnská 360, 67401",
+      "city": "",
+      "source": "node/2780188878",
+      "method": "overpass-address-node-in-building",
+      "building": "way/31779307"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 19,
+      "original_address": "",
+      "address": "Blanenská 2030/2, 66434",
+      "city": "",
+      "source": "node/6035965811",
+      "method": "overpass-address-node-in-building",
+      "building": "way/695509504"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 29,
+      "original_address": "",
+      "address": "Hněvotínská 984/56, 77900",
+      "city": "",
+      "source": "node/9878884662",
+      "method": "overpass-address-node-in-building",
+      "building": "way/915141943"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 30,
+      "original_address": "",
+      "address": "B. Martinů 2097/30, 74101",
+      "city": "",
+      "source": "node/1171832080",
+      "method": "overpass-address-node-in-building",
+      "building": "way/57103925"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 35,
+      "original_address": "",
+      "address": "Průmyslová 2699/1, 78501",
+      "city": "",
+      "source": "node/5937281936",
+      "method": "overpass-address-node-in-building",
+      "building": "way/825798256"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 38,
+      "original_address": "",
+      "address": "U Stadionu 1640/1, 73601",
+      "city": "",
+      "source": "node/1744572868",
+      "method": "overpass-address-node-in-building",
+      "building": "way/32284833"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 39,
+      "original_address": "",
+      "address": "Družstevní 1389/29, 78985",
+      "city": "",
+      "source": "node/3220559797",
+      "method": "overpass-address-node-in-building",
+      "building": "way/330920759"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 40,
+      "original_address": "",
+      "address": "Před Tratí 891/2, 73564",
+      "city": "",
+      "source": "node/2755082258",
+      "method": "overpass-address-node-in-building",
+      "building": "way/183268650"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 43,
+      "original_address": "",
+      "address": "Polská 6191/21, 70800",
+      "city": "",
+      "source": "node/2140194897",
+      "method": "overpass-address-node-in-building",
+      "building": "way/70910696"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 44,
+      "original_address": "",
+      "address": "Vítkovická 3278/3, 70200",
+      "city": "",
+      "source": "node/2106745453",
+      "method": "overpass-address-node-in-building",
+      "building": "way/40770018"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 45,
+      "original_address": "",
+      "address": "Grmelova 2032/2, 70900",
+      "city": "",
+      "source": "node/2103223971",
+      "method": "overpass-address-node-in-building",
+      "building": "way/39415037"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 47,
+      "original_address": "",
+      "address": "9. května 1197, 73581",
+      "city": "",
+      "source": "node/2296931944",
+      "method": "overpass-address-node-in-building",
+      "building": "way/90563520"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 49,
+      "original_address": "",
+      "address": "Dvořákova 1161, 56301",
+      "city": "",
+      "source": "node/3492331250",
+      "method": "overpass-address-node-in-building",
+      "building": "way/338833589"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 50,
+      "original_address": "",
+      "address": "Dr. E. Beneše 692, 56002",
+      "city": "",
+      "source": "node/2839162302",
+      "method": "overpass-address-node-in-building",
+      "building": "way/62191326"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 51,
+      "original_address": "",
+      "address": "Olomoucká 2995/121, 74601",
+      "city": "",
+      "source": "node/2770599549",
+      "method": "overpass-address-node-in-building",
+      "building": "way/304382238"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 54,
+      "original_address": "",
+      "address": "Vítězná 2886/6, 78701",
+      "city": "",
+      "source": "node/847984725",
+      "method": "overpass-address-node-in-building",
+      "building": "way/71023839"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 62,
+      "original_address": "",
+      "address": "Pilnáčkova 436/11, 50003",
+      "city": "",
+      "source": "node/2811685911",
+      "method": "overpass-address-node-in-building",
+      "building": "way/50565133"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 68,
+      "original_address": "",
+      "address": "Václava Majera 2898, Louny, 44001",
+      "city": "Louny",
+      "source": "node/3220517567",
+      "method": "overpass-address-node-in-building",
+      "building": "way/115539749"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 70,
+      "original_address": "",
+      "address": "Polská 379, 54701",
+      "city": "",
+      "source": "way/53099959",
+      "method": "overpass-enclosing-building"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 71,
+      "original_address": "",
+      "address": "Alej 17. listopadu 2720, 41301",
+      "city": "",
+      "source": "node/2971351919",
+      "method": "overpass-address-node-in-building",
+      "building": "way/222910676"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 73,
+      "original_address": "",
+      "address": "17. listopadu 3111, 54401",
+      "city": "",
+      "source": "node/2389177155",
+      "method": "overpass-address-node-in-building",
+      "building": "way/204430970"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 75,
+      "original_address": "",
+      "address": "Mostecká 5894, Chomutov, 43001",
+      "city": "Chomutov",
+      "source": "node/10111937096",
+      "method": "overpass-address-node-in-building",
+      "building": "way/299527959"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 76,
+      "original_address": "",
+      "address": "Siřejovická 1311, 41002",
+      "city": "",
+      "source": "node/12589894591",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1387432995"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 77,
+      "original_address": "",
+      "address": "Kabátnická 1701, 43401",
+      "city": "",
+      "source": "node/2964749526",
+      "method": "overpass-address-node-in-building",
+      "building": "way/50924346"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 78,
+      "original_address": "",
+      "address": "Na Kocandě 2201/35, Litoměřice, 41201",
+      "city": "Litoměřice",
+      "source": "node/2295034884",
+      "method": "overpass-address-node-in-building",
+      "building": "way/59111368"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 80,
+      "original_address": "",
+      "address": "Jiráskova 2181, Litvínov, 43601",
+      "city": "Litvínov",
+      "source": "node/2358196231",
+      "method": "overpass-address-node-in-building",
+      "building": "way/221181092"
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 85,
+      "original_address": "",
+      "address": "Oblouková 1395/4, Děčín, 40502",
+      "city": "Děčín",
+      "source": "node/13072949601",
+      "method": "overpass-address-node-in-building",
+      "building": "way/55136253"
+    },
+    {
+      "chain": "billa",
+      "store_id": 3,
+      "original_address": "",
+      "address": "Dobšická 3929/4, 66902",
+      "city": "",
+      "source": "node/6983432396",
+      "method": "overpass-address-node-in-building",
+      "building": "way/800126437"
+    },
+    {
+      "chain": "billa",
+      "store_id": 4,
+      "original_address": "",
+      "address": "Plavská 999, 37007",
+      "city": "",
+      "source": "node/13274471831",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1487036606"
+    },
+    {
+      "chain": "billa",
+      "store_id": 6,
+      "original_address": "",
+      "address": "Nádražní 1339, 67172",
+      "city": "",
+      "source": "node/11886354698",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1504691378"
+    },
+    {
+      "chain": "billa",
+      "store_id": 8,
+      "original_address": "",
+      "address": "Chaloupky 585, 69801",
+      "city": "",
+      "source": "node/2741058421",
+      "method": "overpass-address-node-in-building",
+      "building": "way/28847055"
+    },
+    {
+      "chain": "billa",
+      "store_id": 9,
+      "original_address": "",
+      "address": "Mánesova 1948, České Budějovice, 37001",
+      "city": "České Budějovice",
+      "source": "node/2410886395",
+      "method": "overpass-address-node-in-building",
+      "building": "way/50452441"
+    },
+    {
+      "chain": "billa",
+      "store_id": 10,
+      "original_address": "",
+      "address": "Jeronýmova 1750/21, 37001",
+      "city": "",
+      "source": "node/296678523",
+      "method": "overpass-address-node-in-building",
+      "building": "way/52087818"
+    },
+    {
+      "chain": "billa",
+      "store_id": 11,
+      "original_address": "",
+      "address": "Pražská tř. 1815/1, České Budějovice, 37004",
+      "city": "České Budějovice",
+      "source": "node/296790795",
+      "method": "overpass-address-node-in-building",
+      "building": "way/52528618"
+    },
+    {
+      "chain": "billa",
+      "store_id": 12,
+      "original_address": "",
+      "address": "M. Horákové 1657/24, České Budějovice, 37005",
+      "city": "České Budějovice",
+      "source": "node/2410886027",
+      "method": "overpass-address-node-in-building",
+      "building": "way/147262017"
+    },
+    {
+      "chain": "billa",
+      "store_id": 20,
+      "original_address": "",
+      "address": "Masarykova 1048, 66461",
+      "city": "",
+      "source": "node/5518114586",
+      "method": "overpass-address-node-in-building",
+      "building": "way/559760957"
+    },
+    {
+      "chain": "billa",
+      "store_id": 21,
+      "original_address": "",
+      "address": "Toužínská 199, 38001",
+      "city": "",
+      "source": "node/7619701763",
+      "method": "overpass-address-node-in-building",
+      "building": "way/769593353"
+    },
+    {
+      "chain": "billa",
+      "store_id": 22,
+      "original_address": "",
+      "address": "Křenovická 1854, 68401",
+      "city": "",
+      "source": "node/7876099279",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1046687141"
+    },
+    {
+      "chain": "billa",
+      "store_id": 25,
+      "original_address": "",
+      "address": "nám. 3. května 1301, 76502",
+      "city": "",
+      "source": "node/1187795995",
+      "method": "overpass-address-node-in-building",
+      "building": "way/94147459"
+    },
+    {
+      "chain": "billa",
+      "store_id": 40,
+      "original_address": "",
+      "address": "Hradišťská 2690, 39701",
+      "city": "",
+      "source": "node/4826929515",
+      "method": "overpass-address-node-in-building",
+      "building": "way/532898979"
+    },
+    {
+      "chain": "billa",
+      "store_id": 41,
+      "original_address": "",
+      "address": "Hornoměstská 370/51, 59401",
+      "city": "",
+      "source": "node/1028539145",
+      "method": "overpass-address-node-in-building",
+      "building": "way/210488538"
+    },
+    {
+      "chain": "billa",
+      "store_id": 44,
+      "original_address": "",
+      "address": "Kpt. Nálepky 2397, Tábor, 39003",
+      "city": "Tábor",
+      "source": "node/2398848950",
+      "method": "overpass-address-node-in-building",
+      "building": "way/23282137"
+    },
+    {
+      "chain": "billa",
+      "store_id": 45,
+      "original_address": "",
+      "address": "Průběžná 2271, 39301",
+      "city": "",
+      "source": "node/1436450184",
+      "method": "overpass-address-node-in-building",
+      "building": "way/87379039"
+    },
+    {
+      "chain": "billa",
+      "store_id": 48,
+      "original_address": "",
+      "address": "Dukelská brána 25/7, 79601",
+      "city": "",
+      "source": "node/1571400337",
+      "method": "overpass-address-node-in-building",
+      "building": "way/57186208"
+    },
+    {
+      "chain": "billa",
+      "store_id": 50,
+      "original_address": "",
+      "address": "Na Křižanově pile 944, 75701",
+      "city": "",
+      "source": "node/7945783676",
+      "method": "overpass-address-node-in-building",
+      "building": "way/899873117"
+    },
+    {
+      "chain": "billa",
+      "store_id": 53,
+      "original_address": "",
+      "address": "Nové Město na Moravě 241, 59231",
+      "city": "",
+      "source": "node/1073644735",
+      "method": "overpass-address-node-in-building",
+      "building": "way/50934653"
+    },
+    {
+      "chain": "billa",
+      "store_id": 54,
+      "original_address": "",
+      "address": "Jeremiášova 486/1, 77900",
+      "city": "",
+      "source": "node/2794768172",
+      "method": "overpass-address-node-in-building",
+      "building": "way/5082476"
+    },
+    {
+      "chain": "billa",
+      "store_id": 55,
+      "original_address": "",
+      "address": "Nádražní 1125, 73991",
+      "city": "",
+      "source": "node/8175554331",
+      "method": "overpass-address-node-in-building",
+      "building": "way/970893564"
+    },
+    {
+      "chain": "billa",
+      "store_id": 57,
+      "original_address": "",
+      "address": "Dobnerova 1195/27, 77900",
+      "city": "",
+      "source": "node/296763198",
+      "method": "overpass-address-node-in-building",
+      "building": "way/58280836"
+    },
+    {
+      "chain": "billa",
+      "store_id": 58,
+      "original_address": "",
+      "address": "Karla Kryla 2089, 74101",
+      "city": "",
+      "source": "node/1171830242",
+      "method": "overpass-address-node-in-building",
+      "building": "way/56846961"
+    },
+    {
+      "chain": "billa",
+      "store_id": 61,
+      "original_address": "",
+      "address": "Pavlovická 272/18, 77900",
+      "city": "",
+      "source": "node/3810933039",
+      "method": "overpass-address-node-in-building",
+      "building": "way/395851415"
+    },
+    {
+      "chain": "billa",
+      "store_id": 63,
+      "original_address": "",
+      "address": "Žižkova 4451, 58001",
+      "city": "",
+      "source": "node/12453551118",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1368053656"
+    },
+    {
+      "chain": "billa",
+      "store_id": 64,
+      "original_address": "",
+      "address": "Dobrá 1130, 73951",
+      "city": "",
+      "source": "node/12150429865",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1178605876"
+    },
+    {
+      "chain": "billa",
+      "store_id": 65,
+      "original_address": "",
+      "address": "Staroměstská 3290, 73801",
+      "city": "",
+      "source": "node/2787401571",
+      "method": "overpass-address-node-in-building",
+      "building": "way/199794649"
+    },
+    {
+      "chain": "billa",
+      "store_id": 66,
+      "original_address": "",
+      "address": "Na Příkopě 3727, Frýdek-Místek, 73801",
+      "city": "Frýdek-Místek",
+      "source": "node/3175609497",
+      "method": "overpass-address-node-in-building",
+      "building": "way/311824774"
+    },
+    {
+      "chain": "billa",
+      "store_id": 67,
+      "original_address": "",
+      "address": "Tyršovo nábřeží 596, 58401",
+      "city": "",
+      "source": "node/2860909831",
+      "method": "overpass-address-node-in-building",
+      "building": "way/254049245"
+    },
+    {
+      "chain": "billa",
+      "store_id": 68,
+      "original_address": "",
+      "address": "Příčná 1263/4, 78401",
+      "city": "",
+      "source": "node/890644117",
+      "method": "overpass-address-node-in-building",
+      "building": "way/23526758"
+    },
+    {
+      "chain": "billa",
+      "store_id": 69,
+      "original_address": "",
+      "address": "Luční 603, 57201",
+      "city": "",
+      "source": "node/12150431132",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1296334018"
+    },
+    {
+      "chain": "billa",
+      "store_id": 71,
+      "original_address": "",
+      "address": "Benešova třída 1304, 33023",
+      "city": "",
+      "source": "node/1448437128",
+      "method": "overpass-address-node-in-building",
+      "building": "way/257791566"
+    },
+    {
+      "chain": "billa",
+      "store_id": 72,
+      "original_address": "",
+      "address": "Majerova 2525/7, 30100",
+      "city": "",
+      "source": "node/296732474",
+      "method": "overpass-address-node-in-building",
+      "building": "way/55569090"
+    },
+    {
+      "chain": "billa",
+      "store_id": 74,
+      "original_address": "",
+      "address": "Karlovarská 26",
+      "city": "",
+      "source": "node/273735898",
+      "method": "overpass-address-node-in-building",
+      "building": "way/725764652"
+    },
+    {
+      "chain": "billa",
+      "store_id": 75,
+      "original_address": "",
+      "address": "Poličská 1561, 53901",
+      "city": "",
+      "source": "node/832457309",
+      "method": "overpass-address-node-in-building",
+      "building": "way/78781059"
+    },
+    {
+      "chain": "billa",
+      "store_id": 77,
+      "original_address": "",
+      "address": "Bohumíra Četyny 3025/15, 70030",
+      "city": "",
+      "source": "node/2107173690",
+      "method": "overpass-address-node-in-building",
+      "building": "way/75134069"
+    },
+    {
+      "chain": "billa",
+      "store_id": 78,
+      "original_address": "",
+      "address": "Dlouhá třída 860/1a, 73601",
+      "city": "",
+      "source": "node/1744610464",
+      "method": "overpass-address-node-in-building",
+      "building": "way/32284802"
+    },
+    {
+      "chain": "billa",
+      "store_id": 79,
+      "original_address": "",
+      "address": "Patrice Lumumby 2444/1, 70030",
+      "city": "",
+      "source": "node/2108528885",
+      "method": "overpass-address-node-in-building",
+      "building": "way/69126350"
+    },
+    {
+      "chain": "billa",
+      "store_id": 80,
+      "original_address": "",
+      "address": "Mánesova 2159, Tachov, 34701",
+      "city": "Tachov",
+      "source": "node/2527135993",
+      "method": "overpass-address-node-in-building",
+      "building": "way/208280215"
+    },
+    {
+      "chain": "billa",
+      "store_id": 81,
+      "original_address": "",
+      "address": "1. máje 2117/8, 70900",
+      "city": "",
+      "source": "node/4278535580",
+      "method": "overpass-address-node-in-building",
+      "building": "way/429018457"
+    },
+    {
+      "chain": "billa",
+      "store_id": 84,
+      "original_address": "",
+      "address": "Hlučínská 1170, Ostrava, 70200",
+      "city": "Ostrava",
+      "source": "node/12718746301",
+      "method": "overpass-address-node-in-building",
+      "building": "way/667580880"
+    },
+    {
+      "chain": "billa",
+      "store_id": 86,
+      "original_address": "",
+      "address": "Kosmonautů 2109/7, 78901",
+      "city": "",
+      "source": "node/848256181",
+      "method": "overpass-address-node-in-building",
+      "building": "way/110418996"
+    },
+    {
+      "chain": "billa",
+      "store_id": 88,
+      "original_address": "",
+      "address": "Tkalcovská 350, 56002",
+      "city": "",
+      "source": "node/1993836374",
+      "method": "overpass-address-node-in-building",
+      "building": "way/62191324"
+    },
+    {
+      "chain": "billa",
+      "store_id": 89,
+      "original_address": "",
+      "address": "Ringhofferovo náměstí 550, 25168",
+      "city": "",
+      "source": "node/1432815021",
+      "method": "overpass-address-node-in-building",
+      "building": "way/258815956"
+    },
+    {
+      "chain": "billa",
+      "store_id": 90,
+      "original_address": "",
+      "address": "Pražská 256, 25401",
+      "city": "",
+      "source": "node/5301484592",
+      "method": "overpass-address-node-in-building",
+      "building": "way/565921289"
+    },
+    {
+      "chain": "billa",
+      "store_id": 93,
+      "original_address": "",
+      "address": "Rooseveltova 47, 53701",
+      "city": "",
+      "source": "node/2782483646",
+      "method": "overpass-address-node-in-building",
+      "building": "way/64927638"
+    },
+    {
+      "chain": "billa",
+      "store_id": 95,
+      "original_address": "",
+      "address": "Lorecká 655, Kutná Hora, 28401",
+      "city": "Kutná Hora",
+      "source": "node/2329516463",
+      "method": "overpass-address-node-in-building",
+      "building": "way/161890919"
+    },
+    {
+      "chain": "billa",
+      "store_id": 96,
+      "original_address": "",
+      "address": "Lidická 3047/50, 78701",
+      "city": "",
+      "source": "node/847984442",
+      "method": "overpass-address-node-in-building",
+      "building": "way/70946472"
+    },
+    {
+      "chain": "billa",
+      "store_id": 97,
+      "original_address": "",
+      "address": "Pražská 936, 25241",
+      "city": "",
+      "source": "node/12246441407",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1303530446"
+    },
+    {
+      "chain": "billa",
+      "store_id": 99,
+      "original_address": "",
+      "address": "Ruská 1919/7, 79201",
+      "city": "",
+      "source": "node/926346559",
+      "method": "overpass-address-node-in-building",
+      "building": "way/102583689"
+    },
+    {
+      "chain": "billa",
+      "store_id": 104,
+      "original_address": "",
+      "address": "Pražská 199, 53006",
+      "city": "",
+      "source": "node/8907074404",
+      "method": "overpass-address-node-in-building",
+      "building": "way/887985323"
+    },
+    {
+      "chain": "billa",
+      "store_id": 105,
+      "original_address": "",
+      "address": "Seifertova 160, 28002",
+      "city": "",
+      "source": "node/296824733",
+      "method": "overpass-address-node-in-building",
+      "building": "way/54103829"
+    },
+    {
+      "chain": "billa",
+      "store_id": 106,
+      "original_address": "",
+      "address": "Vavřenova 1172/12, 14200",
+      "city": "",
+      "source": "node/296498899",
+      "method": "overpass-address-node-in-building",
+      "building": "way/4845019"
+    },
+    {
+      "chain": "billa",
+      "store_id": 109,
+      "original_address": "",
+      "address": "Tilleho náměstí 793/1, 15200",
+      "city": "",
+      "source": "node/296808210",
+      "method": "overpass-address-node-in-building",
+      "building": "way/60599683"
+    },
+    {
+      "chain": "billa",
+      "store_id": 113,
+      "original_address": "",
+      "address": "Walterovo náměstí 329/3, 15800",
+      "city": "",
+      "source": "node/8010318169",
+      "method": "overpass-address-node-in-building",
+      "building": "way/488518174"
+    },
+    {
+      "chain": "billa",
+      "store_id": 114,
+      "original_address": "",
+      "address": "Walterovo náměstí 329/3, 15800",
+      "city": "",
+      "source": "node/8010318169",
+      "method": "overpass-address-node-in-building",
+      "building": "way/488518174"
+    },
+    {
+      "chain": "billa",
+      "store_id": 115,
+      "original_address": "",
+      "address": "Bohdalecká 1406/14, 10100",
+      "city": "",
+      "source": "node/296748503",
+      "method": "overpass-address-node-in-building",
+      "building": "way/38445550"
+    },
+    {
+      "chain": "billa",
+      "store_id": 120,
+      "original_address": "",
+      "address": "Českobrodská 920, 19012",
+      "city": "",
+      "source": "node/2815818570",
+      "method": "overpass-address-node-in-building",
+      "building": "way/199558367"
+    },
+    {
+      "chain": "billa",
+      "store_id": 122,
+      "original_address": "",
+      "address": "U staré cihelny 2808/8, 13000",
+      "city": "",
+      "source": "node/296661681",
+      "method": "overpass-address-node-in-building",
+      "building": "way/31551345"
+    },
+    {
+      "chain": "billa",
+      "store_id": 128,
+      "original_address": "",
+      "address": "Sokolovská 88/91, 18600",
+      "city": "",
+      "source": "node/296666861",
+      "method": "overpass-address-node-in-building",
+      "building": "way/49339664"
+    },
+    {
+      "chain": "billa",
+      "store_id": 131,
+      "original_address": "",
+      "address": "Poděbradská 1011/46a, 19000",
+      "city": "",
+      "source": "node/6035968328",
+      "method": "overpass-address-node-in-building",
+      "building": "way/665905870"
+    },
+    {
+      "chain": "billa",
+      "store_id": 138,
+      "original_address": "",
+      "address": "Argentinská ev.166/42, 17000",
+      "city": "",
+      "source": "node/9121924354",
+      "method": "overpass-address-node-in-building",
+      "building": "way/49336766"
+    },
+    {
+      "chain": "billa",
+      "store_id": 142,
+      "original_address": "",
+      "address": "Žacléřská 1040/1, 19700",
+      "city": "",
+      "source": "node/2829961147",
+      "method": "overpass-address-node-in-building",
+      "building": "way/184576669"
+    },
+    {
+      "chain": "billa",
+      "store_id": 145,
+      "original_address": "",
+      "address": "17. listopadu 1003, 51721",
+      "city": "",
+      "source": "way/62077229",
+      "method": "overpass-enclosing-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 147,
+      "original_address": "",
+      "address": "Čsl. armády 1534, 27101",
+      "city": "",
+      "source": "node/10138175497",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1207838281"
+    },
+    {
+      "chain": "billa",
+      "store_id": 151,
+      "original_address": "",
+      "address": "Stehelčeves 331, 27342",
+      "city": "",
+      "source": "node/11472551419",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1266708389"
+    },
+    {
+      "chain": "billa",
+      "store_id": 152,
+      "original_address": "",
+      "address": "Pionýrů 2025, Sokolov, 35601",
+      "city": "Sokolov",
+      "source": "node/2021459529",
+      "method": "overpass-address-node-in-building",
+      "building": "way/62096530"
+    },
+    {
+      "chain": "billa",
+      "store_id": 153,
+      "original_address": "",
+      "address": "třída Edvarda Beneše 1418/23, 50012",
+      "city": "",
+      "source": "node/296810919",
+      "method": "overpass-address-node-in-building",
+      "building": "way/50204584"
+    },
+    {
+      "chain": "billa",
+      "store_id": 161,
+      "original_address": "",
+      "address": "Nosačická 2112, 27401",
+      "city": "",
+      "source": "node/11737365679",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1305251354"
+    },
+    {
+      "chain": "billa",
+      "store_id": 163,
+      "original_address": "",
+      "address": "Platanová 596, Benátky nad Jizerou, 29471",
+      "city": "Benátky nad Jizerou",
+      "source": "node/2029046164",
+      "method": "overpass-address-node-in-building",
+      "building": "way/130884935"
+    },
+    {
+      "chain": "billa",
+      "store_id": 164,
+      "original_address": "",
+      "address": "Resslova 1810, Kraslice, 35801",
+      "city": "Kraslice",
+      "source": "node/2536988287",
+      "method": "overpass-address-node-in-building",
+      "building": "way/451749341"
+    },
+    {
+      "chain": "billa",
+      "store_id": 165,
+      "original_address": "",
+      "address": "Pražská 4296, 27601",
+      "city": "",
+      "source": "node/7684655115",
+      "method": "overpass-address-node-in-building",
+      "building": "way/739889396"
+    },
+    {
+      "chain": "billa",
+      "store_id": 166,
+      "original_address": "",
+      "address": "Mileny Hážové 1544, 29301",
+      "city": "",
+      "source": "node/10857787736",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1085450336"
+    },
+    {
+      "chain": "billa",
+      "store_id": 167,
+      "original_address": "",
+      "address": "Havlíčkova 888, 41117",
+      "city": "",
+      "source": "node/12981790536",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1493007180"
+    },
+    {
+      "chain": "billa",
+      "store_id": 168,
+      "original_address": "",
+      "address": "Kratochvílova 1991, Roudnice nad Labem, 41301",
+      "city": "Roudnice nad Labem",
+      "source": "node/2021349166",
+      "method": "overpass-address-node-in-building",
+      "building": "way/92141396"
+    },
+    {
+      "chain": "billa",
+      "store_id": 173,
+      "original_address": "",
+      "address": "Terezínská 1120, Lovosice, 41002",
+      "city": "Lovosice",
+      "source": "node/2317330229",
+      "method": "overpass-address-node-in-building",
+      "building": "way/182751012"
+    },
+    {
+      "chain": "billa",
+      "store_id": 175,
+      "original_address": "",
+      "address": "Chomutovská 1197, 43401",
+      "city": "",
+      "source": "node/2964747332",
+      "method": "overpass-address-node-in-building",
+      "building": "way/50260311"
+    },
+    {
+      "chain": "billa",
+      "store_id": 177,
+      "original_address": "",
+      "address": "Studentská 1651, Turnov, 51101",
+      "city": "Turnov",
+      "source": "node/669912091",
+      "method": "overpass-address-node-in-building",
+      "building": "way/95115124"
+    },
+    {
+      "chain": "billa",
+      "store_id": 181,
+      "original_address": "",
+      "address": "Masarykova 3124/32, Ústí nad Labem, 40001",
+      "city": "Ústí nad Labem",
+      "source": "node/296501073",
+      "method": "overpass-address-node-in-building",
+      "building": "way/92690014"
+    },
+    {
+      "chain": "billa",
+      "store_id": 182,
+      "original_address": "",
+      "address": "Krčínova 841/9, Ústí nad Labem, 40007",
+      "city": "Ústí nad Labem",
+      "source": "node/2363578075",
+      "method": "overpass-address-node-in-building",
+      "building": "way/92300745"
+    },
+    {
+      "chain": "billa",
+      "store_id": 183,
+      "original_address": "",
+      "address": "Ladova 3325/2a, Ústí nad Labem, 40011",
+      "city": "Ústí nad Labem",
+      "source": "node/2364427160",
+      "method": "overpass-address-node-in-building",
+      "building": "way/92509830"
+    },
+    {
+      "chain": "billa",
+      "store_id": 189,
+      "original_address": "",
+      "address": "Plzeňská 1700/9, Děčín, 40502",
+      "city": "Děčín",
+      "source": "way/55136710",
+      "method": "overpass-enclosing-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 190,
+      "original_address": "",
+      "address": "Legií 3157, 40747",
+      "city": "",
+      "source": "node/1208256777",
+      "method": "overpass-address-node-in-building",
+      "building": "way/55453027"
+    },
+    {
+      "chain": "billa",
+      "store_id": 191,
+      "original_address": "",
+      "address": "Třída 9. května 1651/70, 40801",
+      "city": "",
+      "source": "node/11093234887",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1148439405"
+    },
+    {
+      "chain": "albert",
+      "store_id": 2,
+      "original_address": "",
+      "address": "J. Palacha 3197/13, 69002",
+      "city": "",
+      "source": "node/3013642388",
+      "method": "overpass-address-node-in-building",
+      "building": "way/95799339"
+    },
+    {
+      "chain": "albert",
+      "store_id": 8,
+      "original_address": "",
+      "address": "Tyršova 12, 37856",
+      "city": "",
+      "source": "node/565488517",
+      "method": "overpass-address-node-in-building",
+      "building": "way/38904426"
+    },
+    {
+      "chain": "albert",
+      "store_id": 13,
+      "original_address": "",
+      "address": "Nádražní 537, 38601",
+      "city": "",
+      "source": "node/13588343918",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1324037466"
+    },
+    {
+      "chain": "albert",
+      "store_id": 17,
+      "original_address": "",
+      "address": "Záhlinická 1059, 76824",
+      "city": "",
+      "source": "node/2762918345",
+      "method": "overpass-address-node-in-building",
+      "building": "way/219336209"
+    },
+    {
+      "chain": "albert",
+      "store_id": 19,
+      "original_address": "",
+      "address": "Tovární 511, 76901",
+      "city": "",
+      "source": "node/2762997319",
+      "method": "overpass-address-node-in-building",
+      "building": "way/79729515"
+    },
+    {
+      "chain": "albert",
+      "store_id": 20,
+      "original_address": "",
+      "address": "Olomoucká 1394, 75201",
+      "city": "",
+      "source": "node/2820563806",
+      "method": "overpass-address-node-in-building",
+      "building": "way/152914298"
+    },
+    {
+      "chain": "albert",
+      "store_id": 21,
+      "original_address": "",
+      "address": "Rožmitálova 1812/5, Blansko, 67801",
+      "city": "Blansko",
+      "source": "node/403898237",
+      "method": "overpass-address-node-in-building",
+      "building": "way/253861232"
+    },
+    {
+      "chain": "albert",
+      "store_id": 22,
+      "original_address": "",
+      "address": "Soběslavská 3045, Tábor, 39005",
+      "city": "Tábor",
+      "source": "node/9781381887",
+      "method": "overpass-address-node-in-building",
+      "building": "way/464039349"
+    },
+    {
+      "chain": "albert",
+      "store_id": 26,
+      "original_address": "",
+      "address": "Opavská 1159/57, 74301",
+      "city": "",
+      "source": "node/9362805899",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1186764447"
+    },
+    {
+      "chain": "albert",
+      "store_id": 32,
+      "original_address": "",
+      "address": "Cihelní 1872/48, Hlučín, 74801",
+      "city": "Hlučín",
+      "source": "node/703663390",
+      "method": "overpass-address-node-in-building",
+      "building": "way/91149910"
+    },
+    {
+      "chain": "albert",
+      "store_id": 41,
+      "original_address": "",
+      "address": "Pražská 2284, 25082",
+      "city": "",
+      "source": "node/12150430745",
+      "method": "overpass-address-node-in-building",
+      "building": "way/1028176389"
+    },
+    {
+      "chain": "albert",
+      "store_id": 42,
+      "original_address": "",
+      "address": "Fajtlova 1090/1, 16100",
+      "city": "",
+      "source": "node/4945947994",
+      "method": "overpass-address-node-in-building",
+      "building": "way/27043597"
+    },
+    {
+      "chain": "lidl",
+      "store_id": 191,
+      "original_address": "",
+      "address": "náměstí Svobody 3316, 41501",
+      "city": "",
+      "source": "way/218063535",
+      "method": "overpass-enclosing-building"
+    },
+    {
+      "chain": "billa",
+      "store_id": 31,
+      "original_address": "",
+      "address": "náměstí Práce 2523, 76001",
+      "city": "",
+      "source": "node/1880744621",
+      "method": "overpass-address-node-in-building",
+      "building": "way/33903936"
+    },
+    {
+      "chain": "billa",
+      "store_id": 110,
+      "original_address": "",
+      "address": "Budějovická 1667/64, Praha, 14000",
+      "city": "Praha",
+      "source": "node/3280040757",
+      "method": "overpass-address-node-in-building",
+      "building": "way/321273937"
+    }
+  ],
+  "unresolved": [
+    {
+      "chain": "lidl",
+      "store_id": 2,
+      "objects": "way/301123078",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 19,
+      "objects": "way/1110390506",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 22,
+      "objects": "node/7847165714",
+      "candidates": [
+        "Kaštanová 579/76, Brno, 62000",
+        "Kaštanová 579/76, 62000"
+      ]
+    },
+    {
+      "chain": "lidl",
+      "store_id": 34,
+      "objects": "way/167957470",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 39,
+      "objects": "node/9085968728",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 45,
+      "objects": "way/1548559153",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 48,
+      "objects": "way/98864876",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 53,
+      "objects": "way/28511457",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 55,
+      "objects": "way/1388773663",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 56,
+      "objects": "node/10580970276",
+      "candidates": [
+        "Kafkova 465/35, 78301",
+        "Kafkova 465/37, 78301",
+        "Kafkova 465/39, 78301",
+        "Kafkova 465/43, 78301",
+        "Kafkova 465/45, 78301",
+        "Kafkova 465/47, 78301",
+        "Kafkova 465/41, 78301",
+        "Kafkova 465/41a, 78301",
+        "Kafkova 465/47a, 78301"
+      ]
+    },
+    {
+      "chain": "lidl",
+      "store_id": 80,
+      "objects": "way/61753617",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 81,
+      "objects": "node/2462218805",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 113,
+      "objects": "way/33197272",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 116,
+      "objects": "node/542947417",
+      "candidates": [
+        "Jírovcovo náměstí 1783/2, 14800",
+        "Vojtíškova 1783/2, 14800"
+      ]
+    },
+    {
+      "chain": "lidl",
+      "store_id": 125,
+      "objects": "way/31117227",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 130,
+      "objects": "node/7281811322",
+      "candidates": [
+        "Ostrovského 253/3, 15000",
+        "Stroupežnického 253/1, 15000",
+        "Radlická 253/5, 15000",
+        "Za Ženskými domovy 253/4, 15000",
+        "Stroupežnického 1/253, Praha, 150 00",
+        "Ostrovského 253, Praha 5, 150 00"
+      ]
+    },
+    {
+      "chain": "lidl",
+      "store_id": 133,
+      "objects": "node/1327593182",
+      "candidates": [
+        "Vinohradská 1630/190, 13000",
+        "Vinohradská 2405/190, 13000"
+      ]
+    },
+    {
+      "chain": "lidl",
+      "store_id": 135,
+      "objects": "node/7847804806",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 138,
+      "objects": "node/11463696531",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 140,
+      "objects": "node/14165427412",
+      "candidates": [
+        "Evropská 866/65, 16000",
+        "Evropská 866/63, 16000"
+      ]
+    },
+    {
+      "chain": "lidl",
+      "store_id": 141,
+      "objects": "node/13468290118",
+      "candidates": [
+        "Komunardů 1643/4, 17000",
+        "Tusarova 1643/40, 17000",
+        "Komunardů 1643/6, 17000"
+      ]
+    },
+    {
+      "chain": "lidl",
+      "store_id": 154,
+      "objects": "way/562511500",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 161,
+      "objects": "node/9524708278",
+      "candidates": [
+        "náměstí 28. října 1610/1, 50002",
+        "Dukelská třída 1713/7, Hradec Králové, 50002"
+      ]
+    },
+    {
+      "chain": "lidl",
+      "store_id": 163,
+      "objects": "way/50565099",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 173,
+      "objects": "node/3012374635",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 184,
+      "objects": "node/2126834132",
+      "candidates": []
+    },
+    {
+      "chain": "lidl",
+      "store_id": 198,
+      "objects": "node/1989864693",
+      "candidates": [
+        "Lípová 664/2, Liberec, 46001",
+        "Lípová 664/4, Liberec, 46001",
+        "Lípová 664/6, Liberec, 46001",
+        "Lípová 664/6a, Liberec, 46001",
+        "Lípová 664/6b, Liberec, 46001"
+      ]
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 1,
+      "objects": "way/460556086",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 2,
+      "objects": "node/1695267013",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 4,
+      "objects": "way/262168887",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 7,
+      "objects": "node/3768640294",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 9,
+      "objects": "node/14122885351",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 11,
+      "objects": "node/13958592305",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 15,
+      "objects": "node/10111762346",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 21,
+      "objects": "way/26594631",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 26,
+      "objects": "node/2616220254",
+      "candidates": [
+        "Olomoucká 4619/120, 79601",
+        "Konečná 4619/2, 79601"
+      ]
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 27,
+      "objects": "way/207571387",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 42,
+      "objects": "node/538423577",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 46,
+      "objects": "node/1292068001",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 57,
+      "objects": "way/48059058",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 58,
+      "objects": "way/257759176",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 59,
+      "objects": "way/60098055",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 60,
+      "objects": "way/227925785",
+      "candidates": []
+    },
+    {
+      "chain": "kaufland",
+      "store_id": 72,
+      "objects": "node/5618685231",
+      "candidates": [
+        "U Stadionu 1276, 29301",
+        "U stadionu 1276, Mladá Boleslav, 29301"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 5,
+      "objects": "node/14073014736",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 14,
+      "objects": "node/12273431862",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 15,
+      "objects": "node/12862481588",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 16,
+      "objects": "node/2595908049",
+      "candidates": [
+        "Čtvrť 1. máje 177, 68771",
+        "Čtvrť 1. máje 177, Bojkovice, 68771"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 18,
+      "objects": "node/9936958898",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 23,
+      "objects": "node/10082219759",
+      "candidates": [
+        "Nádražní 418/5, 60200",
+        "Nádražní 418/3, 60200",
+        "Nádražní 418/1, 60200",
+        "Nádražní 418/1, Brno"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 26,
+      "objects": "node/4243934692",
+      "candidates": [
+        "Kotlanova 2164/9, 62800",
+        "Kotlanova 2163/7, 62800",
+        "Kotlanova 2165/11, 62800"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 27,
+      "objects": "way/1494280983",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 28,
+      "objects": "way/747341443",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 29,
+      "objects": "node/1709795741",
+      "candidates": [
+        "Kubíčkova 1080/6, 63500",
+        "Kubíčkova 8, 635 00"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 30,
+      "objects": "node/7615104561",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 33,
+      "objects": "node/811022321",
+      "candidates": [
+        "náměstí Míru 174, Zlín, 760 01",
+        "náměstí Míru 174, 76001"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 37,
+      "objects": "node/1194699531",
+      "candidates": [
+        "Kolaříkova 1497/1, 62100",
+        "Kolaříkova 1497, Brno, 62100",
+        "Kolaříkova 1, Brno, 62100"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 39,
+      "objects": "way/93654297",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 49,
+      "objects": "node/1565842450",
+      "candidates": [
+        "Plumlovská 4210/104, 79604",
+        "Plumlovská 4210, 79601"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 59,
+      "objects": "node/1133601794",
+      "candidates": [
+        "8. května 465/24, 77900",
+        "28. října 465/6, 77900"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 60,
+      "objects": "node/685779307",
+      "candidates": [
+        "Hynaisova 554/11, 77900",
+        "Hynaisova 554, Olomouc, 77900"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 70,
+      "objects": "node/9742042661",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 73,
+      "objects": "node/11895343931",
+      "candidates": [
+        "U Věže 1806, 34901",
+        "U Věže 1806, Stříbro, 34901"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 76,
+      "objects": "node/14180381880",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 82,
+      "objects": "node/2450287124",
+      "candidates": [
+        "Masarykovo náměstí 3090/15, 70200",
+        "Masarykovo náměstí 3090/15, Ostrava - Moravská Ostrava, 70200",
+        "Masarykovo námestie 15, Ostrava, 70200"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 83,
+      "objects": "way/161119716",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 98,
+      "objects": "way/78774814",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 102,
+      "objects": "node/283619692",
+      "candidates": [
+        "Plovdivská 3426/7, 14300",
+        "Plovdivská 3426/9, 14300"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 108,
+      "objects": "node/7581142045",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 116,
+      "objects": "node/6061244163",
+      "candidates": [
+        "V olšinách 3138/104, 10000",
+        "V olšinách 3140/108, 10000",
+        "V olšinách 3139/106, 10000"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 117,
+      "objects": "node/11411640193",
+      "candidates": [
+        "Korunní 810/104, 10100",
+        "Korunní 104, Praha, 13000",
+        "Korunní 104, Praha, 10100",
+        "Korunní 810/104, Praha 10, 101 00"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 118,
+      "objects": "node/1719924580",
+      "candidates": [
+        "Karlovo náměstí 2097/9, Praha, 12000",
+        "Karlovo náměstí 2097/10, Praha, 12000",
+        "Karlovo náměstí 2097/10, 12000",
+        "Resslova 2097/12, 12000",
+        "Resslova 2097/14, 12000",
+        "Karlovo náměstí 2097/9, 12000",
+        "Karlovo náměstí 10, 11000",
+        "Karlovo náměstí 10, Praha 2, 12000",
+        "Karlovo náměstí 10, 12000"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 119,
+      "objects": "node/1977593516",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 123,
+      "objects": "node/794536582",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 124,
+      "objects": "way/45100655",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 125,
+      "objects": "node/308724912",
+      "candidates": [
+        "Na Petřinách 1945/55, 16200",
+        "Brunclíkova 1945/28, 16200",
+        "Bubeníčkova 1945/1, 16200",
+        "Na Petřinách 1945/55, Praha, 16200"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 126,
+      "objects": "node/1369322781",
+      "candidates": [
+        "Žukovského 888/2, 16100",
+        "Vlastina 888/34, Praha 6, 16100",
+        "Žukovského 888/2, Praha 6, 16100",
+        "Žukovského 888",
+        "Vlastina 888/34, 16100"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 127,
+      "objects": "relation/6437889",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 129,
+      "objects": "node/4810063172",
+      "candidates": [
+        "Evropská 11, Praha 6",
+        "Evropská 2758/11, 16000",
+        "Evropská 2758/11, Praha 6, 160 00",
+        "Evropská 2758/11, Praha, 16000"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 132,
+      "objects": "node/6237778880",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 133,
+      "objects": "way/33702380",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 135,
+      "objects": "node/1820676085",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 136,
+      "objects": "node/3166338390",
+      "candidates": [
+        "Jankovcova 1603/47a, 17000",
+        "Jankovcova 1603/47a, Praha, 17000"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 137,
+      "objects": "node/280948702",
+      "candidates": [
+        "Freyova 945/33, Praha, 19000",
+        "Freyova 945/35, Praha, 19000",
+        "Freyova 945/35, Praha 9, 190 00",
+        "Freyova 945/33, 19000",
+        "Freyova 945/35, 19000",
+        "Freyova 35, Praha, 19000",
+        "Freyova 945/35, Praha 9, 19000"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 139,
+      "objects": "node/4545422449",
+      "candidates": [
+        "Revoluční 1412, Šestajovice, 25092",
+        "Revoluční 1412, 25092"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 140,
+      "objects": "node/263891455",
+      "candidates": [
+        "Vysočanská 382/20, 19000",
+        "Jablonecká 382/1a, 19000",
+        "Vysočanská 382/20, Praha, 19000"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 141,
+      "objects": "node/9543367827",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 146,
+      "objects": "node/7547501345",
+      "candidates": [
+        "U Bažantnice 1506, 290 01",
+        "U Bažantnice 1506, Poděbrady, 29001"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 148,
+      "objects": "node/7141079465",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 154,
+      "objects": "node/11731418833",
+      "candidates": [
+        "Boleslavská 1901, Brandýs nad Labem-Stará Boleslav, 25001",
+        "Boleslavská 1901, 25001"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 155,
+      "objects": "node/6174708884",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 160,
+      "objects": "node/12620111054",
+      "candidates": [
+        "Rudolfa Diesela 508, Kozomín, 27745",
+        "Rudolfa Diesela 507, Kozomín, 27745",
+        "Rudolfa Diesela 277/45, Kozomín, 27745",
+        "Kozomín 508, 27745"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 162,
+      "objects": "way/24027189",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 170,
+      "objects": "way/836749365",
+      "candidates": []
+    },
+    {
+      "chain": "billa",
+      "store_id": 174,
+      "objects": "node/2374738426",
+      "candidates": [
+        "Chomutovská 1316, Most, 43401",
+        "Chomutovská 1316, 43401"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 179,
+      "objects": "node/1550799441",
+      "candidates": [
+        "Krkonošská 16, 54301",
+        "Krkonošská 16, Vrchlabí, 54301"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 180,
+      "objects": "node/2995677257",
+      "candidates": [
+        "Bílinská 3201/4, 40001",
+        "U Kostela 3491/2, Ústí nad Labem, 40001"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 184,
+      "objects": "node/7090420989",
+      "candidates": [
+        "Poštovní 25/9, Jablonec nad Nisou, 46601",
+        "Jehlářská 25/9, Jablonec nad Nisou, 46601"
+      ]
+    },
+    {
+      "chain": "billa",
+      "store_id": 188,
+      "objects": "node/3204840592",
+      "candidates": [
+        "Palachova 1404/2, Liberec, 46001",
+        "Palachova 1404, Liberec, 46090",
+        "Palachova 1404, Liberec, 46001"
+      ]
+    },
+    {
+      "chain": "albert",
+      "store_id": 3,
+      "objects": "node/2475373736",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 7,
+      "objects": "node/12651972966",
+      "candidates": [
+        "Vídeňská 815/89a, 63900",
+        "Vídeňská 291/89, 63900",
+        "Vídeňská 815/89a, Brno, 639 00"
+      ]
+    },
+    {
+      "chain": "albert",
+      "store_id": 9,
+      "objects": "node/11930867601",
+      "candidates": [
+        "Mečová 695/2, 60200",
+        "Mečová 2, Brno, 602 00",
+        "Mečová 2, Brno, 60200",
+        "Mečová 2, 60200"
+      ]
+    },
+    {
+      "chain": "albert",
+      "store_id": 10,
+      "objects": "node/12843694435",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 11,
+      "objects": "node/6180879686",
+      "candidates": [
+        "Modřínová 337, 67401",
+        "Modřínová 338, 67401"
+      ]
+    },
+    {
+      "chain": "albert",
+      "store_id": 12,
+      "objects": "node/13011876497",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 23,
+      "objects": "node/1828413229",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 28,
+      "objects": "node/11076779150",
+      "candidates": [
+        "Červené Vršky 2448, 25601",
+        "Červené Vršky 2448, Benešov, 25601"
+      ]
+    },
+    {
+      "chain": "albert",
+      "store_id": 30,
+      "objects": "node/9269049970",
+      "candidates": [
+        "Varenská 3309/50, 70200",
+        "Varenská 3309/50, Ostrava, 70200"
+      ]
+    },
+    {
+      "chain": "albert",
+      "store_id": 34,
+      "objects": "way/30811428",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 37,
+      "objects": "node/13338226174",
+      "candidates": [
+        "Obchodní 111, Čestlice, 25101",
+        "Obchodní 111, 25101"
+      ]
+    },
+    {
+      "chain": "albert",
+      "store_id": 38,
+      "objects": "way/32953949",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 39,
+      "objects": "node/486741799",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 40,
+      "objects": "node/12078827118",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 43,
+      "objects": "node/4601279491",
+      "candidates": []
+    },
+    {
+      "chain": "albert",
+      "store_id": 45,
+      "objects": "node/13841855283",
+      "candidates": []
+    }
+  ],
+  "overpass_snapshot": "2026-11-09T10:30:45Z"
+}

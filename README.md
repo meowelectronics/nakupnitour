@@ -22,7 +22,7 @@ npm run dev
 npm test
 ```
 
-`npm test` builds the actual Astro output and runs 59 browser scenarios,
+`npm test` builds the actual Astro output and runs 60 browser scenarios,
 including all 24 routes, GPX exports, playback, keyboard controls, responsive
 layouts, offline operation and invalid-data handling. Layouts include 1920px
 and 2560px desktops, with edge-to-edge viewport checks. It uses installed
@@ -66,3 +66,22 @@ are excluded. Mapped inventories are not guaranteed complete or current; some
 closed mapped locations are deliberately retained. Browser GPX exports contain
 display-simplified road tracks, not turn instructions. OpenStreetMap attribution
 and Natural Earth public-domain credits remain on the page.
+
+## Address verification
+
+`address-recovery.json` records 426 verified address additions/improvements
+and their OSM object provenance. These include address points inside shop
+buildings, addresses on enclosing buildings and current shop-object tags.
+The Overpass snapshot is 9 November 2026. Duplicate partial representations
+are consolidated; ambiguous multi-address buildings are not guessed.
+115 blank addresses remain unresolved in OSM. This is not a complete official
+store directory. Recovered OSM address data retains its ODbL license.
+
+`overpass-address-query.txt` can be pasted into https://overpass-turbo.eu/.
+The optional maintenance scripts in `tests/` recover and apply address
+metadata without changing store IDs, coordinates, route orders or road tracks.
+`recover-addresses.py` requires a local OSM extract, the original source
+inventories and the optional `osmium` Python package. `overpass-addresses.py`
+uses the standard library and caches its Overpass response locally (ignored
+by Git). `apply-addresses.mjs` rejects stale overrides; it is intended to run
+once on the corresponding pre-enrichment source.

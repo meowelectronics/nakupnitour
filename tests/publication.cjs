@@ -298,6 +298,26 @@ async function negative(name, mutation) {
     assert(await page.locator('#restart').evaluate(e => getComputedStyle(e).outlineStyle !== 'none'));
     await page.keyboard.press('Tab'); assert.equal(await page.evaluate(()=>document.activeElement.id), 'chain');
   });
+  await check('Recovered OSM addresses: exact provenance, destination display and GPX', async () => {
+    const recovery = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'address-recovery.json'), 'utf8'));
+    const mismatches = await page.evaluate(entries => entries.filter(entry => {
+      const feature = CHAINS[entry.chain].stores.features.find(f => f.properties.id === entry.store_id);
+      return !feature || feature.properties.address !== entry.address ||
+        feature.properties.address_source !== `https://www.openstreetmap.org/${entry.source}`;
+    }), recovery.recovered);
+    assert.deepEqual(mismatches, []);
+    assert.equal(recovery.recovered.length, 426);
+    await select('lidl');
+    await page.evaluate(() => {
+      const index = route.findIndex(s => s.id === 91);
+      progress = index > 0 ? index - .5 : 0;
+      update();
+    });
+    assert.match(await page.locator('#address').textContent(), /Sadová 918, Planá, 34815/);
+    assert.match(await page.locator('#destination').textContent(), /Planá/);
+    assert.deepEqual((await exported()).errors, []);
+    await select('lidl');
+  });
   for (const [width, height] of [[320,740],[390,844],[737,900],[1440,900],[1920,1080],[2560,1440]]) {
     await check(`Responsive ${width}x${height}: no horizontal overflow, reachable non-overlapping essential panels`, async () => {
       await page.setViewportSize({width,height}); await select('lidl'); await page.waitForTimeout(100);

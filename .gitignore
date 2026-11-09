@@ -1,6 +1,7 @@
 # build output
 dist/
 test-results/
+overpass-addresses.json
 # generated types
 .astro/
 
