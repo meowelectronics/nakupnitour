@@ -11,7 +11,7 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 .app{position:relative;width:100%;height:100dvh;min-height:680px;margin:auto;overflow:hidden;background:#ebe5d2}
 .topbar{position:absolute;z-index:3;top:22px;left:28px;right:28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{font:12px system-ui,sans-serif;letter-spacing:3px;text-transform:uppercase}.brand strong{font:italic 23px Georgia,serif;letter-spacing:0;display:block;margin-top:4px}
-.brand-logo{display:block;width:300px;max-width:100%;height:auto}.brand-logo[hidden],.brand-text[hidden]{display:none}
+.brand-logo{display:block;width:360px;max-width:100%;height:auto}.brand-logo[hidden],.brand-text[hidden]{display:none}
 .badge{font:10px system-ui,sans-serif;text-transform:uppercase;letter-spacing:1px;border:1px solid #b9ab8b;border-radius:20px;padding:8px 11px;background:#f5efdded}
 #map{width:100%;height:100%;display:block;touch-action:none;cursor:grab}#map:active{cursor:grabbing}
 .dashboard{position:absolute;top:104px;left:28px;width:440px;max-width:calc(100% - 56px);border:1px solid #c8ba95;border-radius:10px;background:#faf6e9f5;box-shadow:0 8px 26px #4f452018;overflow:hidden}
@@ -59,9 +59,9 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 @media(max-width:600px){.config{top:440px;right:65px;width:calc(100% - 81px);max-height:calc(100dvh - 450px);overflow:auto;padding:9px;font-size:10px}.config[open]{top:92px;z-index:7;max-height:calc(100dvh - 145px);width:calc(100% - 32px);right:16px}.config p{font-size:9px}}
 @media(max-width:600px){.brand{min-width:0;flex:1}.brand strong{white-space:normal;font-size:17px}.badge{max-width:95px;flex-shrink:0}.legend{bottom:225px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-@media(max-width:600px){.brand-logo{width:260px}}
+@media(max-width:600px){.brand-logo{width:312px}}
 @media(max-width:999px){.legend{bottom:calc(var(--controls-height,214px) + 52px)}}
-@media(min-width:1000px){.dashboard{top:108px}}
+@media(min-width:601px){.dashboard{top:118px}}
 .tip{top:calc(var(--dashboard-bottom,370px) + 12px)}
 @media(max-width:600px){.dashboard{top:92px}.dash-body{grid-template-columns:132px minmax(0,1fr);gap:12px;padding:14px 12px}#dial{width:100%}.distance{top:53px;font-size:30px}.distance-label{top:91px;font-size:8px}.gauge small{font-size:9px;margin:0}.stops strong{font-size:30px}.stats{padding:11px 5px}.stats div{padding:0 5px}.stats dt{font-size:7px}.stats dd{font-size:11px}.tip{top:calc(var(--dashboard-bottom,370px) + 10px)}}
 @media(max-width:600px){.map-tools{top:calc(var(--dashboard-bottom,370px) + 10px)}}
