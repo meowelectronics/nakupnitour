@@ -8,6 +8,8 @@
     "node": ">=22.23.4"
   },
   "scripts": {
+    "worker:dev": "node worker/dev.mjs",
+    "test:worker": "node --test worker/index.test.mjs",
     "brand": "node tests/sync-logo.mjs",
     "dev": "astro dev",
     "build": "astro build",

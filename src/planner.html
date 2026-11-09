@@ -42,6 +42,16 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 .distance-ticks{position:absolute;top:63px;left:0;right:0;pointer-events:none}
 .distance-tick{position:absolute;transform:translateX(-50%);white-space:nowrap;font:9px system-ui,sans-serif;color:#655e4e}
 .distance-tick:before{content:"";position:absolute;left:50%;top:-5px;height:4px;border-left:1px solid #9c937e}
+.distance-tick small{display:block;font:italic 9px Georgia,serif;margin-top:2px}
+.distance-milestones{position:absolute;inset:0;pointer-events:none}
+.checkpoint-dot{position:absolute;top:42px;width:24px;height:24px;transform:translateX(-50%);padding:0;border:0;background:transparent;z-index:3;pointer-events:auto}
+.checkpoint-dot:before{content:"";position:absolute;inset:7px;border-radius:50%;background:#c9a34b;border:2px solid #fff9e9;box-shadow:0 0 0 1px #947132}
+.checkpoint-bubble{position:absolute;top:112px;transform:translateX(-50%);max-width:100%;width:max-content;padding:8px 12px;border:1px solid #bc9a50;border-radius:10px;background:#faf6e9;box-shadow:0 4px 14px #302e2620;font:italic 14px Georgia,serif;color:#302e26;z-index:4;pointer-events:none}
+.checkpoint-bubble small{display:block;font:10px system-ui,sans-serif;color:#756b56;margin-bottom:3px}
+.checkpoint-bubble:before{content:"";position:absolute;top:-6px;left:var(--pointer-x,50%);width:10px;height:10px;background:#faf6e9;border-left:1px solid #bc9a50;border-top:1px solid #bc9a50;transform:translateX(-50%) rotate(45deg)}
+.controls .distance-rail{height:166px}
+.distance-bar{position:relative}
+.controls .distance-caption{position:absolute;top:86px;left:24px;right:24px}
 .distance-caption{display:flex;justify-content:space-between;gap:8px;font:10px system-ui,sans-serif;color:#655e4e}
 @media(max-width:600px){.distance-bar{padding:0 16px}.distance-tick{font-size:8px}.cart-marker{width:62px}}
 .footer{position:absolute;bottom:10px;left:28px;right:28px;font:9px system-ui,sans-serif;display:flex;justify-content:space-between;gap:14px;color:#625d50}.footer a{color:inherit}
@@ -69,6 +79,24 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 @media(max-width:360px){.app{min-height:940px}}
 .store-dot:focus-visible{outline:2px solid #155e91;outline-offset:3px}
 .mobile-only{display:none}
+.topbar{padding-right:60px}
+#mobile-menu-toggle{display:block;position:absolute;z-index:9;right:28px;top:26px;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:#faf6e9;font-size:23px}
+#mobile-menu{position:absolute;z-index:8;right:28px;top:78px;width:320px;padding:12px;background:#faf6e9;border:1px solid #c8ba95;border-radius:15px;box-shadow:0 8px 25px #302e2625}
+#mobile-menu[hidden]{display:none}
+.mobile-options{display:grid;gap:8px}.mobile-options .setting{display:grid;gap:5px;font:12px system-ui,sans-serif}
+.mobile-options select{width:100%;height:44px;border:1px solid #c8ba95;border-radius:8px;background:#fffdf6;padding:4px}
+.mobile-actions{display:flex;gap:10px;margin-top:8px}.mobile-actions button{min-height:44px;margin:0;padding:0 12px;border:1px solid var(--line);border-radius:8px}
+.controls{display:flex;align-items:flex-start;gap:14px;background:rgba(250,246,233,.22);border-color:rgba(255,255,255,.22);box-shadow:0 5px 18px #302e261f;backdrop-filter:blur(2px)}
+.controls .control-top{flex:0 0 auto;margin-top:33.5px}.controls .control-top>.spacer{display:none}
+.controls .distance-bar{flex:1;min-width:0;margin-top:0}.controls .mobile-route{display:none}
+.branik-option{display:flex;align-items:center;gap:10px;min-height:44px;font:14px system-ui,sans-serif}
+.branik-option input{width:20px;height:20px;accent-color:#245a81}
+#branik-status{font:11px/1.5 system-ui,sans-serif;color:#655e4e;margin:4px 0}
+.branik-pin{pointer-events:none}
+#branik-notice{position:absolute;z-index:2;bottom:calc(var(--controls-height,150px) + 32px);left:50%;transform:translateX(-50%);background:#faf6e9;border:1px solid #c8ba95;border-radius:8px;padding:5px 10px;font:11px system-ui,sans-serif;pointer-events:none}
+.branik-pin image{animation:branik-pulse 3.8s ease-in-out infinite}
+@keyframes branik-pulse{0%,100%{opacity:1}50%{opacity:.48}}
+@media(prefers-reduced-motion:reduce){.branik-pin image{animation:none}}
 @media(max-width:600px), (max-width:999px) and (max-height:500px){
  .app{height:100dvh;min-height:0}
  .topbar{top:0;left:0;right:0;height:64px;padding:8px 68px 8px 12px;background:#faf6e9f5;border-bottom:1px solid var(--line)}
@@ -86,10 +114,14 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
  .dashboard.expanded{max-height:calc(100dvh - var(--controls-height,150px) - 100px);overflow:auto}
  .tip,.legend,.footer{display:none}
  .controls{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));padding:10px 14px;border-radius:15px}
+ .controls .control-top{margin-top:13.5px}
  .control-top{flex-wrap:nowrap;gap:14px}.play{width:44px;height:44px}.mobile-route{font:16px Georgia,serif}.mobile-route small{display:block;font:10px system-ui,sans-serif;letter-spacing:1px;text-transform:uppercase;color:#655e4e;margin-bottom:4px}
  .control-top>.spacer{display:none}
  .mobile-credits{font:9px system-ui,sans-serif;color:#655e4e;margin-top:8px;text-align:center}.mobile-credits a{color:inherit}
- .distance-bar{margin-top:0;padding:0 12px}.distance-rail{height:50px}.distance-track{top:32px}.cart-marker{height:37px;width:48px;top:0}.distance-rail input{top:21px;height:28px}.distance-ticks{display:none}.distance-caption{font-size:11px}
+ .distance-bar{margin-top:0;padding:0 12px}.controls .distance-rail{height:150px}.distance-track{top:32px}.cart-marker{height:37px;width:48px;top:0}.distance-rail input{top:21px;height:28px}.distance-ticks{display:block;top:44px}.controls .distance-caption{top:66px;left:12px;right:12px;font-size:10px}
+ .checkpoint-dot{top:23px}.checkpoint-bubble{top:93px;font-size:12px}
+ .controls .mobile-credits{position:absolute;bottom:0;left:0;right:0}
+ #mobile-menu{width:auto}
  .map-tools{top:auto;bottom:calc(var(--controls-height,130px) + 32px + env(safe-area-inset-bottom));right:12px;gap:6px}
  .map-tools button{width:44px;height:44px}.map-tools #follow{display:none}
  #mobile-menu{position:absolute;z-index:8;top:68px;left:10px;right:10px;padding:12px;background:#faf6e9;border:1px solid #c8ba95;border-radius:15px;box-shadow:0 8px 25px #302e2625;max-height:calc(100dvh - var(--controls-height,140px) - 100px);overflow:auto}
@@ -108,6 +140,31 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
  .dashboard{top:64px;width:250px}.controls{left:280px}.map-tools{bottom:auto;top:64px;right:12px;flex-direction:row}.map-tools button{width:44px;height:44px}
  #mobile-menu{top:60px;left:auto;width:min(460px,calc(100% - 20px))}
 }
+#mobile-menu-toggle,.map-tools button{display:inline-flex;align-items:center;justify-content:center;padding:0;line-height:1}
+#mobile-menu-toggle svg,.map-tools button svg{display:block;flex-shrink:0}
+@media(min-width:1000px),(min-width:601px) and (min-height:501px){.map-tools{right:28px;width:44px;align-items:center}}
+#mobile-menu{width:340px;padding:22px;border:1px solid #c8ba9599;border-radius:20px;background:#faf6e9f0;box-shadow:0 12px 36px #302e2621;backdrop-filter:blur(16px);font-family:system-ui,sans-serif;max-height:calc(100dvh - 100px);overflow:auto}
+.menu-heading{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid #d9cfb480}
+.menu-heading span{display:block;color:#245a81;font-size:9px;font-weight:650;letter-spacing:2px;margin-bottom:5px}
+.menu-heading strong{font:italic 24px Georgia,serif;color:#302e26}
+#mobile-menu .mobile-options{display:grid;grid-template-columns:1fr;gap:15px}
+#mobile-menu .setting{display:grid;gap:7px;min-width:0;font:500 11px system-ui,sans-serif;color:#756b56}
+#mobile-menu .setting select{display:block;width:100%;max-width:none;min-width:0;margin:0;height:46px;padding:0 34px 0 13px;border:1px solid #d9cfb4;border-radius:11px;background-color:#ffffff8c;font:500 13px system-ui,sans-serif;color:#302e26}
+#mobile-menu .mobile-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+#mobile-menu .mobile-actions button{height:44px;border-radius:11px;font:500 12px system-ui,sans-serif;text-decoration:none;background:transparent;color:#245a81;border:1px solid #245a8130}
+#mobile-menu #export{background:#245a81;color:#faf6e9;border-color:#245a81}
+#mobile-menu .branik-option{display:flex;flex-direction:row-reverse;justify-content:space-between;gap:12px;min-height:44px;margin-top:18px;padding-top:14px;border-top:1px solid #d9cfb480;font:600 13px system-ui,sans-serif;color:#302e26}
+#mobile-menu #branik{appearance:none;width:38px;height:22px;border:1px solid #c8ba95;border-radius:20px;background:#d9cfb4;position:relative;margin:0;flex-shrink:0}
+#mobile-menu #branik:before{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fffdf6;box-shadow:0 1px 3px #302e2630}
+#mobile-menu #branik:checked{background:#245a81;border-color:#245a81}
+#mobile-menu #branik:checked:before{transform:translateX(16px)}
+#mobile-menu #branik:disabled{opacity:.5;cursor:not-allowed}
+#mobile-menu #branik-status{font:11px/1.6 system-ui,sans-serif;color:#756b56;margin:4px 0 0}
+@media(max-width:600px), (max-width:999px) and (max-height:500px){
+ #mobile-menu{width:auto;padding:18px;max-height:calc(100dvh - var(--controls-height,150px) - 90px)}
+ .menu-heading{padding-bottom:12px;margin-bottom:12px}
+ #mobile-menu .mobile-options{gap:10px}
+}
 </style>
 </head>
 <body>
@@ -118,11 +175,14 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 <rect width="1100" height="740" fill="#eee8d5" filter="url(#paper)"/>
 <g id="geography"></g><g id="cities"></g><path id="remaining" fill="none" stroke="#9b9078" stroke-opacity=".22" stroke-width="1" vector-effect="non-scaling-stroke"/>
 <g id="dots"></g><path id="trail" fill="none" stroke="#bc312a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<g id="branik-pins" aria-hidden="true"></g>
+ fill="none" stroke="#bc312a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
 <circle id="halo" r="12" fill="#bf3328" opacity=".18" filter="url(#glow)"/><circle id="traveler" r="5" fill="#fff9eb" stroke="#bc312a" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
 </svg>
 <div class="topbar"><div class="brand"><img id="brand-logo" class="brand-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDEyMDAgMjgwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzY3JpcHRpb24iPg0KICA8dGl0bGUgaWQ9InRpdGxlIj5OYWt1cG5pVG91ci5jejwvdGl0bGU+DQogIDxkZXNjIGlkPSJkZXNjcmlwdGlvbiI+QSBDemVjaCBzaG9wcGluZyBjYXJ0IGFuZCB0b3VyaW5nIGJhZGdlIHdpdGggdGhlIE5ha3VwbmlUb3VyLmN6IHdvcmRtYXJrLjwvZGVzYz4NCiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjQ1YTgxIj4NCiAgICA8cGF0aCBkPSJNMjI1IDIxNGExMDggMTA4IDAgMSAwLTE2OCAwIiBzdHJva2Utd2lkdGg9IjQiLz4NCiAgICA8cGF0aCBkPSJNMjE3IDIwN2E5NyA5NyAwIDEgMC0xNTIgMCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogICAgPHBhdGggZD0iTTYwIDIyNmgxNTYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iMyA5Ii8+DQogIDwvZz4NCiAgPHBhdGggZD0iTTc4IDEwNEg5OEwxMTUgMTcySDE5M0wyMTAgMTIxSDEwM00xMTAgMTQ1SDIwMk0xMjUgMTIyTDEzMiAxNzFNMTUxIDEyMkwxNTUgMTcxTTE3OSAxMjJMMTc4IDE3MU0xMTUgMTcyTDEwOSAxODhIMTk0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNDVhODEiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQogIDxnIGZpbGw9IiNmYWY2ZTkiIHN0cm9rZT0iIzI0NWE4MSIgc3Ryb2tlLXdpZHRoPSI2Ij4NCiAgICA8Y2lyY2xlIGN4PSIxMjUiIGN5PSIyMDMiIHI9IjEwIi8+PGNpcmNsZSBjeD0iMTgxIiBjeT0iMjAzIiByPSIxMCIvPg0KICA8L2c+DQogIDxwYXRoIGQ9Ik0xMzUgMTE5TDEyNiA4M1ExMjUgNzIgMTMzIDcyUTE0MSA3MiAxNDIgODFMMTUzIDExOSIgZmlsbD0iI2Q5YjQ3NyIgc3Ryb2tlPSIjOWU3OTQ0IiBzdHJva2Utd2lkdGg9IjMiLz4NCiAgPHBhdGggZD0iTTEzMCA4OGwxMS0zbS03IDE0bDEwLTMiIHN0cm9rZT0iI2ZhZjZlOSIgc3Ryb2tlLXdpZHRoPSIzIi8+DQogIDxwYXRoIGQ9Ik0xNjUgMTE5Vjg4SDE4NlYxMTkiIGZpbGw9IiNmYWY2ZTkiIHN0cm9rZT0iIzI0NWE4MSIgc3Ryb2tlLXdpZHRoPSIzIi8+DQogIDxwYXRoIGQ9Ik0xNjUgODhsMTAtOSAxMSA5IiBmaWxsPSIjMjQ1YTgxIi8+DQogIDxwYXRoIGQ9Ik0xMDUgMTA1TDkxIDU2IiBzdHJva2U9IiMyNDVhODEiIHN0cm9rZS13aWR0aD0iMyIvPg0KICA8cGF0aCBkPSJNOTIgNTdMMTI3IDYzTDEyMiA4Nkw5OSA4MFoiIGZpbGw9IiNmYWY2ZTkiLz4NCiAgPHBhdGggZD0iTTk1IDY5TDEyNCA3NEwxMjIgODZMOTkgODBaIiBmaWxsPSIjYmIzMDI5Ii8+DQogIDxwYXRoIGQ9Ik05MiA1N0wxMTAgNzFMOTkgODBaIiBmaWxsPSIjMjQ1YTgxIi8+DQogIDxnIGZpbGw9IiMyNDVhODEiPjxjaXJjbGUgY3g9IjQ5IiBjeT0iMTU4IiByPSIzIi8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iMTU4IiByPSIzIi8+PC9nPg0KICA8dGV4dCB4PSIyODQiIHk9IjYyIiBmaWxsPSIjNjU1ZTRlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgbGV0dGVyLXNwYWNpbmc9IjYiPk1BTCYjeGMxOyBaRU0mI3gxMWE7LiBWRUxLJiN4YzE7IE4mI3hjMTtLVVBOJiN4Y2Q7IFRPVVIuPC90ZXh0Pg0KICA8dGV4dCB4PSIyNzgiIHk9IjE1OSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsICdUaW1lcyBOZXcgUm9tYW4nLCBzZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSI4NyIgbGV0dGVyLXNwYWNpbmc9Ii0zIj48dHNwYW4gZmlsbD0iIzI0NWE4MSI+TmFrdXBuaTwvdHNwYW4+PHRzcGFuIGZpbGw9IiNiYjMwMjkiPlRvdXI8L3RzcGFuPjx0c3BhbiBmaWxsPSIjMjQ1YTgxIiBmb250LXNpemU9IjU1IiBsZXR0ZXItc3BhY2luZz0iLTEiPi5jejwvdHNwYW4+PC90ZXh0Pg0KICA8cGF0aCBkPSJNMjg2IDE4OEgxMTE0IiBzdHJva2U9IiNkOWNmYjQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICA8dGV4dCB4PSIyODYiIHk9IjIzMCIgZmlsbD0iIzY1NWU0ZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjMiIGxldHRlci1zcGFjaW5nPSIyIj5LYSYjeDE3ZTtkJiN4ZmQ7IG9iY2hvZC4gSmVkbm8gZG9icm9kcnUmI3gxN2U7c3R2JiN4ZWQ7LjwvdGV4dD4NCjwvc3ZnPg0K" width="1200" height="280" alt="NakupniTour.cz — Každý obchod. Jedno dobrodružství."></div><span class="badge" id="route-badge"></span></div>
 <button id="mobile-menu-toggle" class="mobile-only" aria-label="Route options" aria-expanded="false" aria-controls="mobile-menu">☰</button>
-<aside id="mobile-menu" hidden aria-label="Route options"><div class="mobile-options"></div><div class="mobile-actions"></div></aside>
+<aside id="mobile-menu" hidden aria-label="Route options"><div class="menu-heading"><span>PLÁN CESTY</span><strong>Nastavení tour</strong></div><div class="mobile-options"></div><div class="mobile-actions"></div><label class="branik-option"><input id="branik" type="checkbox" aria-describedby="branik-status">Branik</label><p id="branik-status" role="status">Branch-matched advertised offers only; stock is not guaranteed.</p></aside>
+<div id="branik-notice" hidden>Branik demo · sample offers, not actual availability</div>
 <section class="dashboard" aria-label="Journey dashboard">
 <span class="mobile-only mobile-distance"><span id="mobile-km">0</span> <small>km</small></span>
 <button id="cockpit-toggle" class="mobile-only" aria-label="Expand cockpit" aria-expanded="false">⌄</button>
@@ -158,6 +218,8 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 </g></svg>
 <input id="scrub" type="range" min="0" max="1" step="any" value="0" aria-label="Journey distance">
 <div id="distance-ticks" class="distance-ticks" aria-hidden="true"></div>
+<div id="distance-milestones" class="distance-milestones"></div>
+<div id="checkpoint-bubble" class="checkpoint-bubble" role="status" hidden></div>
 </div>
 <div class="distance-caption"><span id="distance-progress"></span><span id="scrub-label"></span></div>
 <div class="mobile-only mobile-credits">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a></div>
@@ -233,15 +295,45 @@ function buildRoute(){
   dot.append(svgEl("title",{},`Stop ${index+1}: ${s.address||chainName+"; address missing"}`));
   const select=()=>{pause();progress=index;update();};dot.addEventListener("click",select);dot.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select();}});$("dots").append(dot);
  });
- $("scrub").max=total;buildDistanceTicks();setFollowing(false);fit();update();
+ $("scrub").max=total;buildDistanceTicks();setFollowing(false);fit();update();renderBranikPins();
 }
 function buildDistanceTicks(){
- const magnitude=10**Math.floor(Math.log10(total/4));
- const step=[1,2,2.5,5,10].map(n=>n*magnitude).find(n=>n>=total/4);
- const values=[0];for(let km=step;km<total-step*.35;km+=step)values.push(km);values.push(total);
+ const width=$("distance-rail").getBoundingClientRect().width;
+ const intervals=Math.max(2,Math.min(10,Math.floor(width/70)));
+ const magnitude=10**Math.floor(Math.log10(total/intervals));
+ const step=[1,2,2.5,5,10].map(n=>n*magnitude).reduce((a,b)=>Math.abs(a-total/intervals)<Math.abs(b-total/intervals)?a:b);
+ const values=[0];for(let km=step;km<total-step*.65;km+=step)values.push(km);values.push(total);
  $("distance-ticks").replaceChildren(...values.map(km=>{
   const tick=document.createElement("span");tick.className="distance-tick";tick.style.left=(km/total*100)+"%";tick.textContent=num(km)+" km";return tick;
  }));
+ const milestones=[
+  [0,"Jen pro rohlíky"],[42,"Smysl nákupu"],[404,"Rozum nenalezen"],
+  [666,"Pekelná sleva"],[1337,"Košík elite"],
+  [1989,"Svoboda u pokladny"],[2222,"Účtenka do vesmíru"],
+ ].filter(([km])=>km<total*.72);
+ milestones.push([total*.72,"Ještě jeden Braňas"],[total,"Hlásit se v Bohnicích"]);
+ const visible=milestones.filter(([km],index)=>index===milestones.length-1||(index>0&&km/total*width>=24));
+ let edge=-Infinity;
+ const dots=visible.filter(([km],index)=>{
+  const position=km/total*width;
+  if(index!==visible.length-1&&(position<edge+26||position>width-26))return false;
+  edge=position;return true;
+ }).map(([km,label])=>{
+  const dot=document.createElement("button");dot.type="button";dot.className="checkpoint-dot";dot.style.left=(km/total*100)+"%";
+  dot.dataset.km=km;dot.dataset.label=label;dot.setAttribute("aria-label",`${num(km)} km · ${label}`);
+  const show=()=>showCheckpoint(dot);
+  dot.addEventListener("pointerenter",show);dot.addEventListener("focus",show);dot.addEventListener("click",show);
+  return dot;
+ });
+ $("distance-milestones").replaceChildren(...dots);$("checkpoint-bubble").hidden=true;
+}
+function showCheckpoint(dot){
+ const bubble=$("checkpoint-bubble");
+ const caption=document.createElement("small");caption.textContent=`${num(Number(dot.dataset.km))} km · checkpoint`;
+ bubble.replaceChildren(caption,document.createTextNode(dot.dataset.label));bubble.hidden=false;
+ const rail=$("distance-rail").getBoundingClientRect(),rect=dot.getBoundingClientRect(),half=bubble.getBoundingClientRect().width/2;
+ const anchor=rect.left+rect.width/2-rail.left,center=Math.max(half,Math.min(rail.width-half,anchor));
+ bubble.style.left=center+"px";bubble.style.setProperty("--pointer-x",(anchor-center+half)+"px");
 }
 function seekDistance(km){
  if(km>=total-1e-8){progress=route.length-1;return;}
@@ -293,7 +385,62 @@ function update(){
  $("status").textContent=done?`All ${stores.length} mapped ${chainName} locations reached${closed?`, including ${closed} marked closed`:""}. Best-found road route, not proven fastest.`:`${playing?"Playing":"Paused"} · ${chainName} road route · ${OPTIMIZED.metadata.start_city||"free"} start${closed?`, ${closed} closed location(s)`:""} · no live traffic.`;
  if(following){view[0]=point[0]-view[2]/2;view[1]=point[1]-view[3]/2;setView();}
 }
-function setView(){$("map").setAttribute("viewBox",view.join(" "));}
+function setView(){
+ $("map").setAttribute("viewBox",view.join(" "));positionBranikPins();
+}
+let branikData=null,branikRequest=0,branikTimer=null;
+function positionBranikPins(){
+ const matrix=$("map").getScreenCTM();if(!matrix)return;
+ for(const pin of $("branik-pins").children){
+  pin.setAttribute("transform",`translate(${pin.dataset.x} ${pin.dataset.y}) scale(${1/matrix.a})`);
+ }
+}
+function renderBranikPins(){
+ $("branik-pins").replaceChildren();
+ $("branik-notice").hidden=true;
+ if(!$("branik").checked||!branikData)return;
+ const now=Date.now();
+ if(Date.parse(branikData.expiresAt)<=now)return;
+ const ids=new Set(branikData.offers.filter(o=>o.chain===chainSlug&&Date.parse(o.validFrom)<=now&&Date.parse(o.validUntil)>now).map(o=>o.storeId));
+ for(const store of route.filter(store=>ids.has(store.id))){
+  const [x,y]=xy(store),pin=svgEl("g",{class:"branik-pin"});
+  pin.dataset.x=x;pin.dataset.y=y;pin.dataset.storeId=store.id;
+  const image=svgEl("image",{href:new URL("./branik-pin.png",location.href).href,x:-35,y:-87,width:70,height:87});
+  pin.append(image);$("branik-pins").append(pin);
+ }
+ $("branik-notice").hidden=false;
+ $("branik-status").textContent=`Demo: ${$("branik-pins").children.length} matched ${chainName} branch(es). Sample data, not live Kupi offers.`;
+ positionBranikPins();
+}
+function validateBranikOffers(data){
+ const date=value=>typeof value==="string"&&Number.isFinite(Date.parse(value));
+ const now=Date.now();
+ if(data?.version!==1||data.mode!=="demo"||!date(data.checkedAt)||!date(data.expiresAt)||Date.parse(data.checkedAt)>now+60000||Date.parse(data.expiresAt)<=now||Date.parse(data.expiresAt)-Date.parse(data.checkedAt)>21600000||!Array.isArray(data.offers))throw new Error("Invalid or expired offer response.");
+ for(const offer of data.offers){
+  if(!CHAINS[offer.chain]||!Number.isSafeInteger(offer.storeId)||!CHAINS[offer.chain].stores.features.some(s=>s.properties.id===offer.storeId)||offer.product!=="Branik"||offer.volumeLitres!==2||offer.packaging!=="PET"||offer.scope!=="branch"||!date(offer.validFrom)||!date(offer.validUntil)||Date.parse(offer.validUntil)<=Date.parse(offer.validFrom))throw new Error("Offer lacks a valid Braník 2L PET product or an explicit branch match.");
+ }
+ return data;
+}
+async function loadBranikOffers(){
+ const request=++branikRequest;
+ clearTimeout(branikTimer);branikData=null;renderBranikPins();
+ if(!$("branik").checked){$("branik-status").textContent="Branik off. Branch-matched advertised offers only; stock is not guaranteed.";return;}
+ $("branik-status").textContent="Loading branch-matched offers…";
+ try{
+  const response=await fetch("/api/branik-offers",{cache:"no-store",signal:AbortSignal.timeout(10000)});
+  if(!response.ok)throw new Error(`Offer service returned HTTP ${response.status}.`);
+  const data=validateBranikOffers(await response.json());
+  if(request!==branikRequest||!$("branik").checked)return;
+  branikData=data;renderBranikPins();
+  const boundaries=[Date.parse(data.expiresAt),...data.offers.flatMap(o=>[Date.parse(o.validFrom),Date.parse(o.validUntil)])].filter(time=>time>Date.now());
+  branikTimer=setTimeout(loadBranikOffers,Math.max(1,Math.min(60000,...boundaries.map(time=>time-Date.now()))));
+ }catch(error){
+  if(request!==branikRequest)return;
+  console.error("Branik offers failed:",error);
+  $("branik").checked=false;branikData=null;renderBranikPins();
+  $("branik-status").textContent=`Branik unavailable: ${error.message} Start the local Worker or try again.`;
+ }
+}
 function fit(){
  if(mobileLayout.matches){
   const app=document.querySelector(".app").getBoundingClientRect(),dashboard=document.querySelector(".dashboard").getBoundingClientRect(),controls=document.querySelector(".controls").getBoundingClientRect();
@@ -316,13 +463,15 @@ function initializeMobileLayout(){
  const synchronize=()=>{
   setMobileMenu(false);
   for(const {element,marker} of origins){
-   if(mobileLayout.matches)(element.classList.contains("setting")?options:element.classList.contains("footer")||element.id==="status"?menu:actions).append(element);
+   if(mobileLayout.matches||element.classList.contains("setting")||["restart","export"].includes(element.id))(element.classList.contains("setting")?options:element.classList.contains("footer")||element.id==="status"?menu:actions).append(element);
    else marker.after(element);
   }
   if(!following)fit();update();
  };
  $("mobile-menu-toggle").addEventListener("click",()=>setMobileMenu(menu.hidden));
  document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!menu.hidden)setMobileMenu(false,true);});
+ document.addEventListener("keydown",event=>{if(event.key==="Escape")$("checkpoint-bubble").hidden=true;});
+ document.addEventListener("pointerdown",event=>{if(!event.target.closest(".checkpoint-dot"))$("checkpoint-bubble").hidden=true;});
  document.addEventListener("pointerdown",event=>{if(!menu.hidden&&!menu.contains(event.target)&&!$("mobile-menu-toggle").contains(event.target))setMobileMenu(false);});
  $("cockpit-toggle").addEventListener("click",()=>{
   const expanded=document.querySelector(".dashboard").classList.toggle("expanded");
@@ -407,11 +556,24 @@ function validateData(){
 }
 try{
  validateData();
+ const icons={
+  "mobile-menu-toggle":'<path d="M5 6h14M5 12h14M5 18h14"/>',
+  "zoom-in":'<path d="M5 12h14M12 5v14"/>',"zoom-out":'<path d="M5 12h14"/>',
+  fit:'<path d="m4 10 8-7 8 7M6 9v12h12V9M10 21v-7h4v7"/>',
+  follow:'<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>'
+ };
+ for(const [id,body] of Object.entries(icons)){
+  $(id).innerHTML=`<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
+ }
+ if(!["localhost","127.0.0.1","[::1]"].includes(location.hostname)){
+  $("branik").disabled=true;
+  $("branik-status").textContent="Coming soon: an approved offer feed is not connected. No live availability is shown.";
+ }
  chainName=CHAINS.lidl.name;DATA=CHAINS.lidl.stores;OPTIMIZED=CHAINS.lidl.optimized;
  stores=DATA.features.map(f=>({...f.properties,lon:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}));
  drawMap();buildRoute();initializeMobileLayout();
  const controls=document.querySelector(".controls");
- new ResizeObserver(()=>{document.querySelector(".app").style.setProperty("--controls-height",controls.offsetHeight+"px");if(mobileLayout.matches&&!following)fit();}).observe(controls);
+ new ResizeObserver(()=>{document.querySelector(".app").style.setProperty("--controls-height",controls.offsetHeight+"px");buildDistanceTicks();if(mobileLayout.matches&&!following)fit();}).observe(controls);
  const dashboard=document.querySelector(".dashboard");
  new ResizeObserver(()=>{document.querySelector(".app").style.setProperty("--dashboard-bottom",(dashboard.offsetTop+dashboard.offsetHeight)+"px");if(mobileLayout.matches&&!following)fit();}).observe(dashboard);
  $("play").addEventListener("click",()=>playing?(pause(),update()):play());
@@ -424,6 +586,7 @@ try{
  $("fit").addEventListener("click",()=>{setFollowing(false);fit();});
  $("follow").addEventListener("click",()=>{setFollowing(!following);if(following){zoom(.5);update();}});
  $("export").addEventListener("click",exportRoute);
+ $("branik").addEventListener("change",loadBranikOffers);
  $("map").addEventListener("wheel",e=>{e.preventDefault();zoom(e.deltaY<0?.9:1/.9);},{passive:false});
  $("map").addEventListener("pointerdown",e=>{
   if(e.target.closest(".store-dot"))return;

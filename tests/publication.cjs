@@ -30,6 +30,9 @@ async function seek(fraction) {
     e.dispatchEvent(new Event('input', { bubbles: true }));
   }, fraction);
 }
+async function openSettings() {
+  if (!await page.locator('#mobile-menu').isVisible()) await page.click('#mobile-menu-toggle');
+}
 async function model() {
   return page.evaluate(() => ({
     progress, playing, total, routeCount: route.length, cumulative,
@@ -115,11 +118,14 @@ async function negative(name, mutation) {
   await fs.mkdir(root, { recursive: true });
   html = await fs.readFile(builtPage, 'utf8');
   const favicon = await fs.readFile(path.join(__dirname, '..', 'dist', 'favicon.svg'));
+  const branikPin = await fs.readFile(path.join(__dirname, '..', 'dist', 'branik-pin.png'));
   server = http.createServer((req, res) => {
     if (req.url === '/lidl-roadtrip.html') {
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }); res.end(html);
     } else if (req.url === '/favicon.svg') {
       res.writeHead(200, { 'Content-Type': 'image/svg+xml' }); res.end(favicon);
+    } else if (req.url === '/branik-pin.png') {
+      res.writeHead(200, { 'Content-Type': 'image/png' }); res.end(branikPin);
     } else { res.writeHead(404); res.end('Not found'); }
   }).listen(0, '127.0.0.1');
   await once(server, 'listening');
@@ -197,15 +203,16 @@ async function negative(name, mutation) {
   }
   await check('Playback, speed, pause, restart, route/chain switch, end replay and automatic completion', async () => {
     await select('lidl');
+    await openSettings();
     await page.selectOption('#speed', '30');
     await page.click('#play'); await page.waitForTimeout(300);
     let m = await model(); assert(m.progress > 0 && m.playing);
     await page.click('#play'); m = await model(); assert(!m.playing);
     const stopped = m.progress; await page.waitForTimeout(100); assert.equal((await model()).progress, stopped);
     await page.click('#play'); await seek(.3); assert.equal((await model()).playing, false);
-    await page.click('#restart'); assert.equal((await model()).progress, 0);
-    await page.click('#play'); await page.selectOption('#start', 'Brno'); m=await model(); assert.equal(m.progress, 0); assert(!m.playing);
-    await page.click('#play'); await page.selectOption('#chain', 'billa'); m=await model(); assert.equal(m.progress, 0); assert(!m.playing);
+    await openSettings();await page.click('#restart'); assert.equal((await model()).progress, 0);
+    await page.click('#play'); await openSettings();await page.selectOption('#start', 'Brno'); m=await model(); assert.equal(m.progress, 0); assert(!m.playing);
+    await page.click('#play'); await openSettings();await page.selectOption('#chain', 'billa'); m=await model(); assert.equal(m.progress, 0); assert(!m.playing);
     assert.equal(await page.locator('#start').inputValue(), 'optimized');
     await seek(1); await page.click('#play'); await page.waitForTimeout(80); assert((await model()).progress < 10);
     await page.click('#play');
@@ -220,8 +227,44 @@ async function negative(name, mutation) {
       await seek(f); const m = await model(); assert(!m.error); assert(Number.isFinite(m.progress));
       assert(Math.abs(parseFloat(m.gauge)-f*100) < .001);
     }
-    const ticks = await page.locator('.distance-tick').allTextContents();
-    assert(ticks.length >= 3 && ticks.length <= 8); assert.equal(ticks[0], '0 km');
+    const dividers = await page.locator('#distance-ticks .distance-tick').allTextContents();
+    assert(dividers.length>=8,'regular kilometre dividers must remain visible');
+    assert.equal(dividers[1],'500 km');
+    const ticks = await page.locator('.checkpoint-dot').evaluateAll(elements=>elements.map(e=>e.getAttribute('aria-label')));
+    assert(ticks.length >= 4 && ticks.length <= 12);
+    assert(ticks.some(tick=>tick.includes('Košík elite')));
+    assert(ticks.some(tick=>tick.includes('Ještě jeden Braňas')));
+    assert(ticks.at(-1).includes('Hlásit se v Bohnicích'));
+    for (const dot of await page.locator('.checkpoint-dot').all()) {
+      await dot.focus();
+      const alignment=await page.evaluate(()=>{
+        const dot=document.activeElement.getBoundingClientRect(),bubble=document.querySelector('#checkpoint-bubble'),rect=bubble.getBoundingClientRect();
+        const basket=document.querySelector('.cart-marker').getBoundingClientRect();
+        const totals=document.querySelector('.distance-caption').getBoundingClientRect();
+        return {offset:Math.abs(rect.left+parseFloat(bubble.style.getPropertyValue('--pointer-x'))-dot.left-dot.width/2),top:rect.top,basketBottom:basket.bottom,totalsBottom:totals.bottom};
+      });
+      assert(alignment.offset<1,'bubble pointer must align with its gold checkpoint');
+      assert(alignment.top>alignment.basketBottom&&alignment.top>alignment.totalsBottom,'bubble must be below basket, axis and totals');
+    }
+    await page.keyboard.press('Escape');
+    assert.equal(await page.locator('#checkpoint-bubble').isVisible(),false);
+    const checkpoints=await page.locator('.checkpoint-dot').evaluateAll(elements=>elements.map(e=>{
+      const rect=e.getBoundingClientRect();
+      return {km:Number(e.dataset.km),left:rect.left,right:rect.right,position:parseFloat(e.style.left)};
+    }));
+    for(let i=0;i<checkpoints.length;i++){
+      assert(Math.abs(checkpoints[i].position-checkpoints[i].km/(await model()).total*100)<0.0001);
+      if(i)assert(checkpoints[i].left>=checkpoints[i-1].right,'checkpoint targets must not overlap');
+    }
+    const gaps=checkpoints.slice(1).map((tick,i)=>tick.km-checkpoints[i].km);
+    assert(new Set(gaps.map(gap=>Math.round(gap))).size>1,'milestones must not be evenly spaced');
+    const dock = await page.evaluate(() => {
+      const play = document.querySelector('#play').getBoundingClientRect();
+      const rail = document.querySelector('.distance-track').getBoundingClientRect();
+      return {playRight:play.right,railLeft:rail.left,playCenter:play.y+play.height/2,railCenter:rail.y+rail.height/2};
+    });
+    assert(dock.playRight < dock.railLeft);
+    assert(Math.abs(dock.playCenter-dock.railCenter)<1,'Play must be centered on the axis');
     await page.locator('#dots circle').nth(10).dispatchEvent('click');
     assert.equal((await model()).progress, 10);
     assert(await page.evaluate(() => {
@@ -237,6 +280,7 @@ async function negative(name, mutation) {
   await check('All four playback rates, long-frame cap, and hidden-document pause branch', async () => {
     await select('lidl');
     for (const speed of ['1','4','12','30']) {
+      await openSettings();
       await page.selectOption('#speed',speed);
       const actual=await page.evaluate(()=>{
         pause();progress=0;playing=true;lastTime=1000;tick(1100);pause();update();return progress;
@@ -255,6 +299,7 @@ async function negative(name, mutation) {
     assert.equal((await model()).playing,false);
   });
   await check('GPX actual download, safe filename and nonempty MIME Blob', async () => {
+    await openSettings();
     const event = page.waitForEvent('download');
     await page.click('#export');
     const download = await event;
@@ -299,6 +344,7 @@ async function negative(name, mutation) {
   });
   await check('Keyboard operation, named controls, dot Enter/Space, slider keys, visible focus', async () => {
     await select('lidl');
+    await openSettings();
     for (const id of ['play','restart','chain','start','speed','scrub','export','zoom-in','zoom-out','fit','follow']) {
       const e = page.locator('#'+id); assert(await e.isVisible());
       assert((await e.getAttribute('aria-label')) || (await e.textContent())?.trim() || (await e.evaluate(e=>e.labels?.length)), id);
@@ -311,9 +357,9 @@ async function negative(name, mutation) {
     await page.keyboard.press('ArrowRight'); assert((await model()).progress > 0);
     assert.match(await page.locator('#scrub').getAttribute('aria-valuetext'), /kilometers; stop/);
     assert.equal(await page.locator('#status').getAttribute('role'), 'status');
-    await page.locator('#restart').focus();
+    await openSettings();await page.locator('#restart').focus();
     assert(await page.locator('#restart').evaluate(e => getComputedStyle(e).outlineStyle !== 'none'));
-    await page.keyboard.press('Tab'); assert.equal(await page.evaluate(()=>document.activeElement.id), 'chain');
+    await page.keyboard.press('Tab'); assert.equal(await page.evaluate(()=>document.activeElement.id), 'export');
   });
   await check('Recovered OSM addresses: exact provenance, destination display and GPX', async () => {
     const recovery = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'address-recovery.json'), 'utf8'));
@@ -343,7 +389,7 @@ async function negative(name, mutation) {
         return { width:innerWidth, height:innerHeight, app:rect('.app'), map:rect('#map'), scroll:document.documentElement.scrollWidth,
           controls:rect('.controls'), dashboard:rect('.dashboard'), tip:rect('.tip'),
           legend:rect('.legend'), tools:rect('.map-tools'), footer:rect('.footer'), logo:rect('#brand-logo'),
-          buttons:[...document.querySelectorAll('button,select,input')].filter(e=>e.getClientRects().length).map(e=>({id:e.id,...rect('#'+e.id)})) };
+          buttons:[...document.querySelectorAll('button,select,input')].filter(e=>e.getClientRects().length).map(e=>({id:e.id,...e.getBoundingClientRect().toJSON()})) };
       });
       assert(layout.scroll <= width, JSON.stringify(layout));
       for (const surface of [layout.app, layout.map]) {
@@ -362,6 +408,25 @@ async function negative(name, mutation) {
       assert(!overlaps(layout.tools,layout.dashboard), 'map tools overlap dashboard');
       assert(!overlaps(layout.legend,layout.dashboard), 'legend overlaps dashboard');
       assert(!overlaps(layout.logo,layout.dashboard), 'logo overlaps dashboard');
+      assert(!overlaps(layout.buttons.find(button => button.id === 'mobile-menu-toggle'),layout.tools), 'menu toggle overlaps map tools');
+      await page.locator('.checkpoint-dot').last().focus();
+      const bubbleLayout=await page.evaluate(()=>{
+        const rect=document.querySelector('#checkpoint-bubble').getBoundingClientRect();
+        const dot=document.querySelector('.checkpoint-dot:last-child').getBoundingClientRect();
+        const bubble=document.querySelector('#checkpoint-bubble');
+        return {left:rect.left,right:rect.right,bottom:rect.bottom,offset:Math.abs(rect.left+parseFloat(bubble.style.getPropertyValue('--pointer-x'))-dot.left-dot.width/2)};
+      });
+      assert(bubbleLayout.left>=0&&bubbleLayout.right<=width&&bubbleLayout.bottom<=height,'checkpoint bubble must fit viewport');
+      assert(bubbleLayout.offset<1,'responsive bubble pointer must align');
+      for (const id of ['mobile-menu-toggle','zoom-in','zoom-out','fit','follow']) {
+        if(!await page.locator('#'+id).isVisible())continue;
+        const centered=await page.locator('#'+id).evaluate(e=>{
+          const button=e.getBoundingClientRect(),icon=e.querySelector('svg').getBoundingClientRect();
+          return Math.abs(button.x+button.width/2-icon.x-icon.width/2)<1&&Math.abs(button.y+button.height/2-icon.y-icon.height/2)<1;
+        });
+        assert(centered,id+' icon must be centered');
+      }
+      await page.keyboard.press('Escape');
       await page.screenshot({path:path.join(root,`publication-${width}.png`),fullPage:true});
       await page.click('#play'); assert((await model()).playing);
       if (await page.locator('#mobile-menu-toggle').isVisible()) await page.click('#mobile-menu-toggle');
@@ -404,15 +469,67 @@ async function negative(name, mutation) {
     assert.equal(await page.locator('#cockpit-toggle').getAttribute('aria-expanded'),'true');
     await page.click('#cockpit-toggle');
     await page.click('#mobile-menu-toggle');
-    await page.locator('#map').click({position:{x:190,y:400}});
+    await page.locator('#map').click({position:{x:5,y:400}});
     assert.equal(await page.locator('#mobile-menu').isVisible(),false);
     await page.setViewportSize({width:844,height:390});await select('kaufland','Brno');
     assert.equal(await page.locator('#mobile-menu-toggle').isVisible(),true);
     assert.equal(await page.locator('#play').isVisible(),true);
     await page.setViewportSize({width:1440,height:900});await select('lidl');
-    assert.equal(await page.locator('#mobile-menu-toggle').isVisible(),false);
-    assert.equal(await page.locator('.control-top #chain').count(),1);
+    assert.equal(await page.locator('#mobile-menu-toggle').isVisible(),true);
+    assert.equal(await page.locator('#mobile-menu #chain').count(),1);
+    assert.equal(await page.locator('.control-top button').count(),1);
+    assert.equal(await page.locator('.controls select').count(),0);
     assert.equal(await page.locator('.map-tools #follow').count(),1);
+  });
+  await check('Branik opt-in: explicit branch matching, route changes, expiry, failure and reduced motion', async () => {
+    const { sampleOffers } = await import('../worker/index.mjs');
+    let data = sampleOffers();
+    await page.route('**/api/branik-offers', r => r.fulfill({ json: data }));
+    await select('lidl');
+    assert.equal(await page.locator('#branik').isChecked(), false);
+    assert.equal(await page.locator('.branik-pin').count(), 0);
+    await page.click('#mobile-menu-toggle');
+    await page.locator('#branik').check();
+    await page.waitForFunction(() => document.querySelectorAll('.branik-pin').length === 1);
+    assert.equal(await page.locator('.branik-pin').getAttribute('data-store-id'), '1');
+    assert.match(await page.locator('#branik-status').textContent(), /Demo/);
+    assert.equal(await page.locator('#branik-notice').isVisible(), true);
+    await page.keyboard.press('Escape');
+    await page.evaluate(async () => { await document.querySelector('.branik-pin image').decode?.(); });
+    const before = await page.locator('.branik-pin').getAttribute('transform');
+    await page.click('#zoom-in');
+    assert.notEqual(await page.locator('.branik-pin').getAttribute('transform'), before);
+    for (const chain of ['lidl','kaufland','billa','albert']) {
+      await select(chain, 'Brno');
+      assert.equal(await page.locator('.branik-pin').count(), 1);
+    }
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    assert.equal(await page.locator('.branik-pin image').evaluate(e => getComputedStyle(e).animationName), 'none');
+    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    await page.setViewportSize({width:390,height:844});await select('lidl');
+    await page.click('#mobile-menu-toggle');
+    assert.equal(await page.locator('#branik').isChecked(), true);
+    await page.locator('#branik').uncheck();
+    assert.equal(await page.locator('.branik-pin').count(), 0);
+    data = sampleOffers();
+    data.offers = [];
+    await page.locator('#branik').check();
+    await page.waitForFunction(() => document.querySelector('#branik-status').textContent.includes('0 matched'));
+    await page.locator('#branik').uncheck();
+    data = sampleOffers(0);
+    await page.locator('#branik').check();
+    await page.waitForFunction(() => document.querySelector('#branik-status').textContent.includes('unavailable'));
+    assert.equal(await page.locator('.branik-pin').count(), 0);
+    assert.equal(await page.locator('#branik').isChecked(), false);
+    await page.unroute('**/api/branik-offers');
+    await page.route('**/api/branik-offers', r => r.fulfill({ status:503, json:{error:'Unavailable'} }));
+    await page.locator('#branik').check();
+    await page.waitForFunction(() => document.querySelector('#branik-status').textContent.includes('HTTP 503'));
+    assert.equal(await page.locator('.branik-pin').count(), 0);
+    await page.unroute('**/api/branik-offers');
+    await page.keyboard.press('Escape');
+    await page.setViewportSize({width:1440,height:900});await select('lidl');
+    diagnostics.httpErrors = diagnostics.httpErrors.filter(error => !error.includes('/api/branik-offers'));
   });
   await check('Small dashboard text contrast against its light panel meets 4.5:1',async()=>{
     const colors=await page.evaluate(()=>({
@@ -470,7 +587,7 @@ async function negative(name, mutation) {
         }
       }
       await page.click('#play'); await page.waitForTimeout(100); assert((await model()).playing);
-      await page.click('#restart'); assert.deepEqual((await exported()).errors,[]);
+      await openSettings();await page.click('#restart'); assert.deepEqual((await exported()).errors,[]);
     } finally { await context.setOffline(false); }
   });
   await check('file:// standalone load, route change and GPX without HTTP server', async () => {
@@ -478,7 +595,8 @@ async function negative(name, mutation) {
     try {
       await local.goto(require('node:url').pathToFileURL(builtPage).href);
       assert.equal(await local.locator('#error').isVisible(),false);
-      await local.selectOption('#chain','kaufland'); await local.selectOption('#start','Liberec');
+      assert.equal(await local.locator('#branik').isDisabled(),true);
+      await local.click('#mobile-menu-toggle');await local.selectOption('#chain','kaufland'); await local.selectOption('#start','Liberec');
       assert.match(await local.locator('#status').textContent(),/Liberec/);
       assert.equal(await local.evaluate(()=>typeof exportRoute),'function');
     } finally { await local.close(); }

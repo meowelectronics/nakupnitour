@@ -5,4 +5,9 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://nakupnitour.cz',
   output: 'static',
+  vite: {
+    server: {
+      proxy: { '/api/branik-offers': 'http://127.0.0.1:8787' },
+    },
+  },
 });

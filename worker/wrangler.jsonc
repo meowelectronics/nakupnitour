@@ -1,0 +1,8 @@
+{
+  "name": "nakupnitour-branik",
+  "main": "index.mjs",
+  "compatibility_date": "2026-11-09",
+  "vars": { "DATA_MODE": "sample" },
+  "kv_namespaces": [{ "binding": "BRANIK_OFFERS" }],
+  "triggers": { "crons": ["0 * * * *"] }
+}
