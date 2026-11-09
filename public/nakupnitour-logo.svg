@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title description">
+  <title id="title">NakupniTour.cz</title>
+  <desc id="description">A Czech shopping cart and touring badge with the NakupniTour.cz wordmark.</desc>
+  <g fill="none" stroke="#245a81">
+    <path d="M225 214a108 108 0 1 0-168 0" stroke-width="4"/>
+    <path d="M217 207a97 97 0 1 0-152 0" stroke-width="2"/>
+    <path d="M60 226h156" stroke-width="2" stroke-dasharray="3 9"/>
+  </g>
+  <path d="M78 104H98L115 172H193L210 121H103M110 145H202M125 122L132 171M151 122L155 171M179 122L178 171M115 172L109 188H194" fill="none" stroke="#245a81" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#faf6e9" stroke="#245a81" stroke-width="6">
+    <circle cx="125" cy="203" r="10"/><circle cx="181" cy="203" r="10"/>
+  </g>
+  <path d="M135 119L126 83Q125 72 133 72Q141 72 142 81L153 119" fill="#d9b477" stroke="#9e7944" stroke-width="3"/>
+  <path d="M130 88l11-3m-7 14l10-3" stroke="#faf6e9" stroke-width="3"/>
+  <path d="M165 119V88H186V119" fill="#faf6e9" stroke="#245a81" stroke-width="3"/>
+  <path d="M165 88l10-9 11 9" fill="#245a81"/>
+  <path d="M105 105L91 56" stroke="#245a81" stroke-width="3"/>
+  <path d="M92 57L127 63L122 86L99 80Z" fill="#faf6e9"/>
+  <path d="M95 69L124 74L122 86L99 80Z" fill="#bb3029"/>
+  <path d="M92 57L110 71L99 80Z" fill="#245a81"/>
+  <g fill="#245a81"><circle cx="49" cy="158" r="3"/><circle cx="230" cy="158" r="3"/></g>
+  <text x="284" y="62" fill="#655e4e" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="6">MAL&#xc1; ZEM&#x11a;. VELK&#xc1; N&#xc1;KUPN&#xcd; TOUR.</text>
+  <text x="278" y="159" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="bold" font-size="87" letter-spacing="-3"><tspan fill="#245a81">Nakupni</tspan><tspan fill="#bb3029">Tour</tspan><tspan fill="#245a81" font-size="55" letter-spacing="-1">.cz</tspan></text>
+  <path d="M286 188H1114" stroke="#d9cfb4" stroke-width="2"/>
+  <text x="286" y="230" fill="#655e4e" font-family="Arial, Helvetica, sans-serif" font-size="23" letter-spacing="2">Ka&#x17e;d&#xfd; obchod. Jedno dobrodru&#x17e;stv&#xed;.</text>
+</svg>
