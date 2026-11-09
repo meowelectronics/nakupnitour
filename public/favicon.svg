@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>NakupniTour shopping basket</title>
+  <rect width="32" height="32" rx="7" fill="#faf6e9"/>
+  <g fill="none" stroke="#245a81" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m10 13 6-8 6 8M5 13h22l-3 13H8ZM12 17l1 5m7-5-1 5"/>
+  </g>
+</svg>

@@ -114,9 +114,12 @@ async function negative(name, mutation) {
 (async () => {
   await fs.mkdir(root, { recursive: true });
   html = await fs.readFile(builtPage, 'utf8');
+  const favicon = await fs.readFile(path.join(__dirname, '..', 'dist', 'favicon.svg'));
   server = http.createServer((req, res) => {
     if (req.url === '/lidl-roadtrip.html') {
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }); res.end(html);
+    } else if (req.url === '/favicon.svg') {
+      res.writeHead(200, { 'Content-Type': 'image/svg+xml' }); res.end(favicon);
     } else { res.writeHead(404); res.end('Not found'); }
   }).listen(0, '127.0.0.1');
   await once(server, 'listening');
@@ -137,6 +140,16 @@ async function negative(name, mutation) {
     assert.equal(await page.locator('details, form, .config, #schedule-result').count(), 0);
     assert(await page.locator('#brand-logo').evaluate(e => e.complete && e.naturalWidth === 1200 && e.naturalHeight === 280));
     assert.equal(await page.locator('#brand-logo').isVisible(), true);
+    assert.equal(await page.locator('link[rel="icon"]').getAttribute('href'), '/favicon.svg');
+    const icon = await context.request.get(`${origin}/favicon.svg`);
+    assert.equal(icon.status(), 200);
+    assert.match(icon.headers()['content-type'], /image\/svg\+xml/);
+    assert(await page.evaluate(async () => {
+      const image = new Image();
+      image.src = document.querySelector('link[rel="icon"]').href;
+      await image.decode();
+      return image.naturalWidth > 0;
+    }));
   });
   for (const chain of ['lidl', 'kaufland', 'billa', 'albert']) {
     for (const start of ['optimized', 'Prague', 'Brno', 'Ostrava', 'Plzeň', 'Liberec']) {
@@ -445,6 +458,7 @@ async function negative(name, mutation) {
       await licenseTab.goto(`${origin}/license/`);
       assert.equal(await licenseTab.locator('pre').textContent(), licenseText.replace(/\r\n/g, '\n'));
       assert.equal(await licenseTab.locator('a').getAttribute('href'), '/');
+      assert.equal(await licenseTab.locator('link[rel="icon"]').getAttribute('href'), '/favicon.svg');
     } finally { await licenseTab.close(); }
   });
   await check('Offline after load: switch all routes, seek, play and export without network', async () => {
