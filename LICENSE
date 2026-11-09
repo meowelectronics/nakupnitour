@@ -1,0 +1,63 @@
+NakupniTour.cz - Personal Use License
+
+Copyright (c) 2026 mrjoda. All rights reserved.
+
+1. Scope
+
+These terms apply only to the original code, design, artwork, logo and other
+copyrightable material in NakupniTour.cz to the extent owned by mrjoda
+("the Project"). They do not claim ownership of ideas, facts, third-party
+materials, trademarks or rights belonging to others.
+
+2. Limited permission
+
+You may view and interact with the published Project for your own personal,
+noncommercial purposes, including planning personal journeys and downloading
+GPX files for personal use. Technical copies necessary for that permitted use,
+such as ordinary browser caching, are allowed.
+
+3. Rights reserved
+
+Except for the permission above, third-party licenses and rights that cannot
+lawfully be restricted, no permission is granted to copy, modify, redistribute,
+republish, sublicense, sell, commercially exploit or publicly host the Project
+or its original code, design or artwork. These activities require prior written
+permission from mrjoda. Public availability of the repository is not a general
+reuse license. This is a proprietary, source-available license, not an
+open-source license.
+
+For permission, contact mrjoda through the repository:
+https://github.com/meowelectronics/nakupnitour
+
+4. Third-party materials and data
+
+These restrictions do not replace, narrow or override any third-party license.
+OpenStreetMap data remains available under the Open Database License (ODbL)
+1.0, including applicable attribution and share-alike requirements. Any
+ODbL-covered database or adapted database within the Project retains those
+rights and obligations. GPX files include OSM-derived data; this license does
+not restrict reuse rights in that data granted by the ODbL.
+
+OpenStreetMap attribution and license:
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+
+Natural Earth geographic boundaries are public domain:
+https://www.naturalearthdata.com/about/terms-of-use/
+
+Software dependencies retain their respective licenses and notices, including
+Astro (MIT) and Playwright (Apache-2.0). Their license texts are distributed
+with their packages. Supermarket names and any third-party marks belong to
+their respective owners; no affiliation or endorsement is implied.
+
+5. No warranty; navigation limitations
+
+The Project is provided "as is", without warranties of any kind, to the extent
+permitted by law. Route estimates, store inventories and access information
+may be incomplete, outdated or incorrect. Routes are not live navigation,
+verified store entrances or guarantees of safe or lawful travel. Users must
+check current conditions and obey applicable rules.
+
+To the extent permitted by law, mrjoda is not liable for claims or damages
+arising from use of the Project. Nothing here excludes liability or statutory
+rights that cannot lawfully be excluded or limited.

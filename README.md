@@ -1,5 +1,14 @@
 # NakupniTour.cz
 
+Copyright (c) 2026 mrjoda. All rights reserved.
+
+Personal, noncommercial viewing and use of the published site are permitted.
+Copying, modification, redistribution, hosting and commercial use of original
+project material require prior written permission. See [LICENSE](./LICENSE)
+for the complete terms and third-party exceptions. This project is
+source-available, not open-source. OSM/ODbL data, public-domain Natural Earth
+boundaries and dependencies retain their own licenses and reuse rights.
+
 Static Astro website for exploring Czech supermarket road trips: Lidl,
 Kaufland, Billa and Albert, with six precomputed road routes per chain.
 

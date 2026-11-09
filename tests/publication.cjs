@@ -360,9 +360,20 @@ async function negative(name, mutation) {
     } finally {await touchContext.close();}
   });
   await check('Attribution and current-store links use HTTPS and noopener', async () => {
-    const links=await page.locator('a').evaluateAll(elements=>elements.map(e=>({href:e.href,target:e.target,rel:e.rel})));
+    const links=await page.locator('a[target="_blank"]').evaluateAll(elements=>elements.map(e=>({href:e.href,target:e.target,rel:e.rel})));
     assert(links.length >= 4);
     for (const link of links) { assert(link.href.startsWith('https://')); assert.equal(link.target,'_blank'); assert(link.rel.includes('noopener')); }
+    assert.equal(await page.locator('.footer a[href="/license/"]').textContent(), 'Personal use only');
+    assert.match(await page.locator('.footer').textContent(), /2026 mrjoda/);
+    const licensePage = await fs.readFile(path.join(__dirname, '..', 'dist', 'license', 'index.html'), 'utf8');
+    const licenseText = await fs.readFile(path.join(__dirname, '..', 'LICENSE'), 'utf8');
+    const licenseTab = await context.newPage();
+    try {
+      await licenseTab.route('**/license/', r => r.fulfill({ contentType: 'text/html; charset=utf-8', body: licensePage }));
+      await licenseTab.goto(`${origin}/license/`);
+      assert.equal(await licenseTab.locator('pre').textContent(), licenseText.replace(/\r\n/g, '\n'));
+      assert.equal(await licenseTab.locator('a').getAttribute('href'), '/');
+    } finally { await licenseTab.close(); }
   });
   await check('Offline after load: switch all routes, seek, play and export without network', async () => {
     await context.setOffline(true);
