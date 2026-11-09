@@ -22,13 +22,21 @@ npm run dev
 npm test
 ```
 
-`npm test` builds the actual Astro output and runs 60 browser scenarios,
+`npm test` builds the actual Astro output and runs 62 browser scenarios,
 including all 24 routes, GPX exports, playback, keyboard controls, responsive
 layouts, offline operation and invalid-data handling. Layouts include 1920px
 and 2560px desktops, with edge-to-edge viewport checks. It uses installed
 Microsoft Edge by default. Set `PW_CHANNEL=chrome` to use installed Chrome.
 Results and screenshots are written to ignored `test-results/`.
 Safari, Firefox and real mobile hardware are not covered by this suite.
+
+On phones, the map fills the viewport between a compact, expandable cockpit
+and a permanent Play/Pause and distance dock. The top-right menu contains the
+chain, starting city, speed, restart, GPX, follow and license/credits controls.
+Options do not hide playback. Portrait and short landscape layouts are tested,
+including all 24 routes on mobile, 44px action targets, menu dismissal, cockpit
+expansion and rotation back to the unchanged desktop layout. Map attribution
+remains visible even when the menu is closed.
 
 ## Cloudflare Pages
 

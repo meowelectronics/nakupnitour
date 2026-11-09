@@ -67,6 +67,46 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 @media(max-width:600px){.map-tools{top:calc(var(--dashboard-bottom,370px) + 10px)}}
 @media(max-width:360px){.app{min-height:940px}}
 .store-dot:focus-visible{outline:2px solid #155e91;outline-offset:3px}
+.mobile-only{display:none}
+@media(max-width:600px), (max-width:999px) and (max-height:500px){
+ .app{height:100dvh;min-height:0}
+ .topbar{top:0;left:0;right:0;height:64px;padding:8px 68px 8px 12px;background:#faf6e9f5;border-bottom:1px solid var(--line)}
+ .brand-logo{width:230px;max-height:48px;object-fit:contain;object-position:left}
+ .badge{display:none}.mobile-only{display:block}
+ #mobile-menu-toggle{position:absolute;z-index:9;right:12px;top:10px;width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:#faf6e9;font-size:23px}
+ .dashboard{top:74px;left:12px;width:calc(100% - 24px);max-width:none;border-radius:15px}
+ .dash-body{display:block;padding:10px 14px}.gauge,.stats,.store-identity{display:none}
+ .stops{margin:0;min-height:40px;padding-right:135px}.stops strong{font-size:25px}.stops span{font-size:13px}
+ #stop-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+ .mobile-distance{position:absolute;top:19px;right:56px;font:600 21px system-ui,sans-serif}.mobile-distance small{font-size:12px;font-weight:400}
+ #cockpit-toggle{position:absolute;right:8px;top:8px;width:44px;height:44px;border:0;background:transparent;font-size:20px}
+ .heading{padding:9px 0 0;border-bottom:0}#destination{font-size:20px}#address{font:12px/1.4 system-ui,sans-serif}
+ .dashboard.expanded .gauge{display:block;width:130px;margin:6px auto}.dashboard.expanded .stats,.dashboard.expanded .store-identity{display:grid}
+ .dashboard.expanded{max-height:calc(100dvh - var(--controls-height,150px) - 100px);overflow:auto}
+ .tip,.legend,.footer{display:none}
+ .controls{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));padding:10px 14px;border-radius:15px}
+ .control-top{flex-wrap:nowrap;gap:14px}.play{width:44px;height:44px}.mobile-route{font:16px Georgia,serif}.mobile-route small{display:block;font:10px system-ui,sans-serif;letter-spacing:1px;text-transform:uppercase;color:#655e4e;margin-bottom:4px}
+ .control-top>.spacer{display:none}
+ .mobile-credits{font:9px system-ui,sans-serif;color:#655e4e;margin-top:8px;text-align:center}.mobile-credits a{color:inherit}
+ .distance-bar{margin-top:0;padding:0 12px}.distance-rail{height:50px}.distance-track{top:32px}.cart-marker{height:37px;width:48px;top:0}.distance-rail input{top:21px;height:28px}.distance-ticks{display:none}.distance-caption{font-size:11px}
+ .map-tools{top:auto;bottom:calc(var(--controls-height,130px) + 32px + env(safe-area-inset-bottom));right:12px;gap:6px}
+ .map-tools button{width:44px;height:44px}.map-tools #follow{display:none}
+ #mobile-menu{position:absolute;z-index:8;top:68px;left:10px;right:10px;padding:12px;background:#faf6e9;border:1px solid #c8ba95;border-radius:15px;box-shadow:0 8px 25px #302e2625;max-height:calc(100dvh - var(--controls-height,140px) - 100px);overflow:auto}
+ #mobile-menu[hidden]{display:none}
+ .mobile-options{display:grid;grid-template-columns:1fr 1.25fr .85fr;gap:8px}
+ .mobile-options .setting{display:block;font-size:11px;min-width:0}
+ .mobile-options select{display:block;width:100%;max-width:none;min-width:0;height:44px;margin-top:5px;border:1px solid #c8ba95;border-radius:9px;background:#fffdf6;padding:4px;font-size:12px}
+ .mobile-actions{display:flex;align-items:center;gap:10px;margin-top:8px}.mobile-actions button{min-height:44px;font-size:12px;margin:0;padding:0 12px;border:1px solid var(--line);border-radius:8px;text-decoration:none}
+ .mobile-actions #follow.active{background:#245a81;color:#fff}
+ #mobile-menu .footer{display:block;position:static;font-size:11px;line-height:1.6;margin-top:10px}#mobile-menu #data-snapshot{display:block}
+ #mobile-menu .tip{display:block;position:static;width:auto;max-width:none;margin:8px 0 0;font-size:11px;padding:4px 8px}
+ #error{inset:74px 12px auto;max-height:50dvh;overflow:auto}
+}
+@media(max-width:999px) and (max-height:500px){
+ .topbar{height:54px}.brand-logo{width:180px;max-height:40px}#mobile-menu-toggle{top:5px}
+ .dashboard{top:64px;width:250px}.controls{left:280px}.map-tools{bottom:auto;top:64px;right:12px;flex-direction:row}.map-tools button{width:44px;height:44px}
+ #mobile-menu{top:60px;left:auto;width:min(460px,calc(100% - 20px))}
+}
 </style>
 </head>
 <body>
@@ -80,7 +120,11 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 <circle id="halo" r="12" fill="#bf3328" opacity=".18" filter="url(#glow)"/><circle id="traveler" r="5" fill="#fff9eb" stroke="#bc312a" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
 </svg>
 <div class="topbar"><div class="brand"><img id="brand-logo" class="brand-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjI4MCIgdmlld0JveD0iMCAwIDEyMDAgMjgwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzY3JpcHRpb24iPg0KICA8dGl0bGUgaWQ9InRpdGxlIj5OYWt1cG5pVG91ci5jejwvdGl0bGU+DQogIDxkZXNjIGlkPSJkZXNjcmlwdGlvbiI+QSBDemVjaCBzaG9wcGluZyBjYXJ0IGFuZCB0b3VyaW5nIGJhZGdlIHdpdGggdGhlIE5ha3VwbmlUb3VyLmN6IHdvcmRtYXJrLjwvZGVzYz4NCiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjQ1YTgxIj4NCiAgICA8cGF0aCBkPSJNMjI1IDIxNGExMDggMTA4IDAgMSAwLTE2OCAwIiBzdHJva2Utd2lkdGg9IjQiLz4NCiAgICA8cGF0aCBkPSJNMjE3IDIwN2E5NyA5NyAwIDEgMC0xNTIgMCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogICAgPHBhdGggZD0iTTYwIDIyNmgxNTYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iMyA5Ii8+DQogIDwvZz4NCiAgPHBhdGggZD0iTTc4IDEwNEg5OEwxMTUgMTcySDE5M0wyMTAgMTIxSDEwM00xMTAgMTQ1SDIwMk0xMjUgMTIyTDEzMiAxNzFNMTUxIDEyMkwxNTUgMTcxTTE3OSAxMjJMMTc4IDE3MU0xMTUgMTcyTDEwOSAxODhIMTk0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNDVhODEiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQogIDxnIGZpbGw9IiNmYWY2ZTkiIHN0cm9rZT0iIzI0NWE4MSIgc3Ryb2tlLXdpZHRoPSI2Ij4NCiAgICA8Y2lyY2xlIGN4PSIxMjUiIGN5PSIyMDMiIHI9IjEwIi8+PGNpcmNsZSBjeD0iMTgxIiBjeT0iMjAzIiByPSIxMCIvPg0KICA8L2c+DQogIDxwYXRoIGQ9Ik0xMzUgMTE5TDEyNiA4M1ExMjUgNzIgMTMzIDcyUTE0MSA3MiAxNDIgODFMMTUzIDExOSIgZmlsbD0iI2Q5YjQ3NyIgc3Ryb2tlPSIjOWU3OTQ0IiBzdHJva2Utd2lkdGg9IjMiLz4NCiAgPHBhdGggZD0iTTEzMCA4OGwxMS0zbS03IDE0bDEwLTMiIHN0cm9rZT0iI2ZhZjZlOSIgc3Ryb2tlLXdpZHRoPSIzIi8+DQogIDxwYXRoIGQ9Ik0xNjUgMTE5Vjg4SDE4NlYxMTkiIGZpbGw9IiNmYWY2ZTkiIHN0cm9rZT0iIzI0NWE4MSIgc3Ryb2tlLXdpZHRoPSIzIi8+DQogIDxwYXRoIGQ9Ik0xNjUgODhsMTAtOSAxMSA5IiBmaWxsPSIjMjQ1YTgxIi8+DQogIDxwYXRoIGQ9Ik0xMDUgMTA1TDkxIDU2IiBzdHJva2U9IiMyNDVhODEiIHN0cm9rZS13aWR0aD0iMyIvPg0KICA8cGF0aCBkPSJNOTIgNTdMMTI3IDYzTDEyMiA4Nkw5OSA4MFoiIGZpbGw9IiNmYWY2ZTkiLz4NCiAgPHBhdGggZD0iTTk1IDY5TDEyNCA3NEwxMjIgODZMOTkgODBaIiBmaWxsPSIjYmIzMDI5Ii8+DQogIDxwYXRoIGQ9Ik05MiA1N0wxMTAgNzFMOTkgODBaIiBmaWxsPSIjMjQ1YTgxIi8+DQogIDxnIGZpbGw9IiMyNDVhODEiPjxjaXJjbGUgY3g9IjQ5IiBjeT0iMTU4IiByPSIzIi8+PGNpcmNsZSBjeD0iMjMwIiBjeT0iMTU4IiByPSIzIi8+PC9nPg0KICA8dGV4dCB4PSIyODQiIHk9IjYyIiBmaWxsPSIjNjU1ZTRlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgbGV0dGVyLXNwYWNpbmc9IjYiPk1BTCYjeGMxOyBaRU0mI3gxMWE7LiBWRUxLJiN4YzE7IE4mI3hjMTtLVVBOJiN4Y2Q7IFRPVVIuPC90ZXh0Pg0KICA8dGV4dCB4PSIyNzgiIHk9IjE1OSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsICdUaW1lcyBOZXcgUm9tYW4nLCBzZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1zaXplPSI4NyIgbGV0dGVyLXNwYWNpbmc9Ii0zIj48dHNwYW4gZmlsbD0iIzI0NWE4MSI+TmFrdXBuaTwvdHNwYW4+PHRzcGFuIGZpbGw9IiNiYjMwMjkiPlRvdXI8L3RzcGFuPjx0c3BhbiBmaWxsPSIjMjQ1YTgxIiBmb250LXNpemU9IjU1IiBsZXR0ZXItc3BhY2luZz0iLTEiPi5jejwvdHNwYW4+PC90ZXh0Pg0KICA8cGF0aCBkPSJNMjg2IDE4OEgxMTE0IiBzdHJva2U9IiNkOWNmYjQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICA8dGV4dCB4PSIyODYiIHk9IjIzMCIgZmlsbD0iIzY1NWU0ZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjMiIGxldHRlci1zcGFjaW5nPSIyIj5LYSYjeDE3ZTtkJiN4ZmQ7IG9iY2hvZC4gSmVkbm8gZG9icm9kcnUmI3gxN2U7c3R2JiN4ZWQ7LjwvdGV4dD4NCjwvc3ZnPg0K" width="1200" height="280" alt="NakupniTour.cz — Každý obchod. Jedno dobrodružství."></div><span class="badge" id="route-badge"></span></div>
+<button id="mobile-menu-toggle" class="mobile-only" aria-label="Route options" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+<aside id="mobile-menu" hidden aria-label="Route options"><div class="mobile-options"></div><div class="mobile-actions"></div></aside>
 <section class="dashboard" aria-label="Journey dashboard">
+<span class="mobile-only mobile-distance"><span id="mobile-km">0</span> <small>km</small></span>
+<button id="cockpit-toggle" class="mobile-only" aria-label="Expand cockpit" aria-expanded="false">⌄</button>
 <div class="dash-body">
 <div class="gauge"><svg id="dial" viewBox="0 0 180 150" aria-hidden="true"><g id="ticks"></g><path d="M20 100 A70 70 0 0 1 160 100" fill="none" stroke="#d9cfb4" stroke-width="9" stroke-linecap="round"/><path d="M20 100 A70 70 0 0 1 160 100" fill="none" stroke="#245a81" stroke-width="9" stroke-linecap="round"/><path id="gauge-progress" d="M20 100 A70 70 0 0 1 160 100" pathLength="100" stroke-dasharray="0 100" fill="none" stroke="#bb3029" stroke-width="9" stroke-linecap="butt"/><line id="needle" x1="11" y1="100" x2="29" y2="100" stroke="#302e26" stroke-width="2" stroke-linecap="round"/></svg>
 <div class="distance" id="km">0</div><div class="distance-label" id="distance-label">Modeled road km</div><small id="miles">0 miles</small></div>
@@ -94,7 +138,7 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 <div class="map-tools" aria-label="Map controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit" aria-label="Fit Czechia">⌂</button><button class="follow" id="follow" aria-label="Follow current position" aria-pressed="false">◎</button></div>
 <div class="legend"><span><i></i>Visited trail</span><span><i class="remaining"></i>Remaining</span><span><b></b><span id="legend-chain">Lidl</span></span></div>
 <section class="controls" aria-label="Playback controls">
-<div class="control-top"><button class="play" id="play" aria-label="Play itinerary">▶</button><button class="restart" id="restart">Restart</button>
+<div class="control-top"><button class="play" id="play" aria-label="Play itinerary">▶</button><div class="mobile-only mobile-route"><small id="mobile-chain"></small><span id="mobile-route-name"></span></div><button class="restart" id="restart">Restart</button>
 <label class="setting">Supermarket<select id="chain" aria-label="Supermarket chain"><option value="lidl">Lidl</option><option value="kaufland">Kaufland</option><option value="billa">Billa + convenience</option><option value="albert">Albert (all formats)</option></select></label>
 <label class="setting">Route<select id="start"><option value="optimized">Best road route</option><option value="Prague">Prague · road</option><option value="Brno">Brno · road</option><option value="Ostrava">Ostrava · road</option><option value="Plzeň">Plzeň · road</option><option value="Liberec">Liberec · road</option></select></label>
 <label class="setting">Playback<select id="speed"><option value="1">1 stop/s</option><option value="4" selected>4 stops/s</option><option value="12">12 stops/s</option><option value="30">30 stops/s</option></select></label>
@@ -115,6 +159,7 @@ button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visib
 <div id="distance-ticks" class="distance-ticks" aria-hidden="true"></div>
 </div>
 <div class="distance-caption"><span id="distance-progress"></span><span id="scrub-label"></span></div>
+<div class="mobile-only mobile-credits">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a></div>
 </div>
 </section>
 <div class="footer"><span>© 2026 mrjoda · <a href="/license/">Personal use only</a> · Data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener">Fix the map</a> · <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener">Natural Earth</a></span><span id="data-snapshot"></span></div>
@@ -136,6 +181,7 @@ const cities=[
 let stores=[];
 let route=[],cumulative=[],total=0,progress=0,playing=false,lastTime=null,following=false;
 let frame=null,view=[0,0,1100,740],baseView=[...view],drag=null;
+const mobileLayout=matchMedia("(max-width:600px), (max-width:999px) and (max-height:500px)");
 let legShapes=[],cachedTrailIndex=-1,cachedTrail="";
 const rad=x=>x*Math.PI/180;
 function distance(a,b){const dLat=rad(b.lat-a.lat),dLon=rad(b.lon-a.lon);const h=Math.sin(dLat/2)**2+Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(dLon/2)**2;return 6371*2*Math.asin(Math.sqrt(Math.min(1,h)));}
@@ -222,7 +268,9 @@ function update(){
  const i=Math.floor(progress),t=progress-i,done=i===route.length-1;
  const km=cumulative[i]+(done?0:(cumulative[i+1]-cumulative[i])*t),fraction=total?km/total:0;
  $("km").textContent=num(km);$("miles").textContent=num(km*.621371)+" miles · modeled road distance";$("stop").textContent=num(i+1);
- $("percent").textContent=(fraction*100).toFixed(1)+"%";$("scrub").value=km;$("scrub-label").textContent=`${i+1} / ${route.length} stores`;
+ $("mobile-km").textContent=num(km);$("mobile-chain").textContent=chainName+" tour";
+ $("mobile-route-name").textContent=OPTIMIZED.metadata.start_city?OPTIMIZED.metadata.start_city+" start":"Best road route";
+ $("percent").textContent=(fraction*100).toFixed(1)+"%";$("scrub").value=km;$("scrub-label").textContent=mobileLayout.matches?(fraction*100).toFixed(1)+"%":`${i+1} / ${route.length} stores`;
  $("distance-rail").style.setProperty("--journey",(fraction*100)+"%");
  $("distance-progress").textContent=`${num(km)} / ${num(total)} km`;
  $("scrub").setAttribute("aria-valuetext",`${num(km)} of ${num(total)} kilometers; stop ${i+1} of ${route.length}`);
@@ -246,8 +294,42 @@ function update(){
 }
 function setView(){$("map").setAttribute("viewBox",view.join(" "));}
 function fit(){
- const portrait=window.innerWidth<=600;
- baseView=portrait?[55,-220,1000,850]:[0,0,1100,740];view=[...baseView];setView();
+ if(mobileLayout.matches){
+  const app=document.querySelector(".app").getBoundingClientRect(),dashboard=document.querySelector(".dashboard").getBoundingClientRect(),controls=document.querySelector(".controls").getBoundingClientRect();
+  const landscape=app.width>app.height,top=landscape?116:dashboard.bottom-app.top+12,bottom=controls.top-app.top-12;
+  const availableHeight=Math.max(100,bottom-top),availableWidth=landscape?app.width-290:app.width-24;
+  const width=Math.max(1020*app.width/availableWidth,430*app.width/availableHeight),height=width*app.height/app.width;
+  const centerX=landscape?290+availableWidth/2:app.width/2,centerY=(top+bottom)/2;
+  baseView=[550-centerX/app.width*width,330-centerY/app.height*height,width,height];
+ }else baseView=[0,0,1100,740];
+ view=[...baseView];setView();
+}
+function setMobileMenu(open,restoreFocus=false){
+ $("mobile-menu").hidden=!open;$("mobile-menu-toggle").setAttribute("aria-expanded",String(open));
+ if(restoreFocus)$("mobile-menu-toggle").focus();
+}
+function initializeMobileLayout(){
+ const menu=$("mobile-menu"),options=menu.querySelector(".mobile-options"),actions=menu.querySelector(".mobile-actions");
+ const elements=[...document.querySelectorAll(".control-top .setting"),$("restart"),$("export"),$("follow"),document.querySelector(".footer"),$("status")];
+ const origins=elements.map(element=>{const marker=document.createComment("desktop position");element.before(marker);return {element,marker};});
+ const synchronize=()=>{
+  setMobileMenu(false);
+  for(const {element,marker} of origins){
+   if(mobileLayout.matches)(element.classList.contains("setting")?options:element.classList.contains("footer")||element.id==="status"?menu:actions).append(element);
+   else marker.after(element);
+  }
+  if(!following)fit();update();
+ };
+ $("mobile-menu-toggle").addEventListener("click",()=>setMobileMenu(menu.hidden));
+ document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!menu.hidden)setMobileMenu(false,true);});
+ document.addEventListener("pointerdown",event=>{if(!menu.hidden&&!menu.contains(event.target)&&!$("mobile-menu-toggle").contains(event.target))setMobileMenu(false);});
+ $("cockpit-toggle").addEventListener("click",()=>{
+  const expanded=document.querySelector(".dashboard").classList.toggle("expanded");
+  $("cockpit-toggle").setAttribute("aria-expanded",String(expanded));
+  $("cockpit-toggle").setAttribute("aria-label",expanded?"Collapse cockpit":"Expand cockpit");
+  $("cockpit-toggle").textContent=expanded?"⌃":"⌄";
+ });
+ mobileLayout.addEventListener("change",synchronize);synchronize();
 }
 function setFollowing(value){following=value;$("follow").classList.toggle("active",value);$("follow").setAttribute("aria-pressed",String(value));}
 function zoom(factor){
@@ -326,11 +408,11 @@ try{
  validateData();
  chainName=CHAINS.lidl.name;DATA=CHAINS.lidl.stores;OPTIMIZED=CHAINS.lidl.optimized;
  stores=DATA.features.map(f=>({...f.properties,lon:f.geometry.coordinates[0],lat:f.geometry.coordinates[1]}));
- drawMap();buildRoute();
+ drawMap();buildRoute();initializeMobileLayout();
  const controls=document.querySelector(".controls");
- new ResizeObserver(()=>document.querySelector(".app").style.setProperty("--controls-height",controls.offsetHeight+"px")).observe(controls);
+ new ResizeObserver(()=>{document.querySelector(".app").style.setProperty("--controls-height",controls.offsetHeight+"px");if(mobileLayout.matches&&!following)fit();}).observe(controls);
  const dashboard=document.querySelector(".dashboard");
- new ResizeObserver(()=>document.querySelector(".app").style.setProperty("--dashboard-bottom",(dashboard.offsetTop+dashboard.offsetHeight)+"px")).observe(dashboard);
+ new ResizeObserver(()=>{document.querySelector(".app").style.setProperty("--dashboard-bottom",(dashboard.offsetTop+dashboard.offsetHeight)+"px");if(mobileLayout.matches&&!following)fit();}).observe(dashboard);
  $("play").addEventListener("click",()=>playing?(pause(),update()):play());
  $("restart").addEventListener("click",()=>{pause();progress=0;update();});
  $("start").addEventListener("change",()=>{try{buildRoute();}catch(error){fail(error);}});

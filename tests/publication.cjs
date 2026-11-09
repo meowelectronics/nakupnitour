@@ -17,8 +17,12 @@ const check = async (name, fn) => {
   console.log(`${results.at(-1).status} ${name}${results.at(-1).error ? '\n' + results.at(-1).error : ''}`);
 };
 async function select(chain, start = 'optimized') {
+  await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  const mobile = await page.locator('#mobile-menu-toggle').isVisible();
+  if (mobile && !await page.locator('#chain').isVisible()) await page.click('#mobile-menu-toggle');
   await page.selectOption('#chain', chain);
   await page.selectOption('#start', start);
+  if (mobile) await page.keyboard.press('Escape');
 }
 async function seek(fraction) {
   await page.locator('#scrub').evaluate((e, f) => {
@@ -318,7 +322,7 @@ async function negative(name, mutation) {
     assert.deepEqual((await exported()).errors, []);
     await select('lidl');
   });
-  for (const [width, height] of [[320,740],[390,844],[737,900],[1440,900],[1920,1080],[2560,1440]]) {
+  for (const [width, height] of [[320,740],[390,844],[844,390],[737,900],[1440,900],[1920,1080],[2560,1440]]) {
     await check(`Responsive ${width}x${height}: no horizontal overflow, reachable non-overlapping essential panels`, async () => {
       await page.setViewportSize({width,height}); await select('lidl'); await page.waitForTimeout(100);
       const layout = await page.evaluate(() => {
@@ -326,13 +330,13 @@ async function negative(name, mutation) {
         return { width:innerWidth, height:innerHeight, app:rect('.app'), map:rect('#map'), scroll:document.documentElement.scrollWidth,
           controls:rect('.controls'), dashboard:rect('.dashboard'), tip:rect('.tip'),
           legend:rect('.legend'), tools:rect('.map-tools'), footer:rect('.footer'), logo:rect('#brand-logo'),
-          buttons:[...document.querySelectorAll('button,select,input')].map(e=>({id:e.id,...rect('#'+e.id)})) };
+          buttons:[...document.querySelectorAll('button,select,input')].filter(e=>e.getClientRects().length).map(e=>({id:e.id,...rect('#'+e.id)})) };
       });
       assert(layout.scroll <= width, JSON.stringify(layout));
       for (const surface of [layout.app, layout.map]) {
         assert.equal(surface.x, 0, 'page surface must start at the viewport edge');
         assert.equal(surface.width, width, 'page surface must fill the viewport width');
-        if (width >= 737) assert.equal(surface.height, height, 'desktop surface must fill the viewport height');
+        assert.equal(surface.height, height, 'surface must fill the viewport height');
       }
       for (const r of [layout.controls,layout.dashboard,layout.tip,layout.legend,layout.tools,layout.footer,layout.logo,...layout.buttons]) {
         assert(r.x >= -1 && r.right <= width+1, JSON.stringify(r));
@@ -346,11 +350,57 @@ async function negative(name, mutation) {
       assert(!overlaps(layout.legend,layout.dashboard), 'legend overlaps dashboard');
       assert(!overlaps(layout.logo,layout.dashboard), 'logo overlaps dashboard');
       await page.screenshot({path:path.join(root,`publication-${width}.png`),fullPage:true});
-      await page.click('#play'); assert((await model()).playing); await page.click('#restart');
+      await page.click('#play'); assert((await model()).playing);
+      if (await page.locator('#mobile-menu-toggle').isVisible()) await page.click('#mobile-menu-toggle');
+      await page.click('#restart');
       await page.selectOption('#chain','albert'); assert.equal((await model()).chainSlug,'albert');
+      if (await page.locator('#mobile-menu-toggle').isVisible()) await page.keyboard.press('Escape');
     });
   }
   await page.setViewportSize({width:1440,height:900});
+  await check('Mobile map-first layout: all routes, menu, playback, disclosure, expansion and rotation', async () => {
+    await page.setViewportSize({width:390,height:844});
+    for (const chain of ['lidl','kaufland','billa','albert']) {
+      for (const start of ['optimized','Prague','Brno','Ostrava','Plzeň','Liberec']) {
+        await select(chain,start);
+        assert.equal(await page.locator('#mobile-menu').isVisible(),false);
+        assert.equal(await page.locator('#play').isVisible(),true);
+        const layout=await page.evaluate(()=>{
+          const dashboard=document.querySelector('.dashboard').getBoundingClientRect();
+          const dock=document.querySelector('.controls').getBoundingClientRect();
+          return {height:innerHeight,gap:dock.top-dashboard.bottom,scroll:document.documentElement.scrollHeight};
+        });
+        assert(layout.gap >= layout.height*.45, 'map must have at least 45% clear vertical space');
+        assert.equal(layout.scroll,844,'portrait must not need page scrolling');
+        await seek(.5);assert.equal(await page.locator('#scrub-label').textContent(),'50.0%');
+      }
+    }
+    await page.click('#mobile-menu-toggle');
+    assert.equal(await page.locator('#play').isVisible(),true);
+    await page.click('#play');assert((await model()).playing);
+    await page.click('#mobile-menu-toggle');
+    assert.equal(await page.locator('#status').isVisible(),true);
+    assert.equal(await page.locator('#follow').isVisible(),true);
+    for(const id of ['chain','start','speed','restart','export']){
+      const height=await page.locator('#'+id).evaluate(e=>e.getBoundingClientRect().height);
+      assert(height>=44,id+' needs a 44px touch target');
+    }
+    await page.keyboard.press('Escape');
+    assert.equal(await page.evaluate(()=>document.activeElement.id),'mobile-menu-toggle');
+    await page.click('#cockpit-toggle');
+    assert.equal(await page.locator('#cockpit-toggle').getAttribute('aria-expanded'),'true');
+    await page.click('#cockpit-toggle');
+    await page.click('#mobile-menu-toggle');
+    await page.locator('#map').click({position:{x:190,y:400}});
+    assert.equal(await page.locator('#mobile-menu').isVisible(),false);
+    await page.setViewportSize({width:844,height:390});await select('kaufland','Brno');
+    assert.equal(await page.locator('#mobile-menu-toggle').isVisible(),true);
+    assert.equal(await page.locator('#play').isVisible(),true);
+    await page.setViewportSize({width:1440,height:900});await select('lidl');
+    assert.equal(await page.locator('#mobile-menu-toggle').isVisible(),false);
+    assert.equal(await page.locator('.control-top #chain').count(),1);
+    assert.equal(await page.locator('.map-tools #follow').count(),1);
+  });
   await check('Small dashboard text contrast against its light panel meets 4.5:1',async()=>{
     const colors=await page.evaluate(()=>({
       muted:getComputedStyle(document.documentElement).getPropertyValue('--muted').trim(),
@@ -373,8 +423,10 @@ async function negative(name, mutation) {
     try {
       await touch.goto(`${origin}/lidl-roadtrip.html`);
       await touch.tap('#play');assert.equal(await touch.evaluate(()=>playing),true);
+      await touch.tap('#mobile-menu-toggle');
       await touch.tap('#restart');assert.equal(await touch.evaluate(()=>progress),0);
       await touch.selectOption('#chain','billa');assert.equal(await touch.evaluate(()=>chainSlug),'billa');
+      await touch.tap('#mobile-menu-toggle');
       await touch.tap('#zoom-in');
       assert(await touch.evaluate(()=>view[2]<baseView[2]));
     } finally {await touchContext.close();}
