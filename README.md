@@ -22,7 +22,7 @@ npm run dev
 npm test
 ```
 
-`npm test` builds the actual Astro output and runs 63 browser scenarios,
+`npm test` builds the actual Astro output and runs 64 browser scenarios,
 including all 24 routes, GPX exports, playback, keyboard controls, responsive
 layouts, offline operation and invalid-data handling. Layouts include 1920px
 and 2560px desktops, with edge-to-edge viewport checks. It uses installed
@@ -49,6 +49,126 @@ dismisses it. Milestone positions remain true road kilometres; crowded dots
 are omitted on narrow screens. The dock has a 22%-opacity parchment background
 and soft shadow. The menu uses full-width controls and a Branik switch; map
 tools use centered SVG icons.
+
+## Route accuracy and optimality experiments
+
+The `/accuracy/` page, linked beside the license in the planner, reports bounds
+for all four published default routes. City-start routes are not independently
+bounded. The page explains the model, data limitations and evidence fingerprints;
+percentages are conservative upper bounds, not probabilities of accuracy.
+
+`tests/optimize_kaufland.py --chain lidl` (also `kaufland`, `billa` or `albert`)
+evaluates the free-start, free-finish directed
+open route against its original OSRM matrix without changing website data.
+It requires Python, NumPy and SciPy; optional OR-Tools refinement requires
+OR-Tools (an existing installation can be passed via `--optimizer-packages`).
+For the incremental bound solver, install
+`python -m pip install -r tests/requirements-optimize.txt`.
+Run `python tests/optimize_kaufland.py --help` for input paths and time limits.
+The inputs are the original matrix JSON, shop GeoJSON and incumbent route JSON;
+coordinate fingerprints and the incumbent objective are verified before solving.
+The large routing matrix is not included in this repository.
+
+The solver adds a zero-cost dummy node and iteratively excludes disconnected
+subtours from a directed assignment relaxation, including fractional directed
+minimum-cut separation before the MILP phase. Its lower bounds apply to every
+feasible open route, even when a time-limited solve returns no valid itinerary.
+Only a single connected tour may replace the incumbent. `--solver cp-sat` uses
+OR-Tools circuit constraints with full LP linearization as an alternative.
+`--previous-result PATH` validates and resumes the best previous route and
+bound; `--heuristic-runs 3` adds deterministically perturbed route searches.
+`--solver incremental` retains a HiGHS simplex basis while adding directed
+minimum-cut inequalities, rather than rebuilding and cold-starting each LP.
+After no fractional cut remains, it switches the same model to integer arcs
+and supplies the verified route as a feasible hint. Odd-cut inequalities on
+the undirected degree-two projection strengthen fractional solutions further.
+All arcs are initially retained. Only optimal-LP reduced costs may eliminate
+arcs that cannot occur in a better route, using the verified incumbent cutoff;
+there is no speculative nearest-neighbour pruning.
+`--solver lkh --lkh-runs 10` uses Lin-Kernighan-Helsgaun to search the complete
+directed matrix. Positive arc shifting preserves the free-start/open-route
+objective exactly. LKH is a heuristic: it never supplies a new lower bound;
+only independently verified earlier bounds are retained.
+It starts from the best verified tour; `--lkh-seed` permits reproducible
+independent searches, with nonsequential patching moves enabled.
+The `elkai` wrapper and embedded LKH are for academic/noncommercial use only,
+under their own license, not this project's original-material terms.
+`--post-seconds 120` optionally refines a candidate with OR-Tools after the
+main search. Disconnected cycle covers may seed a valid itinerary by joining
+cycles; only the fully reconstructed, rescored path can become an incumbent.
+`--target-seconds 1799` stops early if the candidate's remaining possible
+saving drops below that threshold; a time limit can expire without reaching it.
+Near the target, the incremental solver can instead exclude tours above the
+requested threshold and prove that the remaining model is infeasible.
+This certifies the absolute gap without proving the exact optimum.
+Bounds from threshold-restricted searches are capped at the threshold plus
+one integer decisecond, so they remain valid for the unrestricted problem.
+Saved threshold MPS models can be independently rechecked with
+`--verify-model PATH --previous-result PATH --target-seconds N`.
+Use `--model-output PATH` to retain the model; these files can be large and
+are not needed by the website.
+HiGHS and CP-SAT are limited to two threads.
+Tests compare results against exhaustive small asymmetric cases:
+`python -m unittest discover -s tests -p test_optimize_kaufland.py`.
+Set `OPTIMIZER_PACKAGES` to the existing OR-Tools package directory to include
+the optional CP-SAT tests.
+
+On 2026-11-09, each chain received 30 seconds of OR-Tools refinement and a
+180-second MILP budget. These were the initial results, before further searches:
+
+| Chain | Shops | Published seconds | Lower bound seconds | At most above optimum |
+| --- | ---: | ---: | ---: | ---: |
+| Lidl | 326 | 308219.3 | 252868.7 | 21.890% |
+| Kaufland | 149 | 203706.0 | 203043.1 | 0.327% |
+| Billa | 294 | 264895.4 | 251789.6 | 5.206% |
+| Albert | 345 | 265858.9 | 237935.6 | 11.736% |
+
+Percentages are rounded up to three decimals. Kaufland's maximum possible
+saving is 662.9 seconds. Follow-up searches for Lidl and Albert use three
+60-second heuristic runs, 300 seconds of fractional-cut bounds and repeated
+CP-SAT circuit searches. The accuracy page contains the current published
+times and strongest verified bounds, not this historical table.
+Absolute optimality was not established by the initial checks.
+A loose bound is inconclusive, not evidence that the route is bad. These are
+floating-point solver bounds for static matrices, not guarantees about traffic.
+
+After LKH searches, stronger bounds and road-geometry rebuilds, all current
+default routes satisfy the requested under-30-minute remaining-saving ceiling.
+Lidl saves 7,690.8 seconds and Albert saves 5,064.7 seconds compared with the
+initially checked itineraries. The subsequent Billa search saves 1,594.8 seconds:
+
+| Chain | Published seconds | Lower bound seconds | At most above optimum | Remaining saving ceiling |
+| --- | ---: | ---: | ---: | ---: |
+| Lidl | 300528.5 | 298870.2 | 0.555% | 1658.3 seconds |
+| Billa | 263300.6 | 262998.1 | 0.116% | 302.5 seconds |
+| Albert | 260794.2 | 259004.3 | 0.692% | 1789.9 seconds |
+
+Albert's threshold model ruled out any itinerary of 259,004.2 seconds or less,
+then was exported and independently re-solved to confirm infeasibility.
+Integer deciseconds therefore give a 259,004.3-second lower bound. This proves
+the requested gap numerically without claiming exact global optimality.
+Billa's stronger bound came from incremental directed subtour and odd cuts;
+its faster route came from LKH. Every one of its 293 road legs was rebuilt
+and verified against the road-time matrix. Kaufland and all city-start
+itineraries were unchanged.
+
+`tests/adopt_route_candidate.py --result PATH --road-data PATH --osrm-packages PATH`
+rebuilds every leg of a strictly improved default route using the existing
+local OSRM extract. It checks every road duration against the matrix before
+updating the planner's embedded route data. A differing distance is allowed
+only for an exact modeled-time tie: it is explicitly logged and retained in
+metadata, and the actual road geometry's distance is used. City-start
+routes are preserved. GPX is generated from that same updated geometry at
+export time. Run `npm test` after adoption.
+
+After saving each solver report as `{chain}-optimality.json`, regenerate the
+page data with `python tests/publish_route_accuracy.py --results PATH --matrices PATH`.
+Repeat `--additional-result PATH` for follow-up reports. Each is independently
+verified; the generator combines the strongest bound with the best candidate,
+never weakening either simply because the latest run was worse.
+The generator verifies matrix hashes, current coordinates, complete route
+permutations and driving objectives before writing `src/data/route-accuracy.json`.
+Its gaps always refer to the published route, not an unpublished candidate.
 
 ## Local Branik offer prototype
 

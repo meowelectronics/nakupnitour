@@ -1,0 +1,270 @@
+[
+  {
+    "slug": "lidl",
+    "name": "Lidl",
+    "stores": 326,
+    "checkedAt": "2026-11-09T14:03:09.635195+00:00",
+    "publishedSeconds": 300528.5,
+    "lowerBoundSeconds": 298870.2,
+    "savedSinceInitialCheckSeconds": 7690.799999999988,
+    "publishedGapPercent": 0.5548562553242098,
+    "displayGapPercent": 0.555,
+    "maximumSavingSeconds": 1658.2999999999884,
+    "underThirtyMinutes": true,
+    "bestCandidateSeconds": 300528.5,
+    "candidateGapPercent": 0.5548562553242098,
+    "candidateMaximumSavingSeconds": 1658.2999999999884,
+    "candidateImprovementSeconds": 0.0,
+    "publishedOptimal": false,
+    "solverSeconds": 197.50768440007232,
+    "exactBudgetSeconds": 180,
+    "heuristicBudgetSeconds": 120,
+    "heuristicRuns": 1,
+    "roadSnapshot": "2026-11-07T21:21:36Z",
+    "matrixSha256": "0c38c2f396fd06c4f86cc35fa8eb12a4968d945c64df864dd460daf568b9a943",
+    "coordinateSha256": "cb89623827a5b5c03b033b464c111ed607d22fc8d50cf3626f34d0b0dfc1839a",
+    "publishedOrderSha256": "e1fadc19bbc5c05ab12b2e27808dc7ea74c15da3990e642199838a19830c03c4",
+    "solver": "Incremental HiGHS LP min-cut separation with retained basis, followed by DFJ MILP",
+    "thresholdCertificate": false,
+    "certificateModelSha256": null,
+    "searches": [
+      {
+        "solver": "SciPy/HiGHS MILP with iteratively separated DFJ subtour constraints",
+        "seconds": 210.54651700006798,
+        "bestSeconds": 308206.2,
+        "lowerSeconds": 252868.7
+      },
+      {
+        "solver": "OR-Tools CP-SAT directed circuit with verified incumbent and prior lower bound",
+        "seconds": 361.12944269995205,
+        "bestSeconds": 303952.4,
+        "lowerSeconds": 298096.8
+      },
+      {
+        "solver": "OR-Tools CP-SAT directed circuit with verified incumbent and prior lower bound",
+        "seconds": 300.9254714001436,
+        "bestSeconds": 303911.3,
+        "lowerSeconds": 298096.8
+      },
+      {
+        "solver": "Incremental HiGHS LP min-cut separation with retained basis, followed by DFJ MILP",
+        "seconds": 900.1665300000459,
+        "bestSeconds": 303911.3,
+        "lowerSeconds": 298870.2
+      },
+      {
+        "solver": "LKH directed-tour search; lower bound retained from previous verified solver run",
+        "seconds": 180.35576840001158,
+        "bestSeconds": 300528.5,
+        "lowerSeconds": 298870.2
+      },
+      {
+        "solver": "Incremental HiGHS LP min-cut separation with retained basis, followed by DFJ MILP",
+        "seconds": 317.8966139999684,
+        "bestSeconds": 303904.1,
+        "lowerSeconds": 298870.2
+      },
+      {
+        "solver": "SciPy/HiGHS fractional min-cut LP separation followed by directed DFJ MILP",
+        "seconds": 480.7931939000264,
+        "bestSeconds": 307358.3,
+        "lowerSeconds": 298096.8
+      }
+    ]
+  },
+  {
+    "slug": "kaufland",
+    "name": "Kaufland",
+    "stores": 149,
+    "checkedAt": "2026-11-09T12:59:51.479406+00:00",
+    "publishedSeconds": 203706.0,
+    "lowerBoundSeconds": 203043.1,
+    "savedSinceInitialCheckSeconds": 0.0,
+    "publishedGapPercent": 0.3264824069372452,
+    "displayGapPercent": 0.327,
+    "maximumSavingSeconds": 662.8999999999942,
+    "underThirtyMinutes": true,
+    "bestCandidateSeconds": 203706.0,
+    "candidateGapPercent": 0.3264824069372452,
+    "candidateMaximumSavingSeconds": 662.8999999999942,
+    "candidateImprovementSeconds": 0.0,
+    "publishedOptimal": false,
+    "solverSeconds": 180.0779744000174,
+    "exactBudgetSeconds": 180,
+    "heuristicBudgetSeconds": 30,
+    "heuristicRuns": 1,
+    "roadSnapshot": "2026-11-07T21:21:36Z",
+    "matrixSha256": "999230b0f6e3c1ac60e5022f884fe4e06f5ae1e00faa68dca0818c2abcbe914a",
+    "coordinateSha256": "8a2a3314dc18db91da886cf4c4072f24e2c3aee85cc4922f1428bbc8b351c0dd",
+    "publishedOrderSha256": "02e974f68fe01733a4eeede2f31a96ccff4a106f89f687c495da7ecd7a3654a2",
+    "solver": "SciPy/HiGHS MILP with iteratively separated DFJ subtour constraints",
+    "thresholdCertificate": false,
+    "certificateModelSha256": null,
+    "searches": [
+      {
+        "solver": "SciPy/HiGHS MILP with iteratively separated DFJ subtour constraints",
+        "seconds": 210.5952524000313,
+        "bestSeconds": 203706.0,
+        "lowerSeconds": 203043.1
+      }
+    ]
+  },
+  {
+    "slug": "billa",
+    "name": "Billa",
+    "stores": 294,
+    "checkedAt": "2026-11-09T14:58:31.021281+00:00",
+    "publishedSeconds": 263300.6,
+    "lowerBoundSeconds": 262998.1,
+    "savedSinceInitialCheckSeconds": 1594.8000000000466,
+    "publishedGapPercent": 0.11501984234867368,
+    "displayGapPercent": 0.116,
+    "maximumSavingSeconds": 302.5,
+    "underThirtyMinutes": true,
+    "bestCandidateSeconds": 263300.6,
+    "candidateGapPercent": 0.11501984234867368,
+    "candidateMaximumSavingSeconds": 302.5,
+    "candidateImprovementSeconds": 0.0,
+    "publishedOptimal": false,
+    "solverSeconds": 83.57658220012672,
+    "exactBudgetSeconds": 600,
+    "heuristicBudgetSeconds": 0,
+    "heuristicRuns": 1,
+    "roadSnapshot": "2026-11-07T21:21:36Z",
+    "matrixSha256": "eff986142dc95aaa91051b1c45885d09219f4d9b0ff49a0829e0ccc6df4b09dc",
+    "coordinateSha256": "1c348795c5d0d454d97089b0d001034c53d52c41016dc2c3813992ca5d07e3b8",
+    "publishedOrderSha256": "db13c7ce1896ab01079532fa66f04dde3b417d9a8b1e4c6b9ba0aa56ceeb1576",
+    "solver": "Incremental HiGHS LP min-cut and odd-cut separation with retained basis, followed by DFJ MILP",
+    "thresholdCertificate": false,
+    "certificateModelSha256": null,
+    "searches": [
+      {
+        "solver": "SciPy/HiGHS MILP with iteratively separated DFJ subtour constraints",
+        "seconds": 210.37217939994298,
+        "bestSeconds": 264895.4,
+        "lowerSeconds": 251789.6
+      },
+      {
+        "solver": "Incremental HiGHS LP min-cut and odd-cut separation with retained basis, followed by DFJ MILP",
+        "seconds": 83.61478960001841,
+        "bestSeconds": 263835.3,
+        "lowerSeconds": 262998.1
+      },
+      {
+        "solver": "LKH directed-tour search; lower bound retained from previous verified solver run",
+        "seconds": 188.7214770000428,
+        "bestSeconds": 263300.6,
+        "lowerSeconds": 251789.6
+      }
+    ]
+  },
+  {
+    "slug": "albert",
+    "name": "Albert",
+    "stores": 345,
+    "checkedAt": "2026-11-09T14:48:35.413106+00:00",
+    "publishedSeconds": 260794.2,
+    "lowerBoundSeconds": 259004.3,
+    "savedSinceInitialCheckSeconds": 5064.700000000012,
+    "publishedGapPercent": 0.6910696077246703,
+    "displayGapPercent": 0.692,
+    "maximumSavingSeconds": 1789.9000000000233,
+    "underThirtyMinutes": true,
+    "bestCandidateSeconds": 260794.2,
+    "candidateGapPercent": 0.6910696077246703,
+    "candidateMaximumSavingSeconds": 1789.9000000000233,
+    "candidateImprovementSeconds": 0.0,
+    "publishedOptimal": false,
+    "solverSeconds": 114.0162351001054,
+    "exactBudgetSeconds": 300,
+    "heuristicBudgetSeconds": 0,
+    "heuristicRuns": 1,
+    "roadSnapshot": "2026-11-07T21:21:36Z",
+    "matrixSha256": "9f12731d75386c3d09d474dd3b30c1576b14e39df396878a71dca6132cac4c5e",
+    "coordinateSha256": "104baffa84eaa6f0845c06fadf4d832c95669e8cea6c88c11781c1c4c1dc13d2",
+    "publishedOrderSha256": "4b689fd80ff9f7baa072010330a05892c27842f0716f696ac48e6c72faf1bf68",
+    "solver": "HiGHS independently rechecked threshold-infeasibility model with subtour and odd cuts",
+    "thresholdCertificate": true,
+    "certificateModelSha256": "8088827842c83be45f88f765570302143bfb58fd8fa95825dcf49a57a11a76c6",
+    "searches": [
+      {
+        "solver": "SciPy/HiGHS MILP with iteratively separated DFJ subtour constraints",
+        "seconds": 210.4975996001158,
+        "bestSeconds": 265858.9,
+        "lowerSeconds": 237935.6
+      },
+      {
+        "solver": "Incremental HiGHS LP min-cut separation with retained basis, followed by DFJ MILP",
+        "seconds": 602.4999673999846,
+        "bestSeconds": 260794.2,
+        "lowerSeconds": 258850.1
+      },
+      {
+        "solver": "Incremental HiGHS LP min-cut separation with retained basis, followed by DFJ MILP",
+        "seconds": 736.213961499976,
+        "bestSeconds": 260876.4,
+        "lowerSeconds": 258693.4
+      },
+      {
+        "solver": "OR-Tools CP-SAT directed circuit with verified incumbent and prior lower bound",
+        "seconds": 361.17447480000556,
+        "bestSeconds": 262002.6,
+        "lowerSeconds": 238225.2
+      },
+      {
+        "solver": "OR-Tools CP-SAT directed circuit with verified incumbent and prior lower bound",
+        "seconds": 301.0121846999973,
+        "bestSeconds": 261930.4,
+        "lowerSeconds": 238225.2
+      },
+      {
+        "solver": "Incremental HiGHS LP min-cut separation with retained basis, followed by DFJ MILP",
+        "seconds": 1009.1104119000956,
+        "bestSeconds": 261930.4,
+        "lowerSeconds": 258362.2
+      },
+      {
+        "solver": "LKH directed-tour search; lower bound retained from previous verified solver run",
+        "seconds": 179.84712939988822,
+        "bestSeconds": 260876.4,
+        "lowerSeconds": 258362.2
+      },
+      {
+        "solver": "LKH directed-tour search; lower bound retained from previous verified solver run",
+        "seconds": 258.485409299843,
+        "bestSeconds": 260794.2,
+        "lowerSeconds": 258362.2
+      },
+      {
+        "solver": "LKH directed-tour search; lower bound retained from previous verified solver run",
+        "seconds": 480.4977213998791,
+        "bestSeconds": 260794.2,
+        "lowerSeconds": 258362.2
+      },
+      {
+        "solver": "LKH directed-tour search; lower bound retained from previous verified solver run",
+        "seconds": 213.98302070004866,
+        "bestSeconds": 260794.2,
+        "lowerSeconds": 258362.2
+      },
+      {
+        "solver": "OR-Tools CP-SAT directed circuit with verified incumbent and prior lower bound",
+        "seconds": 361.02944090007804,
+        "bestSeconds": 260794.2,
+        "lowerSeconds": 258850.1
+      },
+      {
+        "solver": "HiGHS independently rechecked threshold-infeasibility model with subtour and odd cuts",
+        "seconds": 114.09721109992824,
+        "bestSeconds": 260794.2,
+        "lowerSeconds": 259004.3
+      },
+      {
+        "solver": "SciPy/HiGHS fractional min-cut LP separation followed by directed DFJ MILP",
+        "seconds": 482.8168069999665,
+        "bestSeconds": 264334.5,
+        "lowerSeconds": 238225.2
+      }
+    ]
+  }
+]

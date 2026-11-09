@@ -1,0 +1,5 @@
+numpy>=2.0
+scipy>=1.15
+highspy>=1.12
+elkai>=2.0.1
+networkx>=3.0

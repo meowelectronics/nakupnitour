@@ -1,0 +1,127 @@
+---
+import reports from '../data/route-accuracy.json';
+
+const duration = (seconds: number) => {
+  const rounded = Math.round(seconds);
+  return `${Math.floor(rounded / 3600)}h ${Math.floor(rounded % 3600 / 60)}m ${rounded % 60}s`;
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accuracy | NakupniTour.cz</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      body { margin: 0; background: #f5efdd; color: #302e26; font: 16px/1.65 system-ui, sans-serif; }
+      main { max-width: 1080px; margin: auto; padding: 32px 20px 60px; }
+      nav { display: flex; flex-wrap: wrap; gap: 20px; }
+      a { color: #245a81; }
+      a:focus-visible { outline: 3px solid #245a81; outline-offset: 4px; }
+      h1, h2 { font-family: Georgia, serif; }
+      h1 { font-style: italic; font-size: 38px; margin-bottom: 8px; }
+      .intro { max-width: 800px; }
+      .table-wrap { overflow-x: auto; border: 1px solid #c8ba95; border-radius: 14px; background: #faf6e9; margin: 24px 0; }
+      table { width: 100%; border-collapse: collapse; font-size: 14px; }
+      th, td { padding: 14px; text-align: left; border-bottom: 1px solid #d9cfb4; white-space: nowrap; }
+      th { color: #245a81; }
+      tbody tr:last-child td { border-bottom: 0; }
+      .gap { font-weight: 700; color: #245a81; }
+      .note { padding: 16px 20px; border-left: 3px solid #bb3029; background: #faf6e9; }
+      details { border-top: 1px solid #d9cfb4; padding: 14px 0; }
+      summary { cursor: pointer; color: #245a81; }
+      code { overflow-wrap: anywhere; font-size: 12px; }
+      @media(max-width:600px) { h1 { font-size: 30px; } main { padding: 24px 16px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Site information"><a href="/">Back to NakupniTour.cz</a><a href="/license/">License</a></nav>
+      <h1>How accurate is this tour?</h1>
+      <p class="intro">These are best-found road itineraries, not promises of the fastest real-world journey.
+        We tested all four default, free-start routes against mathematical lower bounds using the same directed road-time matrices as the planner.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Default route optimality bounds">
+        <table>
+          <thead><tr><th>Supermarket</th><th>Shops</th><th>Published driving time</th><th>Lower bound</th><th>At most above optimum</th><th>Maximum possible saving</th></tr></thead>
+          <tbody>{reports.map(report => (
+            <tr data-chain={report.slug}>
+              <th scope="row">{report.name}</th><td>{report.stores}</td>
+              <td>{duration(report.publishedSeconds)}</td><td>{duration(report.lowerBoundSeconds)}</td>
+              <td class="gap">≤ {report.displayGapPercent.toFixed(3)}%</td>
+              <td>{duration(Math.ceil(report.maximumSavingSeconds))}</td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </div>
+      <p>Percentages are rounded <strong>up</strong> to three decimal places. Times are rounded to the nearest second;
+        maximum savings are rounded up. Smaller gaps are better. A large gap means the bound is inconclusive,
+        not that the route is necessarily bad.</p>
+      <p class="note"><strong>The table evaluates the published itineraries.</strong> These are the routes you actually see and export.
+        These bounds apply only to <strong>“Best road route”</strong>, with any starting and finishing shop and no return journey.
+        The five city-start options per chain have not been independently bounded.
+        {reports.every(report => !report.publishedOptimal) && ' None of the published routes has been proven absolutely optimal.'}</p>
+      <h2>What does the percentage mean?</h2>
+      <p>The real model optimum lies between the lower bound and a verified feasible route.
+        We report <code>100 × (published time / lower bound − 1)</code>. This is an upper bound on how much slower
+        the published route can be than the optimum, not a probability or a percentage of “accuracy”.</p>
+      <h2>How we checked</h2>
+      <p>OSRM supplies direction-dependent car-driving times between every pair of shops.
+        OR-Tools tries to improve feasible routes, retaining only verified improvements across repeated searches.
+        SciPy/HiGHS tightens lower bounds with directed assignment constraints and subtour-elimination cuts,
+        including directed minimum-cut separation of fractional solutions in the strengthened runs.
+        The incremental solver retains its LP basis and accumulated cuts, avoiding repeated cold starts.
+        Odd-cut inequalities strengthen the degree-two projection. A threshold-infeasibility test can
+        rule out every route faster than a chosen time, certifying a requested gap without finding the exact optimum.
+        Further runs use OR-Tools CP-SAT circuit constraints with the best verified route and earlier lower bounds.
+        Lin-Kernighan-Helsgaun (LKH) supplies additional directed-route candidates; it does not establish lower bounds.
+        Each solver is limited to two threads.
+        A zero-cost dummy stop represents the free start and finish. Per-chain budgets are listed below.
+        Disconnected cycles are never accepted as a valid itinerary.</p>
+      <p>All store coordinates, route orders and objective values are checked against the original matrix.
+        The solver is tested against exhaustive enumeration on small directed examples, including disconnected cycle covers.
+        HiGHS uses floating-point tolerances: these are numerical solver bounds, not formal exact-arithmetic certificates.
+        Time limits do not guarantee an optimality proof or the same result on another computer.</p>
+      <h2>Data and real-world limitations</h2>
+      <ul>
+        <li>Road snapshot: {reports[0].roadSnapshot.slice(0, 10)}. No live traffic, weather, future closures or roadworks.</li>
+        <li>OpenStreetMap is not an authoritative current shop directory. Locations may be missing, duplicated, closed or incorrectly tagged. Explicitly closed mapped shops remain in the itineraries.</li>
+        <li>Billa includes mapped convenience formats; Albert includes supermarkets and hypermarkets.</li>
+        <li>Driving time excludes shopping, opening hours, parking, loading, driver rest and travel to the first shop.</li>
+        <li>Coordinates are representative shop locations snapped to car-accessible roads, not verified entrances. Each leg is routed independently.</li>
+        <li>Routing uses the Czech road extract; routes outside its coverage are not considered. The objective minimizes modeled time, not kilometres.</li>
+        <li>Some addresses were recovered from unambiguous OSM objects inside shop buildings; unresolved addresses remain explicitly missing.</li>
+        <li>GPX reflects the modeled route. It is not a guarantee of legal access, safe navigation or current store availability.</li>
+      </ul>
+      <h2>Per-chain evidence</h2>
+      {reports.map(report => (
+        <details>
+          <summary>{report.name} — checked {report.checkedAt.slice(0, 10)}</summary>
+          <p>Best candidate found: {duration(report.bestCandidateSeconds)}.
+            Candidate improvement: {duration(report.candidateImprovementSeconds)}.
+            {report.candidateImprovementSeconds > 0
+              ? ' This candidate is not the published itinerary; it needs new road geometry and GPX validation before use.'
+              : ' No verified unpublished candidate is faster than the current itinerary.'}</p>
+          <p>Published driving time saved since the initial check: {duration(report.savedSinceInitialCheckSeconds)}.
+            The under-30-minute remaining-saving target is {report.underThirtyMinutes ? 'certified by the numerical bound' : 'not yet certified'}.</p>
+          <p>Lower bound: {report.lowerBoundSeconds.toFixed(1)} seconds.
+            Published route: {report.publishedSeconds.toFixed(1)} seconds.
+            Solver elapsed: {report.solverSeconds.toFixed(1)} seconds, excluding the heuristic phase.</p>
+          <p>Latest bound run: heuristic budget {report.heuristicBudgetSeconds} seconds over {report.heuristicRuns} searches;
+            bound solver budget {report.exactBudgetSeconds} seconds. Earlier verified bounds and candidates are retained.
+            Method: {report.solver}.</p>
+          <ul>{report.searches.map(search => (
+            <li>{search.solver}: {Math.round(search.seconds)} seconds elapsed;
+              best candidate {duration(search.bestSeconds)}, lower bound {duration(search.lowerSeconds)}.</li>
+          ))}</ul>
+          <p>Matrix SHA-256: <code>{report.matrixSha256}</code><br />
+            Coordinates SHA-256: <code>{report.coordinateSha256}</code><br />
+            Published order SHA-256: <code>{report.publishedOrderSha256}</code></p>
+          {report.thresholdCertificate && <p>Threshold infeasibility was independently rechecked.
+            Saved model SHA-256: <code>{report.certificateModelSha256}</code>.</p>}
+        </details>
+      ))}
+      <p><a href="/license/">License and third-party data rights</a></p>
+    </main>
+  </body>
+</html>

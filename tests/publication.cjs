@@ -574,9 +574,57 @@ async function negative(name, mutation) {
       await licenseTab.route('**/license/', r => r.fulfill({ contentType: 'text/html; charset=utf-8', body: licensePage }));
       await licenseTab.goto(`${origin}/license/`);
       assert.equal(await licenseTab.locator('pre').textContent(), licenseText.replace(/\r\n/g, '\n'));
-      assert.equal(await licenseTab.locator('a').getAttribute('href'), '/');
+      assert.equal(await licenseTab.locator('a[href="/"]').getAttribute('href'), '/');
       assert.equal(await licenseTab.locator('link[rel="icon"]').getAttribute('href'), '/favicon.svg');
+      assert.equal(await licenseTab.locator('a[href="/accuracy/"]').textContent(), 'Accuracy');
     } finally { await licenseTab.close(); }
+  });
+  await check('Accuracy page: all four published route bounds, evidence and responsive layout', async () => {
+    const reports = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'src', 'data', 'route-accuracy.json'), 'utf8'));
+    const accuracyHtml = await fs.readFile(path.join(__dirname, '..', 'dist', 'accuracy', 'index.html'), 'utf8');
+    assert.equal(await page.locator('.footer a[href="/accuracy/"]').textContent(), 'Accuracy');
+    const accuracy = await context.newPage();
+    try {
+      await accuracy.route('**/accuracy/', r => r.fulfill({ contentType: 'text/html; charset=utf-8', body: accuracyHtml }));
+      await accuracy.goto(`${origin}/accuracy/`);
+      assert.equal(await accuracy.locator('tbody tr').count(), 4);
+      assert.equal(await accuracy.locator('a[href="/license/"]').count(), 2);
+      assert.equal(await accuracy.locator('link[rel="icon"]').getAttribute('href'), '/favicon.svg');
+      for (const report of reports) {
+        const published = await page.evaluate(slug => ({
+          seconds: CHAINS[slug].optimized.driving_seconds,
+          stores: CHAINS[slug].stores.features.length,
+          order: CHAINS[slug].optimized.order_ids,
+        }), report.slug);
+        assert(Math.abs(published.seconds-report.publishedSeconds)<0.11);
+        assert.equal(published.stores, report.stores);
+        assert(report.lowerBoundSeconds>0&&report.lowerBoundSeconds<=report.bestCandidateSeconds&&report.bestCandidateSeconds<=report.publishedSeconds);
+        const gap=100*(report.publishedSeconds/report.lowerBoundSeconds-1);
+        assert(Math.abs(gap-report.publishedGapPercent)<1e-8);
+        assert(Math.abs(report.maximumSavingSeconds-(report.publishedSeconds-report.lowerBoundSeconds))<1e-6);
+        assert(Math.abs(report.candidateMaximumSavingSeconds-(report.bestCandidateSeconds-report.lowerBoundSeconds))<1e-6);
+        assert(Math.abs(report.candidateGapPercent-100*(report.bestCandidateSeconds/report.lowerBoundSeconds-1))<1e-8);
+        assert.equal(report.underThirtyMinutes,report.maximumSavingSeconds<1800);
+        assert(report.maximumSavingSeconds<1800,`${report.name}: remaining saving must be strictly under 30 minutes`);
+        assert(report.displayGapPercent>=gap-1e-9&&report.displayGapPercent-gap<.001001);
+        assert.equal(report.publishedOrderSha256,require('node:crypto').createHash('sha256').update(JSON.stringify(published.order).replaceAll(',', ', ')).digest('hex'));
+        const cells=await accuracy.locator(`tr[data-chain="${report.slug}"] td`).allTextContents();
+        assert.equal(cells[0],String(report.stores));
+        assert(cells.includes(`≤ ${report.displayGapPercent.toFixed(3)}%`));
+      }
+      assert.match(await accuracy.locator('main').textContent(),/city-start options.*not been independently bounded/);
+      for (const width of [320,390,1440]) {
+        await accuracy.setViewportSize({width,height:844});
+        assert(await accuracy.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'accuracy page must not overflow horizontally');
+      }
+      await page.setViewportSize({width:390,height:844});await select('lidl');
+      await openSettings();
+      assert.equal(await page.locator('.footer a[href="/accuracy/"]').isVisible(),true);
+      await page.keyboard.press('Escape');
+    } finally {
+      await accuracy.close();
+      await page.setViewportSize({width:1440,height:900});await select('lidl');
+    }
   });
   await check('Offline after load: switch all routes, seek, play and export without network', async () => {
     await context.setOffline(true);
